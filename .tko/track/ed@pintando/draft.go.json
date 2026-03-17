@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_21-06-12",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,23 +23,8 @@\n mt%22%0A\n-import %22math%22%0A%0A\n func\n@@ -34,145 +34,35 @@\n in()\n+ \n %7B%0A\n-%0Avar a int 3.0%0Avar b int 4.0%0Avar c int 5.0%0A%0Ap := (a + b + c) / 2.0%0A%0Aarea := math.Sqrt(p *(p-a)*(p-b)*(p-c))%0A%0A\n+    \n fmt.\n-p\n+P\n rint\n-f(%22%25.2f%5Cn%22, area)%0A\n+ln(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-14_23-29-37",
+            "content": "@@ -66,9 +66,8 @@\n  3.0\n-;\n %0Avar\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-14_23-29-51",
+            "content": "@@ -60,16 +60,19 @@\n  a int 3\n+.0;\n %0Avar b i\n@@ -75,16 +75,18 @@\n  b int 4\n+.0\n %0Avar c i\n@@ -89,16 +89,18 @@\n  c int 5\n+.0\n %0A%0Ap := (\n@@ -113,16 +113,18 @@\n + c) / 2\n+.0\n %0A%0Aarea :\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-14_23-30-16",
+            "content": "@@ -53,34 +53,43 @@\n )%7B%0A%0A\n-a := 3.0%0Ab := 4.0%0Ac := 5.0\n+var a int 3%0Avar b int 4%0Avar c int 5\n %0A%0Ap \n@@ -110,10 +110,8 @@\n  / 2\n-.0\n %0A%0Aar\n@@ -157,9 +157,9 @@\n fmt.\n-P\n+p\n rint\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-14_23-32-22",
+            "content": "@@ -53,19 +53,34 @@\n )%7B%0A%0A\n-var a, b, c\n+a := 3.0%0Ab := 4.0%0Ac := 5.0\n %0A%0Ap \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-14_23-34-04",
+            "content": "@@ -53,34 +53,19 @@\n )%7B%0A%0A\n-a := 3.0%0Ab := 4.0%0Ac := 5.0\n+var a, b, c\n %0A%0Ap \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-14_23-34-41",
+            "content": "@@ -53,65 +53,34 @@\n )%7B%0A%0A\n-var a%0Avar b%0Avar c%0A%0Afmt.Scan(&a)%0Afmt.Scan(&b)%0Afmt.Scan(&c)\n+a := 3.0%0Ab := 4.0%0Ac := 5.0\n %0A%0Ap \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-14_23-46-42",
+            "content": "@@ -58,44 +58,20 @@\n ar a\n- float64%0Avar b float64%0Avar c float64\n+%0Avar b%0Avar c\n %0A%0Afm\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-14_23-48-39",
+            "content": "package main\n\nimport \"fmt\"\nimport \"math\"\n\nfunc main(){\n\nvar a float64\nvar b float64\nvar c float64\n\nfmt.Scan(&a)\nfmt.Scan(&b)\nfmt.Scan(&c)\n\np := (a + b + c) / 2.0\n\narea := math.Sqrt(p *(p-a)*(p-b)*(p-c))\n\nfmt.Printf(\"%.2f\\n\", area)\n\n}\n",
+            "lines": "22"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_21-29-49",
+            "content": "@@ -39,373 +39,32 @@\n ) %7B%0A\n-%0Avar nome string%0Avar int idade%0Afmt.Scan(&nome)%0Afmt.Scan(&idade)%0A%0Avar classificacao string%0A%0Aif idade %3C 12 %7B%0A    classificacao = crianca%0A%7D%0Aelse if idade %3C 18 %7B%0A    classificacao = jovem%0A%7D%0Aelse if idade %3C 65 %7B%0A    classificacao = adulto%0A%7D%0Aelse if idade %3C 1000 %7B%0A    classificacao = idoso%0A%7D%0Aelse %7B%0A    classificacao = mumia%0A%7D%0A%0Afmt.Println(nome + %22 eh %22 + classificacao)%0A\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-16_21-54-45",
+            "content": "@@ -61,16 +61,16 @@\n ar i\n+nt i\n dade\n- int\n %0Afmt\n@@ -166,17 +166,15 @@\n o = \n-%22\n crianca\n-%22\n %0A%7D%0Ae\n@@ -217,15 +217,13 @@\n o = \n-%22\n jovem\n-%22\n %0A%7D%0Ae\n@@ -266,16 +266,14 @@\n o = \n-%22\n adulto\n-%22\n %0A%7D%0Ae\n@@ -318,15 +318,13 @@\n o = \n-%22\n idoso\n-%22\n %0A%7D%0Ae\n@@ -353,15 +353,13 @@\n o = \n-%22\n mumia\n-%22\n %0A%7D%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-16_21-58-00",
+            "content": "@@ -173,16 +173,17 @@\n ianca%22%0A%7D\n+%0A\n else if \n@@ -224,16 +224,17 @@\n jovem%22%0A%7D\n+%0A\n else if \n@@ -272,24 +272,25 @@\n = %22adulto%22%0A%7D\n+%0A\n else if idad\n@@ -328,17 +328,18 @@\n %22idoso%22%0A\n-\n %7D\n+%0A\n else %7B%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-16_22-00-08",
+            "content": "package main\nimport \"fmt\"\n\n\nfunc main() {\n\nvar nome string\nvar idade int\nfmt.Scan(&nome)\nfmt.Scan(&idade)\n\nvar classificacao string\n\nif idade < 12 {\n    classificacao = \"crianca\"\n}else if idade < 18 {\n    classificacao = \"jovem\"\n}else if idade < 65 {\n    classificacao = \"adulto\"\n}else if idade < 1000 {\n    classificacao = \"idoso\"\n}else {\n    classificacao = \"mumia\"\n}\n\nfmt.Println(nome + \" eh \" + classificacao)\n\n}\n",
+            "lines": "28"
+        }
+    ]
+}

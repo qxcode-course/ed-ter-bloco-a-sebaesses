@@ -1,0 +1,16 @@
+2026-03-13 20:45:40, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-13 20:45:57, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-13 21:02:37, EXEC, v:1, k:sandbox@user_001, mode:FREE, size:5
+2026-03-13 21:03:00, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-13 21:03:11, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-13 21:03:58, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0
+2026-03-13 21:04:17, EXEC, v:1, k:sandbox@user_001, mode:FREE
+2026-03-13 21:04:39, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-13 21:05:10, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-13 21:05:28, MOVE, v:1, k:sandbox@user_002, mode:PICK
+2026-03-13 21:06:02, MOVE, v:1, k:sandbox@user_002, mode:BACK
+2026-03-13 21:06:10, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-13 21:06:12, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:5
+2026-03-13 21:06:18, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-13 21:06:20, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-13 21:06:28, MOVE, v:1, k:ed@pintando, mode:BACK

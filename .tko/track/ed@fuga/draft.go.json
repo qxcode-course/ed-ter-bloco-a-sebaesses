@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_23-33-57",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n\n    var H, P, F, D int\n\nfmt.Scan(&H, &P, &F, &D)\n\nfor {\n    if F == H {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\t\tif F == P {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak \n\t\t}\n\n\t\tF = F + D\n\n\t\tif F > 15 {\n\t\t\tF = 0\n\t\t} else if F < 0 {\n\t\t\tF = 15\n\t\t}\n\t}\n}\n\n\n",
+            "lines": "31"
+        }
+    ]
+}
