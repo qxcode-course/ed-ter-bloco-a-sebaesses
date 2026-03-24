@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_14-39-41",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,196 +23,53 @@\n mt%22%0A\n-%0Atype Ponto struct %7B%0A%09x int%0A%09y int%0A%7D%0A%0Afunc main() %7B%0A%09var q int%0A%09var d string%0A%09fmt.Scan(&q, &d)%0A%0A%09cobra := make(%5B%5DPonto, q)%0A%0A%09for i := 0; i %3C q; i++ %7B%0A%09%09fmt.Scan(&cobra%5Bi%5D.x, &cobra%5Bi%5D.y\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A\n-%09\n %7D%0A\n-%0A%09\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-23_00-22-32",
+            "content": "@@ -216,200 +216,4 @@\n %7D%0A%0A%09\n-for i := q - 1; i %3E 0; i-- %7B%0A%09%09cobra%5Bi%5D = cobra%5Bi-1%5D %0A%09%7D%0A%0A%09%0A%09if d == %22L%22 %7B%0A%09%09cobra%5B0%5D.x-- %0A%09%7D else if d == %22R%22 %7B%0A%09%09cobra%5B0%5D.x++ %0A%09%7D else if d == %22U%22 %7B%0A %09%7D else if d == %22D%22 %7B%0A%09%09cobra%5B0%5D.y++ %0A%09%7D%0A%0A%09%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-23_00-39-32",
+            "content": "@@ -411,71 +411,5 @@\n %7D%0A%0A%09\n-for i := 0; i %3C q; i++ %7B%0A%09%09fmt.Println(cobra%5Bi%5D.x, cobra%5Bi%5D.y)%0A%09%7D%0A%7D\n+%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_01-26-49",
+            "content": "@@ -367,23 +367,8 @@\n %22 %7B%0A\n-%09%09cobra%5B0%5D.y--%0A\n  %09%7D \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-23_01-27-48",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Ponto struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tfmt.Scan(&q, &d)\n\n\tcobra := make([]Ponto, q)\n\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Scan(&cobra[i].x, &cobra[i].y)\n\t}\n\n\tfor i := q - 1; i > 0; i-- {\n\t\tcobra[i] = cobra[i-1] \n\t}\n\n\t\n\tif d == \"L\" {\n\t\tcobra[0].x-- \n\t} else if d == \"R\" {\n\t\tcobra[0].x++ \n\t} else if d == \"U\" {\n\t\tcobra[0].y--\n \t} else if d == \"D\" {\n\t\tcobra[0].y++ \n\t}\n\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Println(cobra[i].x, cobra[i].y)\n\t}\n}",
+            "lines": "39"
+        }
+    ]
+}

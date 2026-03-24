@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_21-13-46",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,137 +37,39 @@\n ) %7B%0A\n-%0A    var n int%0A    fmt.Scan(&n)%0A    %0A    semPar := make(map%5Bint%5Dint)%0A%0A    pares := 0%0A%0A    for i := 0; i %3C n; i++ %7B%0A        %0A    %7D%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-22_21-27-05",
+            "content": "@@ -161,252 +161,14 @@\n     \n-var animal int%0A        fmt.Scan(&animal)%0A%0A        parIdeal := -animal%0A        %0A        if semPar %5BparIdeal%5D %3E 0 %7B%0A            pares++%0A            semPar%5BparIdeal%5D--%0A        %7D else %7B%0A            semPar%5Banimal%5D++%0A        %7D%0A    %7D%0A%0A    fmt.Println)\n+%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-22_21-29-38",
+            "content": "@@ -385,11 +385,28 @@\n %0A    %7D%0A%0A\n+    fmt.Println)%0A\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-22_21-29-44",
+            "content": "@@ -389,30 +389,7 @@\n  %7D%0A%0A\n-    fmt.Println(pares)%0A\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-22_21-31-43",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n    var n int\n    fmt.Scan(&n)\n    \n    semPar := make(map[int]int)\n\n    pares := 0\n\n    for i := 0; i < n; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        parIdeal := -animal\n        \n        if semPar [parIdeal] > 0 {\n            pares++\n            semPar[parIdeal]--\n        } else {\n            semPar[animal]++\n        }\n    }\n\n    fmt.Println(pares)\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}

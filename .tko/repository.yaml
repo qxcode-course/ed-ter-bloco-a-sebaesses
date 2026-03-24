@@ -13,14 +13,18 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
 - sandbox@sandbox:00_rascunhos
-- ed@side-quests
+- ed@revisão
 - ed@main-quest
+- ed@side-quests
 tasks:
   ed@pintando: '{self:1, rate:100, study:30, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, concept:1}'
   ed@fuga: '{self:1, rate:100, study:60, concept:1}'
+  ed@pedra: '{self:1, rate:100, study:80, concept:1}'
+  ed@casais: '{self:1, rate:100, study:30, concept:1, refactor:1}'
+  ed@baruel: '{self:1, rate:100, study:60, concept:1, debug:1}'
+  ed@gomos: '{self:1, rate:100, study:150, guided:1, concept:1}'
 flags:
   painel: 1
   quests: 0
@@ -29,4 +33,4 @@ flags:
   task_graph_mode: 0
   show_time: 1
 lang: go
-selected: ed@mumia
+selected: ed@pedra

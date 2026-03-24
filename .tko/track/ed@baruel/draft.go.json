@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_23-14-17",
+            "content": "@@ -85,58 +85,8 @@\n  int\n-%0A%09fmt.Scan(&totalAlbum)%0A%09fmt.Scan(&totalCompradas)\n %0A%0A%09%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-22_23-20-20",
+            "content": "@@ -138,430 +138,8 @@\n )%0A%0A%09\n-var album %5B51%5D%0A%0A%09figurinhaRepetida := false%0A%09figurinhaFalta := false%0A%0A%09for i := 0; i %3C totalCompradas; i++ %7B%0A%09%09var figurinha int%0A%09%09fmt.Scan(&figurinha)%0A%0A%09%09if album%5Bfigurinha%5D %3E 0 %7B%0A%09%09%09if figurinhaRepetida == true %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(figurinha)%0A%09%09%09figurinhaRepetida == true%0A%09%09%7D%0A%09%09album%5Bfigurinha%5D++%0A%09%7D%0A%09if figurinhaRepetida == false %7B%0A%09%09%09fmt.Print(%22N%22)%0A%09%7D%0A%09fmt.Print()%0A%0A%09for i := 1; i %3C= totalAlbum%0A%09%09%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-22_23-27-36",
+            "content": "@@ -514,26 +514,24 @@\n %7D%0A%09fmt.Print\n-ln\n ()%0A%0A%09for i :\n@@ -554,206 +554,14 @@\n lbum\n-; i++ %7B%0A%09%09if album%5Bi%5D == 0 %7B%0A%09%09%09if figurinhaFalta == true %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(i)%0A%09%09%09figurinhaFalta = true%0A%09%09%7D%0A%09%7D%0A%0A%09if figurinhaFalta == false %7B %0A%09%09fmt.Print(%22N%22)%0A%09%7D%0A%09fmt.Println()\n+%0A%09%09%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_23-29-29",
+            "content": "@@ -148,19 +148,16 @@\n bum %5B51%5D\n-int\n %0A%0A%09figur\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-22_23-30-22",
+            "content": "@@ -339,24 +339,25 @@\n haRepetida =\n+=\n  true %7B%0A%09%09%09%09\n@@ -422,16 +422,17 @@\n petida =\n+=\n  true%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-22_23-30-48",
+            "content": "@@ -343,17 +343,16 @@\n petida =\n-=\n  true %7B%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-22_23-30-56",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n    var totalAlbum int\n\tvar totalCompradas int\n\tfmt.Scan(&totalAlbum)\n\tfmt.Scan(&totalCompradas)\n\n\tvar album [51]int\n\n\tfigurinhaRepetida := false\n\tfigurinhaFalta := false\n\n\tfor i := 0; i < totalCompradas; i++ {\n\t\tvar figurinha int\n\t\tfmt.Scan(&figurinha)\n\n\t\tif album[figurinha] > 0 {\n\t\t\tif figurinhaRepetida == true {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(figurinha)\n\t\t\tfigurinhaRepetida = true\n\t\t}\n\t\talbum[figurinha]++\n\t}\n\tif figurinhaRepetida == false {\n\t\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n\n\tfor i := 1; i <= totalAlbum; i++ {\n\t\tif album[i] == 0 {\n\t\t\tif figurinhaFalta == true {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(i)\n\t\t\tfigurinhaFalta = true\n\t\t}\n\t}\n\n\tif figurinhaFalta == false { \n\t\tfmt.Print(\"N\")\n\t}\n\tfmt.Println()\n\n}\n",
+            "lines": "49"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+2026-03-23 00:22:32, EXEC, v:1, k:ed@gomos, mode:FULL, size:21, fail:COMP
+2026-03-23 00:39:32, EXEC, v:1, k:ed@gomos, mode:FULL, size:35, fail:COMP
+2026-03-23 01:26:39, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-23 01:26:49, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:38
+2026-03-23 01:27:48, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:39
+2026-03-23 01:27:57, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-23 01:28:31, SELF, v:1, k:ed@gomos, self:1, rate:100, study:150, guided:1, concept:1
