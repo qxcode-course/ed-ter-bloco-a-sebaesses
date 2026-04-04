@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-04_05-50-53",
+            "content": "@@ -80,56 +80,8 @@\n   %7D%0A\n-    %0A    quociente := num/2%0A    resto := num%252%0A%0A\n %7D%0A%0A%0A\n@@ -102,19 +102,17 @@\n     var \n-num\n+x\n  int%0A   \n@@ -122,19 +122,17 @@\n t.Scan(&\n-num\n+x\n )%0A    %0A \n@@ -138,47 +138,35 @@\n     \n-if num %3E 0 %7B%0A        divisao(num)%0A    %7D%0A\n+fmt.Printf(%22%25d %25d%22 num, qtd)\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-04_05-53-06",
+            "content": "@@ -37,17 +37,9 @@\n sao(\n-num int) \n+)\n  %7B%0A \n@@ -126,82 +126,8 @@\n um%252\n-%0A    %0A    %5Ddivisao(quociente)%0A%0A    fmt.Printf(%22%25d %25d/n%22, quociente, resto)\n %0A%0A%7D%0A\n@@ -220,16 +220,17 @@\n ao(num)%0A\n-\n     %7D%0A\n+%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-04_05-56-39",
+            "content": "@@ -136,24 +136,25 @@\n %252%0A    %0A    \n+%5D\n divisao(quoc\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-04_05-56-58",
+            "content": "@@ -185,9 +185,9 @@\n d %25d\n-%5C\n+/\n n%22, \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-04_05-57-47",
+            "content": "@@ -113,11 +113,9 @@\n  num\n- / \n+/\n 2%0A  \n@@ -132,13 +132,15 @@\n  num\n- %25 2%0A\n+%252%0A    \n %0A   \n@@ -159,20 +159,16 @@\n ciente)%0A\n-    \n %0A    fmt\n@@ -204,17 +204,19 @@\n  resto)%0A\n-%7D\n+%0A%7D%0A\n %0A%0Afunc m\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-04_05-58-53",
+            "content": "package main\nimport \"fmt\"\n\nfunc divisao(num int)  {\n    if num == 0 {\n        return\n    }\n    \n    quociente := num / 2\n    resto := num % 2\n\n    divisao(quociente)\n    \n    fmt.Printf(\"%d %d\\n\", quociente, resto)\n}\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    \n    if num > 0 {\n        divisao(num)\n    }\n}\n",
+            "lines": "24"
+        }
+    ]
+}

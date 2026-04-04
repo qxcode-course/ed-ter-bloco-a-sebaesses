@@ -1,0 +1,13 @@
+2026-04-04 05:46:48, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-04 05:46:50, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-04 05:50:53, EXEC, v:1, k:ed@resto, mode:FULL, size:16, fail:COMP
+2026-04-04 05:53:06, EXEC, v:1, k:ed@resto, mode:FULL, size:23, fail:COMP
+2026-04-04 05:56:39, EXEC, v:1, k:ed@resto, mode:FULL, size:26, fail:COMP
+2026-04-04 05:56:58, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:26
+2026-04-04 05:57:47, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:26
+2026-04-04 05:58:10, SELF, v:1, k:ed@resto, self:1, rate:100, study:15, friend:monitor Heitor
+2026-04-04 05:58:15, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-04 05:58:27, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-04 05:58:28, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-04 05:58:53, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:24
+2026-04-04 05:58:58, MOVE, v:1, k:ed@resto, mode:BACK

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-29_18-35-01",
+            "content": "@@ -1,10 +1,8 @@\n-%0A%0A\n package \n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,379 +37,6 @@\n ) %7B%0A\n-%09%0A%09var n int%0A%09fmt.Scan(&n)%0A%0A%09fila := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09var m int%0A%09fmt.Scan(&m)%0A%0A%09sairam := make(map%5Bint%5Dbool)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09var desistente int%0A%09%09fmt.Scan(&desistente)%0A%09%09sairam%5Bdesistente%5D = true%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if sairam%5Bfila%5Bi%5D%5D == false %7B%0A%09%09%09fmt.Printf(%22%25d %22, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()%0A%7D%0A\n+%7D\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-30_22-44-26",
+            "content": "\n\npackage main\nimport \"fmt\"\n\nfunc main() {\n\t\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\n\tsairam := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tvar desistente int\n\t\tfmt.Scan(&desistente)\n\t\tsairam[desistente] = true\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tif sairam[fila[i]] == false {\n\t\t\tfmt.Printf(\"%d \", fila[i])\n\t\t}\n\t}\n\tfmt.Println()\n}\n\n",
+            "lines": "33"
+        }
+    ]
+}

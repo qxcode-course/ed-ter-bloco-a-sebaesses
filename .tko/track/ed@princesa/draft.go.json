@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_13-48-56",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -43,263 +43,9 @@\n     \n-var n, e int%0A%09fmt.Scan(&n, &e)%0A%0A%09roda := make(%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09roda%5Bi%5D + 1%0A%09%7D%0A%0A%09tamanhoAtual%0A%0A%09for len(roda) %3E 1 %7B%0A%09%09tamanhoAtual = (tamanhoAtual  + e - 1) %25 len(roda)%0A%09%09roda = append(roda%5B:tamanhoAtual%5D, roda%5BtamanhoAtual+1;%5D...)%0A%09%7D\n+;\n %0A%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-24_14-26-07",
+            "content": "@@ -301,28 +301,6 @@\n %09%7D%0A%0A\n-%09fmt.Println(roda%5B0%5D)%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-24_14-26-57",
+            "content": "@@ -30,244 +30,22 @@\n unc \n-imprimirRoda(roda %5B%5Dint, indiceEspada int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i := 0; i %3C len(roda); i++ %7B%0A%09%09if i == indiceEspada %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, roda%5Bi%5D)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, roda%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D%0A%0Afunc main() %7B%0A%09\n+main() %7B%0A%0A    \n var \n@@ -96,16 +96,17 @@\n int, n)%0A\n+%0A\n %09for i :\n@@ -132,20 +132,16 @@\n %09roda%5Bi%5D\n- = i\n  + 1%0A%09%7D%0A\n@@ -146,29 +146,20 @@\n %7D%0A%0A%09\n-indiceEspada := e - 1\n+tamanhoAtual\n %0A%0A%09f\n@@ -183,74 +183,43 @@\n %7B%0A%09%09\n-imprimirRoda(roda, indiceEspada)%0A%0A%09%09indiceMorto := (indiceEspada +\n+tamanhoAtual = (tamanhoAtual  + e -\n  1) \n@@ -230,17 +230,16 @@\n n(roda)%0A\n-%0A\n %09%09roda =\n@@ -256,125 +256,73 @@\n da%5B:\n-indiceMorto%5D, roda%5BindiceMorto+1:\n+tamanhoAtual%5D, roda%5BtamanhoAtual+1;\n %5D...)%0A\n-%0A%09%09indiceEspada = indiceMorto %25 len(roda)%0A%09%7D%0A%0A%09imprimirRoda(roda, indiceEspada\n+%09%7D%0A%0A%09fmt.Println(roda%5B0%5D\n )%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-29_21-05-42",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimirRoda(roda []int, indiceEspada int) {\n\tfmt.Print(\"[ \")\n\tfor i := 0; i < len(roda); i++ {\n\t\tif i == indiceEspada {\n\t\t\tfmt.Printf(\"%d> \", roda[i])\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", roda[i])\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n, e int\n\tfmt.Scan(&n, &e)\n\n\troda := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\troda[i] = i + 1\n\t}\n\n\tindiceEspada := e - 1\n\n\tfor len(roda) > 1 {\n\t\timprimirRoda(roda, indiceEspada)\n\n\t\tindiceMorto := (indiceEspada + 1) % len(roda)\n\n\t\troda = append(roda[:indiceMorto], roda[indiceMorto+1:]...)\n\n\t\tindiceEspada = indiceMorto % len(roda)\n\t}\n\n\timprimirRoda(roda, indiceEspada)\n}\n",
+            "lines": "39"
+        }
+    ]
+}
