@@ -1,0 +1,21 @@
+2026-04-06 20:09:25, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-06 20:09:28, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-06 20:19:58, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-04-06 20:20:08, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-06 23:40:39, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-04-06 23:40:41, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-06 23:50:03, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:17
+2026-04-06 23:50:05, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-06 23:50:24, SELF, v:1, k:ed@mdc, self:1, rate:100, study:10
+2026-04-06 23:50:31, SELF, v:1, k:ed@resto, self:1, rate:100, study:15, friend:monitor Heitor
+2026-04-06 23:50:31, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-06 23:50:34, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-06 23:50:49, SELF, v:1, k:ed@resto, self:1, rate:100, study:15
+2026-04-06 23:50:50, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-06 23:50:51, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-06 23:51:00, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-06 23:51:27, SELF, v:1, k:ed@resto, self:1, rate:100, study:15, friend:Monitor Heitor
+2026-04-06 23:52:39, SELF, v:1, k:ed@mdc, self:1, rate:100, study:10
+2026-04-06 23:52:39, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-06 23:52:41, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-06 23:53:54, MOVE, v:1, k:ed@triangulo, mode:PICK
