@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_23-32-10",
+            "content": "@@ -159,46 +159,8 @@\n %0A%09%7D%0A\n-%0A%09if grid%5Bl%5D%5Bc%5D != '#' %7B%0A%09%09return%0A%09%7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-07_23-33-11",
+            "content": "@@ -197,27 +197,8 @@\n %09%7D%0A%0A\n-%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A\n %7D%0A%0Af\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-07_23-34-09",
+            "content": "@@ -216,109 +216,8 @@\n o'%0A%0A\n-%09burnTrees(grid, l-1, c)%0A%09burnTrees(grid, l-1, c)%0A%09burnTrees(grid, l-1, c)%0A%09burnTrees(grid, l-1, c)%0A%0A\n %7D%0A%0Af\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-07_23-35-00",
+            "content": "@@ -259,9 +259,9 @@\n d, l\n-+\n+-\n 1, c\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-07_23-35-08",
+            "content": "@@ -284,13 +284,13 @@\n d, l\n+-1\n , c\n--1\n )%0A%09b\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-07_23-35-22",
+            "content": "@@ -309,13 +309,13 @@\n d, l\n+-1\n , c\n-+1\n )%0A%0A%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-07_23-35-41",
+            "content": "@@ -308,18 +308,18 @@\n id, l, c\n-%0A%09\n++1\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-07_23-36-03",
+            "content": "@@ -308,17 +308,16 @@\n id, l, c\n-)\n %0A%09)%0A%0A%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-07_23-36-08",
+            "content": "@@ -312,12 +312,12 @@\n l, c\n-+\n )%0A%09\n+)\n %0A%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-07_23-36-20",
+            "content": "@@ -313,13 +313,13 @@\n , c+\n-1\n )%0A%09%0A\n+%0A\n %7D%0A%0Af\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-07_23-36-32",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tif l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) {\n\t\treturn\n\t}\n\n\tif grid[l][c] != '#' {\n\t\treturn\n\t}\n\n\tgrid[l][c] = 'o'\n\n\tburnTrees(grid, l-1, c)\n\tburnTrees(grid, l+1, c)\n\tburnTrees(grid, l, c-1)\n\tburnTrees(grid, l, c+1)\n\t\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "48"
+        }
+    ]
+}
