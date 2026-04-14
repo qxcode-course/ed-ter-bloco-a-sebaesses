@@ -12,6 +12,7 @@ func main() {
 
 	figurinhaRepetida := false
 	figurinhaFalta := false
+	
 
 	for i := 0; i < totalCompradas; i++ {
 		var figurinha int

@@ -4,7 +4,8 @@ import "fmt"
 func main() {
 
     var n int
-    fmt.Scan(&n)
+    fmt.Scan(
+        &n)
     
     semPar := make(map[int]int)
 

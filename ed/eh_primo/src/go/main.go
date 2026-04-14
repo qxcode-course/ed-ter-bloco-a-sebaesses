@@ -13,10 +13,6 @@ func eh_primo(x int, div int) bool {
 		return true
 	}	
 
-	if x % 2 == 0 {
-		return false
-	}
-
 	if div * div > x {
 		return true
 	}
