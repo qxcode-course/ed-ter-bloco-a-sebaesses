@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-30-48",
+            "content": "@@ -39,156 +39,8 @@\n  %7B%0A%0A\n-var n int%0Afmt.Scan(&n)%0A%0AidFila := make(%5B%5Dint, n)%0A%0Afor i := 0; i %3C n; i++ %7B%0A%0A%7D%0A%0Avar m int%0Afmt.Scan(&m)%0A%0Afor i := 0; i %3E m; i++ %7B%0A%0A%7D%0A%0Afmt.Println(n-m)\n %0A%0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-14_13-47-27",
+            "content": "@@ -114,28 +114,8 @@\n + %7B%0A\n-%09fmt.Scan(idFila%5Bi%5D)\n %0A%7D%0A%0A\n@@ -142,44 +142,8 @@\n m)%0A%0A\n-deixaramFila := make(map%5Bint%5Dbool)%0A%0A\n for \n@@ -152,17 +152,17 @@\n := 0; i \n-%3C\n+%3E\n  m; i++ \n@@ -167,40 +167,8 @@\n + %7B%0A\n-%09var saiu int%0A%09fmt.Scan(&saiu)%0A%09\n %0A%7D%0A%0A\n@@ -179,14 +179,17 @@\n Println(\n+n-m\n )%0A%0A%7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-53-26",
+            "content": "@@ -158,16 +158,51 @@\n an(&m)%0A%0A\n+deixaramFila := make(map%5Bint%5Dbool)%0A\n %0Afor i :\n@@ -250,16 +250,17 @@\n (&saiu)%0A\n+%09\n %0A%7D%0A%0Afmt.\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_13-53-40",
+            "content": "@@ -162,43 +162,8 @@\n m)%0A%0A\n-deixaramFila := make(map%5Bint%5Dbool)%0A\n %0Afor\n@@ -214,18 +214,16 @@\n n(&saiu)\n-%0A%09\n %0A%0A%7D%0A%0Afmt\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_13-57-05",
+            "content": "@@ -255,119 +255,9 @@\n u)%0A%09\n-sairam%5Bsaiu%5D = true%0A%0A%7D%0A%0Afor i := 0; i %3C n; i++ %7B%0A%09if sairam%5BidFila%5Bi%5D%5D == false %7B%0A%09%09fmt.Printf(%22%25d%22, sairam)%0A%09%7D\n+%0A\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_14-02-43",
+            "content": "@@ -251,28 +251,22 @@\n &saiu)%0A%09\n-deixaramFila\n+sairam\n %5Bsaiu%5D =\n@@ -304,28 +304,22 @@\n + %7B%0A%09if \n-deixaramFila\n+sairam\n %5BidFila%5B\n@@ -352,17 +352,22 @@\n f(%22%25d%22, \n-n\n+sairam\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-03-36",
+            "content": "@@ -373,11 +373,26 @@\n )%0A%09%7D%0A%7D%0A%0A\n+fmt.Println()%0A%0A\n %7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-03-50",
+            "content": "@@ -368,42 +368,15 @@\n d%22, \n-deixaramFila)%0A%09%7D%0A%7D%0A%0A%09fmt.Println()\n+n)%0A%09%7D%0A%7D\n %0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_14-04-09",
+            "content": "@@ -364,17 +364,28 @@\n f(%22%25d%22, \n-m\n+deixaramFila\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-06-46",
+            "content": "@@ -364,20 +364,17 @@\n f(%22%25d%22, \n-saiu\n+m\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-07-00",
+            "content": "@@ -368,12 +368,12 @@\n d%22, \n-fila\n+saiu\n )%0A%09%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-08-46",
+            "content": "@@ -364,25 +364,20 @@\n f(%22%25d%22, \n-idFila%5Bi%5D\n+fila\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-08-53",
+            "content": "@@ -381,12 +381,27 @@\n )%0A%09%7D%0A%7D%0A%0A\n+%09fmt.Println()%0A\n %0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-09-32",
+            "content": "@@ -35,17 +35,16 @@\n in() %7B%0A%0A\n-%09\n var n in\n@@ -41,25 +41,24 @@\n %0A%0Avar n int%0A\n-%09\n fmt.Scan(&n)\n@@ -59,17 +59,16 @@\n an(&n)%0A%0A\n-%09\n idFila :\n@@ -85,17 +85,16 @@\n nt, n)%0A%0A\n-%09\n for i :=\n@@ -131,21 +131,19 @@\n ila%5Bi%5D)%0A\n-%09\n %7D%0A%0A\n-%09\n var m in\n@@ -140,25 +140,24 @@\n %0A%0Avar m int%0A\n-%09\n fmt.Scan(&m)\n@@ -158,17 +158,16 @@\n an(&m)%0A%0A\n-%09\n deixaram\n@@ -194,17 +194,16 @@\n %5Dbool)%0A%0A\n-%09\n for i :=\n@@ -278,21 +278,19 @@\n = true%0A%0A\n-%09\n %7D%0A%0A\n-%09\n for i :=\n@@ -306,17 +306,16 @@\n ; i++ %7B%0A\n-%09\n %09if deix\n@@ -347,17 +347,16 @@\n lse %7B%0A%09%09\n-%09\n fmt.Prin\n@@ -379,31 +379,14 @@\n i%5D)%0A\n-%09\n %09%7D%0A\n-%09\n %7D%0A%0A\n-%09fmt.Println()%0A\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_14-12-06",
+            "content": "@@ -228,17 +228,16 @@\n ; i++ %7B%0A\n-%09\n %09var sai\n@@ -242,17 +242,16 @@\n aiu int%0A\n-%09\n %09fmt.Sca\n@@ -259,17 +259,16 @@\n (&saiu)%0A\n-%09\n %09deixara\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-13-57",
+            "content": "@@ -34,17 +34,16 @@\n ain() %7B%0A\n-%09\n %0A%09var n \n@@ -87,16 +87,17 @@\n int, n)%0A\n+%0A\n %09for i :\n@@ -114,17 +114,16 @@\n ; i++ %7B%0A\n-%09\n %09fmt.Sca\n@@ -124,17 +124,16 @@\n mt.Scan(\n-&\n idFila%5Bi\n@@ -166,20 +166,28 @@\n n(&m)%0A%0A%09\n-saiu\n+deixaramFila\n  := make\n@@ -201,16 +201,17 @@\n t%5Dbool)%0A\n+%0A\n %09for i :\n@@ -234,28 +234,20 @@\n %7B%0A%09%09var \n-deixaramFila\n+saiu\n  int%0A%09%09f\n@@ -259,29 +259,16 @@\n an(&\n-deixaramFila)%0A%09%09saiu%5B\n+saiu)%0A%09%09\n deix\n@@ -275,16 +275,21 @@\n aramFila\n+%5Bsaiu\n %5D = true\n@@ -289,16 +289,17 @@\n  = true%0A\n+%0A\n %09%7D%0A%0A%09for\n@@ -325,20 +325,28 @@\n  %7B%0A%09%09if \n-saiu\n+deixaramFila\n %5BidFila%5B\n@@ -377,17 +377,16 @@\n intf(%22%25d\n- \n %22, idFil\n@@ -398,16 +398,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09fmt.Pri\n@@ -414,11 +414,12 @@\n intln()%0A\n+%0A\n %7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-16-24",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\t\n\tvar n int\n\tfmt.Scan(&n)\n\n\tidFila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&idFila[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\n\tsaiu := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tvar deixaramFila int\n\t\tfmt.Scan(&deixaramFila)\n\t\tsaiu[deixaramFila] = true\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tif saiu[idFila[i]] == false {\n\t\t\tfmt.Printf(\"%d \", idFila[i])\n\t\t}\n\t}\n\tfmt.Println()\n}\n\n",
+            "lines": "31"
+        }
+    ]
+}

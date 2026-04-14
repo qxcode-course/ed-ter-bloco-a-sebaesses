@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-21-40",
+            "content": "@@ -236,45 +236,8 @@\n     \n-if semPar %5BparIdeal %5D%3E 0 %7B%0A%0A        %7D\n %0A%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_13-21-44",
+            "content": "@@ -241,16 +241,17 @@\n f semPar\n+ \n %5BparIdea\n@@ -255,38 +255,16 @@\n deal\n+ \n %5D%3E 0 %7B%0A\n-            pares++    \n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-23-14",
+            "content": "@@ -251,17 +251,16 @@\n arIdeal%5D\n- \n %3E 0 %7B%0A  \n@@ -280,102 +280,22 @@\n es++\n-%0A\n     \n-        semPar%5BparIdeal%5D--%0A        %7D%0A%0A        %7Delse%7B%0A            %0A            %0A        %7D \n+%0A        %7D\n %0A%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-25-33",
+            "content": "@@ -351,24 +351,21 @@\n     \n-semPar%5Banimal%5D++\n+%0A            \n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_13-26-16",
+            "content": "@@ -333,14 +333,12 @@\n    %7D\n- \n else\n- \n %7B%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_13-26-31",
+            "content": "@@ -316,21 +316,20 @@\n %0A       \n-%0A    \n+ %7D%0A%0A\n         \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-14_13-27-12",
+            "content": "@@ -402,17 +402,19 @@\n Println(\n+%22\n pares\n+%22\n )%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_13-27-33",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n    var n int\n    fmt.Scan(&n)\n\n    semPar := make(map[int]int) \n    pares := 0\n\n    for i := 0; i < n; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        parIdeal := -animal\n\n        if semPar[parIdeal] > 0 {\n            pares++\n            semPar[parIdeal]--\n       \n            } else {\n            semPar[animal]++\n        } \n\n    }\n\n    fmt.Println(pares)\n}\n",
+            "lines": "29"
+        }
+    ]
+}
