@@ -1,6 +1,6 @@
-a# Tocando fogo na floresta
+# Tocando fogo na floresta
 
-![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/queimada/cover.jpg)
+![_](../../.tko/cache/8a677bd2f06aa30f815fb05d0ecad35d48d5917b/base/queimada/assets/cover.jpg)
 
 - Seja uma matriz de caracteres que representa um mapa de uma floresta.
 - Cada caractere representa um espaço vazio ou uma árvore.
@@ -27,9 +27,9 @@ Dado a matriz da floresta e o ponto inicial onde começa o fogo, queime as árvo
 
 <!-- links .cache/drafts -->
 - cpp
-  - [main.cpp](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/queimada/.cache/drafts/cpp/main.cpp)
+  - [main.cpp](../../.tko/cache/8a677bd2f06aa30f815fb05d0ecad35d48d5917b/base/queimada/.cache/drafts/cpp/main.cpp)
 - go
-  - [main.go](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/queimada/.cache/drafts/go/main.go)
+  - [main.go](../../.tko/cache/8a677bd2f06aa30f815fb05d0ecad35d48d5917b/base/queimada/.cache/drafts/go/main.go)
 <!-- links -->
 
 ## Testes

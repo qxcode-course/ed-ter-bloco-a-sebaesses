@@ -1,0 +1,229 @@
+2026-04-25 18:46:07, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 18:48:01, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:126, fail:COMP
+2026-04-25 18:48:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:137
+2026-04-25 18:48:34, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 18:50:06, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:143, fail:COMP
+2026-04-25 18:49:52, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:48:34, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:48:34, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:48:33, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:50:29, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:143
+2026-04-25 18:50:50, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:143, fail:COMP
+2026-04-25 18:51:03, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:50:29, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:50:29, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 18:55:52, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 18:59:24, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 18:59:34, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:00:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:00:08, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:00:08, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:00:08, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:00:08, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:00:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:00:54, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:11, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:20, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:32, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:01:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:12, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:22, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:30, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:38, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:46, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:02:54, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:03:06, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:144, fail:COMP
+2026-04-25 19:03:23, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 19:03:31, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:03:38, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:03:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:18, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:29, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:04:59, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:05:07, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:05:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:05:23, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:05:32, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:144
+2026-04-25 19:05:38, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:05:41, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:08:06, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:135, fail:COMP
+2026-04-25 19:05:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:05:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:07:13, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:05:56, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:08:25, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:135, fail:COMP
+2026-04-25 19:08:56, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 19:10:01, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:142
+2026-04-25 19:11:55, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:142
+2026-04-25 19:12:04, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:142
+2026-04-25 19:12:39, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:12:30, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:12:04, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:13:44, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:13:56, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:57, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:57, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:57, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:59, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:59, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:13:59, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:00, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:00, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:01, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:01, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:01, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:11, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:14:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:14:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:19:31, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:167, fail:COMP
+2026-04-25 19:20:25, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:142
+2026-04-25 19:23:13, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:171, fail:COMP
+2026-04-25 19:23:42, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:172, fail:COMP
+2026-04-25 19:23:40, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:20:25, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:20:25, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:23:52, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:171, fail:COMP
+2026-04-25 19:26:17, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:169
+2026-04-25 19:26:05, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:26:17, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:26:17, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:29:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:167
+2026-04-25 19:30:05, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:30:15, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:30:23, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:141, fail:COMP
+2026-04-25 19:30:28, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:30:50, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:31:17, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:31:27, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:31:40, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:29:48, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:31:40, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:31:40, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:31:40, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:34:50, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:36:32, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:140
+2026-04-25 19:36:42, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 19:37:17, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:140
+2026-04-25 19:38:20, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:141
+2026-04-25 19:38:19, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:38:20, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:38:20, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:39:29, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:143
+2026-04-25 19:39:42, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:143
+2026-04-25 19:39:57, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:143
+2026-04-25 19:41:07, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:135
+2026-04-25 19:41:07, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:41:07, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:41:07, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:40:29, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:44:05, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:139, fail:COMP
+2026-04-25 19:45:34, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:138, fail:COMP
+2026-04-25 19:46:05, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:138, fail:COMP
+2026-04-25 19:46:21, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:136, fail:COMP
+2026-04-25 19:48:46, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:130
+2026-04-25 19:48:43, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:48:46, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:48:46, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:49:11, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:130
+2026-04-25 19:49:10, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:49:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 19:49:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 20:12:50, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-25 20:12:50, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 20:12:50, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 20:13:28, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 20:13:47, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 20:13:58, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:08:07, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:145
+2026-04-25 21:08:05, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:08:07, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:08:07, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:12:44, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:146
+2026-04-25 21:13:46, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:12:44, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:12:44, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:14:54, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:138
+2026-04-25 21:16:27, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-25 21:16:48, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 21:18:36, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:124, fail:COMP
+2026-04-25 21:19:00, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 21:19:13, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:124, fail:COMP
+2026-04-25 21:19:41, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:124, fail:COMP
+2026-04-25 21:20:12, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:20:31, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:20:45, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:01, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:09, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:31, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:42, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:21:54, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:00, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:05, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:14, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:20, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:28, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:22:52, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:23:03, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:23:14, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:23:20, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:23:31, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:23:38, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:23:31, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:23:31, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:24:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:24:12, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-25 21:26:14, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:24:12, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:24:12, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:31:58, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:41:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:139
+2026-04-25 21:42:40, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:139
+2026-04-25 21:42:49, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:139, fail:COMP
+2026-04-25 21:42:59, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 21:43:04, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:139
+2026-04-25 21:43:24, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:139
+2026-04-25 21:43:39, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:139
+2026-04-25 21:46:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:153
+2026-04-25 21:46:22, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:153
+2026-04-25 21:46:22, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:46:22, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:46:20, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:44:23, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:46:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:48:08, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:153
+2026-04-25 21:48:08, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:153
+2026-04-25 21:49:05, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:49:13, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:49:43, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:49:55, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:50:00, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:50:08, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:50:13, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:52:09, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:52:22, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:52:28, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:178
+2026-04-25 21:52:27, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:52:28, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:52:28, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:52:57, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 21:53:03, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:07:03, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:13:32, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:97, fail:COMP
+2026-04-25 22:13:31, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:37:35, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-25 22:37:50, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-25 22:38:04, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:50:14, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:135
+2026-04-25 22:50:12, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:50:14, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:50:14, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-25 22:58:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT

@@ -12,7 +12,7 @@ func ri(inf, sup int) float64 {
 func gelo(pen *Pen, dist float64, nivel int){
 	if nivel == 0 || dist < 2 {
         return
-	}
+    }
 
     
     for range 5 {

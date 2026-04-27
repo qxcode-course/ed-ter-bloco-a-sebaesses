@@ -22,12 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
+- ed@rec
 flags:
-  inbox: all
-  panel: graph
+  inbox: inbox
+  panel: skills
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@casais
+selected: ed@fractais_png
+selected_index: 11

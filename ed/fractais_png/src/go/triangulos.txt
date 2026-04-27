@@ -1,0 +1,42 @@
+package main
+
+import (
+	"fmt"
+)
+
+func triangulo(pen *Pen, tamanho float64, nivel int) {
+	if nivel == 0 {
+		for range 3 {
+			pen.Walk(tamanho)
+			pen.Left(120)
+		}
+		return
+	}
+
+	triangulo(pen, tamanho/2, nivel-1)
+
+	pen.Walk(tamanho/2)
+	triangulo(pen, tamanho/2, nivel-1)
+
+	pen.Left(120)
+	pen.Walk(tamanho/2)
+	pen.Right(120)
+
+	triangulo(pen, tamanho/2, nivel-1)
+
+	pen.Left(120)
+	pen.Walk(-tamanho/2)
+	pen.Right(120)
+	pen.Walk(-tamanho/2)
+}
+
+func main() {
+	pen := NewPen(800, 800)
+	pen.SetHeading(180)
+	pen.SetPosition(650, 200)
+
+	triangulo(pen, 500, 6)
+
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

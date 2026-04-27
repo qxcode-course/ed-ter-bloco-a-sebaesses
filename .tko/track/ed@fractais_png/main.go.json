@@ -27,8 +27,698 @@
         },
         {
             "label": "2026-04-14_00-59-00",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc arvere(pen *Pen, dist float64) {\n\tif dist < 10 {\n\t\tif ri(0, 50) == 0 {\n\t\t\tpen.SetRGB(255, 0, 0)\n\t\t\tpen.FillCircle(10)\n\t\t}\n\t\treturn\n\t}\n\tang_dir := ri(10, 40)\n\tang_esq := ri(10, 40)\n\n\tpen.SetLineWidth(dist / 5)\n\tpen.SetRGB(0, 0, 0)\n\tpen.Walk(dist)\n\tpen.Right(ang_dir)\n\tarvere(pen, dist*(ri(80, 85)/100))\n\tpen.Left(ang_dir + ang_esq)\n\tarvere(pen, dist*(ri(80, 85)/100))\n\tpen.Right(ang_esq)\n\tpen.SetRGB(0, 0, 0)\n\tpen.Walk(-dist)\n}\n\nfunc main() {\n\tpen := NewPen(600, 500)\n\tpen.SetHeading(90)\n\tpen.SetPosition(300, 500)\n\tarvere(pen, 80)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -118,16 +118,447 @@\n inf)%0A%7D%0A%0A\n+func arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)%0A%7D\n %0A%0Afunc m\n",
             "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-25-03",
+            "content": "@@ -207,16 +207,31 @@\n , 500)%0A%09\n+arvere(pen, 80)\n %0A%09pen.Sa\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-15_22-25-14",
+            "content": "@@ -122,439 +122,8 @@\n %0A%7D%0A%0A\n-func arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)%0A%7D\n %0A%0Afu\n@@ -211,23 +211,8 @@\n 0)%0A%09\n-arvere(pen, 80)\n %0A%09pe\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-15_22-26-13",
+            "content": "@@ -580,18 +580,17 @@\n  NewPen(\n-10\n+6\n 00, 500)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-26-22",
+            "content": "@@ -586,18 +586,17 @@\n n(1000, \n-10\n+5\n 00)%0A%09pen\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-26-29",
+            "content": "@@ -580,22 +580,24 @@\n  NewPen(\n-3\n+10\n 00, \n-5\n+10\n 00)%0A%09pen\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-26-46",
+            "content": "@@ -580,17 +580,17 @@\n  NewPen(\n-6\n+3\n 00, 500)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-26-57",
+            "content": "@@ -584,9 +584,9 @@\n Pen(\n-7\n+6\n 00, \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-27-06",
+            "content": "@@ -580,17 +580,17 @@\n  NewPen(\n-6\n+7\n 00, 500)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-27-20",
+            "content": "@@ -586,17 +586,17 @@\n n(600, 5\n-5\n+0\n 0)%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-27-27",
+            "content": "@@ -582,16 +582,17 @@\n ewPen(60\n+0\n , 550)%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-27-39",
+            "content": "@@ -582,21 +582,20 @@\n ewPen(60\n-0\n , 5\n-0\n+5\n 0)%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-27-49",
+            "content": "@@ -27,16 +27,8 @@\n mt%22%0A\n-%09%22math%22%0A\n %09%22ma\n@@ -48,33 +48,32 @@\n unc \n-(t*Pen) Walk(dist\n+ri(inf, sup int)\n  float64\n ) %7B%0A\n@@ -72,206 +72,54 @@\n at64\n-)\n  %7B%0A%09\n-newX := t.x + dist*math.Cos(t.angle*math.Pi/180)%0A%09newY := t.y - dist*math.Cos(t.angle*math.Pi/180)%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, newX, newY)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y, newX, newY\n+return float64(rand.Intn(sup-inf+1) + inf)\n %0A%7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-15_22-33-03",
+            "content": "@@ -1,20 +1,73 @@\n+package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math%22%0A%09%22math/rand%22%0A)%0A%0A\n func (t\n- \n *Pen) Walk(d\n@@ -160,11 +160,11 @@\n ath.\n-Sin\n+Cos\n (t.a\n@@ -263,18 +263,17 @@\n t.x, t.y\n- =\n+,\n  newX, n\n@@ -288,1520 +288,432 @@\n unc \n-(t *Pen) Left(deg float64)  %7B t.angle += deg %7D%0Afunc (t *Pen) Right(deg float64) %7B t.angle -= deg %7D%0A%0Afunc (t *Pen) Up()   %7B t.penDown = false %7D%0Afunc (t *Pen) Down() %7B t.penDown = true %7D%0A%0Afunc (t *Pen) Goto(x, y float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, x, y)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y = x, y%0A%7D%0A%0Afunc (t *Pen) SetPosition(x, y float64) %7B%0A%09t.x = x%0A%09t.y = y%0A%7D%0A%0Afunc (t *Pen) SetHeading(angle float64) %7B%0A%09t.angle = angle%0A%7D%0A%0Afunc (t *Pen) DrawCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) DrawRect(w, h float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawRectangle(t.x, t.y, w, h\n+arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0\n )%0A%09%09\n-t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Fill()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillSquare(w, h float64) %7B%0A%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09t.dc.Fill()%0A%7D%0A%0Afunc (t *Pen) SetRGB(r, g, b float64) %7B%0A%09t.dc.SetRGB(r/255, g/255, b/255)%0A%7D%0A%0Afunc (t *Pen) SetLineWidth(w float64) %7B%0A%09t.dc.SetLineWidth(w)%0A%7D%0A%0Afunc (t *Pen) SavePNG(path string) %7B%0A%09t.dc.SavePNG(path)%0A%7D%0A%0Afunc kochCurve(pen *Pen, dist float64, level int) %7B%0A%09if level == 0 %7B%0A%09%09pen.Walk(dist)%0A%09%09return%0A%09%7D%0A%09segmento := dist / 3.0%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCu\n+%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09a\n rve\n+re\n (pen, \n-segmento, level-1)%0A%09pen.Right(120)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%7D%0A%0Afunc floco(pen *Pen, tamanho float64, nivel int) %7B%0A%09for i := 0; i %3C 3; i++ %7B%0A%09%09kochCurve(pen, tamanho, nivel)%0A%09%09pen.Right(120)%0A%09%7D\n+dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)\n %0A%7D%0A%0A\n@@ -745,20 +745,18 @@\n Pen(\n-8\n+6\n 00, \n-8\n+5\n 00)%0A\n-%09%0A\n %09pen\n@@ -767,16 +767,17 @@\n Heading(\n+9\n 0)%0A%09pen.\n@@ -792,39 +792,34 @@\n ion(\n-15\n+30\n 0, \n-5\n 50\n-)%0A%0A%09floco(pen, 500, 4)%0A\n+0)%0A%09arvere(pen, 80)\n %0A%09pe\n@@ -829,21 +829,20 @@\n avePNG(%22\n-floco\n+tree\n .png%22)%0A%09\n@@ -858,37 +858,38 @@\n ln(%22\n-floco.png gerado com\n+PNG file created\n  suc\n+c\n ess\n-o!\n+fully.\n %22)%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_22-34-23",
+            "content": "@@ -1,65 +1,12 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math%22%0A%09%22math/rand%22%0A)%0A%0A\n func (t\n+ \n *Pen\n@@ -95,35 +95,35 @@\n t.y - dist*math.\n-Cos\n+Sin\n (t.angle*math.Pi\n@@ -210,23 +210,29 @@\n t.x, t.y\n-,\n+ =\n  newX,\n+ newY\n %0A%7D%0A%0Afunc\n@@ -236,432 +236,1520 @@\n unc \n-arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09a\n+(t *Pen) Left(deg float64)  %7B t.angle += deg %7D%0Afunc (t *Pen) Right(deg float64) %7B t.angle -= deg %7D%0A%0Afunc (t *Pen) Up()   %7B t.penDown = false %7D%0Afunc (t *Pen) Down() %7B t.penDown = true %7D%0A%0Afunc (t *Pen) Goto(x, y float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, x, y)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y = x, y%0A%7D%0A%0Afunc (t *Pen) SetPosition(x, y float64) %7B%0A%09t.x = x%0A%09t.y = y%0A%7D%0A%0Afunc (t *Pen) SetHeading(angle float64) %7B%0A%09t.angle = angle%0A%7D%0A%0Afunc (t *Pen) DrawCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) DrawRect(w, h float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Fill()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillSquare(w, h float64) %7B%0A%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09t.dc.Fill()%0A%7D%0A%0Afunc (t *Pen) SetRGB(r, g, b float64) %7B%0A%09t.dc.SetRGB(r/255, g/255, b/255)%0A%7D%0A%0Afunc (t *Pen) SetLineWidth(w float64) %7B%0A%09t.dc.SetLineWidth(w)%0A%7D%0A%0Afunc (t *Pen) SavePNG(path string) %7B%0A%09t.dc.SavePNG(path)%0A%7D%0A%0Afunc kochCurve(pen *Pen, dist float64, level int) %7B%0A%09if level == 0 %7B%0A%09%09pen.Walk(dist)%0A%09%09return%0A%09%7D%0A%09segmento := dist / 3.0%0A%09kochCu\n rve\n-re\n (pen, \n-dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)\n+segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Right(120)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%7D%0A%0Afunc floco(pen *Pen, tamanho float64, nivel int) %7B%0A%09for i := 0; i %3C 3; i++ %7B%0A%09%09kochCurve(pen, tamanho, nivel)%0A%09%09pen.Right(120)%0A%09%7D\n %0A%7D%0A%0A\n@@ -1781,18 +1781,20 @@\n Pen(\n-6\n+8\n 00, \n-5\n+8\n 00)%0A\n+%09%0A\n %09pen\n@@ -1809,9 +1809,8 @@\n ing(\n-9\n 0)%0A%09\n@@ -1829,34 +1829,39 @@\n ion(\n-30\n+15\n 0, 5\n-00)%0A%09arvere(pen, 80)\n+50)%0A%0A%09floco(pen, 500, 4)%0A\n %0A%09pe\n@@ -1875,12 +1875,13 @@\n NG(%22\n-tree\n+floco\n .png\n@@ -1901,38 +1901,37 @@\n ln(%22\n-PNG file created\n+floco.png gerado com\n  suc\n-c\n ess\n-fully.\n+o!\n %22)%0A%7D\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-04-15_22-34-51",
+            "content": "@@ -50,25 +50,24 @@\n %22%0A)%0A%0Afunc (t\n- \n *Pen) Walk(d\n@@ -160,11 +160,11 @@\n ath.\n-Sin\n+Cos\n (t.a\n@@ -267,21 +267,15 @@\n  t.y\n- =\n+,\n  newX,\n- newY\n %0A%7D%0A%0A\n@@ -283,1152 +283,238 @@\n unc \n-(t *Pen) Left(deg float64)  %7B t.angle += deg %7D%0Afunc (t *Pen) Right(deg float64) %7B t.angle -= deg %7D%0A%0Afunc (t *Pen) Up()   %7B t.penDown = false %7D%0Afunc (t *Pen) Down() %7B t.penDown = true %7D%0A%0Afunc (t *Pen) Goto(x, y float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, x, y)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y = x, y%0A%7D%0A%0Afunc (t *Pen) SetPosition(x, y float64) %7B%0A%09t.x = x%0A%09t.y = y%0A%7D%0A%0Afunc (t *Pen) SetHeading(angle float64) %7B%0A%09t.angle = angle%0A%7D%0A%0Afunc (t *Pen) DrawCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) DrawRect(w, h float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawRectangle(t.x, t.y, w, h\n+arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0\n )%0A%09%09\n-t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Fill()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillSquare(w, h float64) %7B%0A%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09t.dc.Fill()%0A%7D%0A%0Afunc (t *Pen) SetRGB(r, g, b float64) %7B%0A%09t.dc.SetRGB(r/255, g/255, b/255)%0A%7D%0A%0Afunc (t *Pen) SetLineWidth(w float64) %7B%0A%09t.dc.SetLineWidth(w)%0A%7D%0A%0Afunc (t *Pen) SavePNG(path string) %7B%0A%09t.dc.SavePNG(path)%0A%7D%0A%0Afunc kochCurve(pen *Pen, dist float64, level int) %7B%0A%09if level == 0 %7B%0A%09\n+%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A\n %09pen\n@@ -530,359 +530,185 @@\n t)%0A%09\n-%09return%0A%09%7D%0A%09segmento := dist / 3.0%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCu\n+pen.Right(ang_dir)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09a\n rve\n+re\n (pen, \n-segmento, level-1)%0A%09pen.Right(120)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%7D%0A%0Afunc floco(pen *Pen, tamanho float64, nivel int) %7B%0A%09for i := 0; i %3C 3; i++ %7B%0A%09%09kochCurve(pen, tamanho, nivel)%0A%09%09pen.Right(120)%0A%09%7D\n+dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)\n %0A%7D%0A%0A\n@@ -740,20 +740,18 @@\n Pen(\n-8\n+6\n 00, \n-8\n+5\n 00)%0A\n-%09%0A\n %09pen\n@@ -762,16 +762,17 @@\n Heading(\n+9\n 0)%0A%09pen.\n@@ -787,39 +787,34 @@\n ion(\n-15\n+30\n 0, 5\n-50)%0A%0A%09floco(pen, 500, 4)%0A\n+00)%0A%09arvere(pen, 80)\n %0A%09pe\n@@ -824,21 +824,20 @@\n avePNG(%22\n-floco\n+tree\n .png%22)%0A%09\n@@ -853,37 +853,38 @@\n ln(%22\n-floco.png gerado com\n+PNG file created\n  suc\n+c\n ess\n-o!\n+fully.\n %22)%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-15_22-35-14",
+            "content": "@@ -32,16 +32,27 @@\n %22math%22%0A%09\n+%22math/rand%22\n %0A)%0A%0Afunc\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-04-15_22-35-28",
+            "content": "@@ -23,17 +23,1340 @@\n %0A%09%22fmt%22%0A\n-)\n+%09%22math%22%0A%09%0A)%0A%0Afunc (t *Pen) Walk(dist float64) %7B%0A%09newX := t.x + dist*math.Cos(t.angle*math.Pi/180)%0A%09newY := t.y - dist*math.Sin(t.angle*math.Pi/180)%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, newX, newY)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y = newX, newY%0A%7D%0A%0Afunc (t *Pen) Left(deg float64)  %7B t.angle += deg %7D%0Afunc (t *Pen) Right(deg float64) %7B t.angle -= deg %7D%0A%0Afunc (t *Pen) Up()   %7B t.penDown = false %7D%0Afunc (t *Pen) Down() %7B t.penDown = true %7D%0A%0Afunc (t *Pen) Goto(x, y float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawLine(t.x, t.y, x, y)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%09t.x, t.y = x, y%0A%7D%0A%0Afunc (t *Pen) SetPosition(x, y float64) %7B%0A%09t.x = x%0A%09t.y = y%0A%7D%0A%0Afunc (t *Pen) SetHeading(angle float64) %7B%0A%09t.angle = angle%0A%7D%0A%0Afunc (t *Pen) DrawCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) DrawRect(w, h float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09%09t.dc.Stroke()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillCircle(radius float64) %7B%0A%09if t.penDown %7B%0A%09%09t.dc.DrawCircle(t.x, t.y, radius)%0A%09%09t.dc.Fill()%0A%09%7D%0A%7D%0A%0Afunc (t *Pen) FillSquare(w, h float64) %7B%0A%09t.dc.DrawRectangle(t.x, t.y, w, h)%0A%09t.dc.Fill()%0A%7D%0A%0Afunc (t *Pen) SetRGB(r, g, b float64) %7B%0A%09t.dc.SetRGB(r/255, g/255, b/255)%0A%7D%0A%0Afunc (t *Pen) SetLineWidth(w float64) %7B%0A%09t.dc.SetLineWidth(w)%0A%7D%0A%0Afunc (t *Pen) SavePNG(path string) %7B%0A%09t.dc.SavePNG(path)%0A%7D\n %0A%0Afunc k\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-04-15_22-37-29",
+            "content": "@@ -604,11 +604,55 @@\n .png%22)%0A%09\n+fmt.Println(%22floco.png gerado com sucesso!%22)\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-15_22-37-54",
+            "content": "@@ -608,51 +608,7 @@\n %22)%0A%09\n-fmt.Println(%22floco.png gerado com sucesso!%22)\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-15_22-38-11",
+            "content": "@@ -26,8 +26,633 @@\n fmt%22%0A)%0A%0A\n+func kochCurve(pen *Pen, dist float64, level int) %7B%0A%09if level == 0 %7B%0A%09%09pen.Walk(dist)%0A%09%09return%0A%09%7D%0A%09segmento := dist / 3.0%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Right(120)%0A%09kochCurve(pen, segmento, level-1)%0A%09pen.Left(60)%0A%09kochCurve(pen, segmento, level-1)%0A%7D%0A%0Afunc floco(pen *Pen, tamanho float64, nivel int) %7B%0A%09for i := 0; i %3C 3; i++ %7B%0A%09%09kochCurve(pen, tamanho, nivel)%0A%09%09pen.Right(120)%0A%09%7D%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(800, 800)%0A%09%0A%09pen.SetHeading(0)%0A%09pen.SetPosition(150, 550)%0A%0A%09floco(pen, 500, 4)%0A%0A%09pen.SavePNG(%22floco.png%22)%0A%09fmt.Println(%22floco.png gerado com sucesso!%22)%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-15_22-44-37",
+            "content": "@@ -27,369 +27,7 @@\n mt%22%0A\n-%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc gelo(pen *Pen, dist float64, nivel int)%7B%0A%09if nivel == 0 %7C%7C dist %3C 2 %7B%0A        return%0A    %7D%0A%0A    %0A    for range 5 %7B%0A        pen.Walk(dist)%0A        %0A            gelo(pen, dist * 0.35, nivel - 3)%0A        %0A        pen.Walk(-dist)%0A        pen.Right(72)   %0A%09%09%0A    %7D%0A%09%0A%7D\n+)\n %0A%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-25_18-48-01",
+            "content": "@@ -392,185 +392,4 @@\n %0A%7D%0A%0A\n-func main() %7B%0A%09pen := NewPen(800, 800)%0A%09pen.SetHeading(0)%0A%09pen.SetPosition(400, 400)%0A%09gelo(pen, 200, 2)%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-25_18-48-16",
+            "content": "@@ -123,22 +123,20 @@\n %7D%0A%0Afunc \n-arvore\n+gelo\n (pen *Pe\n@@ -154,23 +154,47 @@\n at64\n-) %7B%0A%09if\n+, nivel int)%7B%0A%09if nivel == 0 %7C%7C\n  dist %3C \n 10 %7B\n@@ -193,393 +193,207 @@\n t %3C \n-10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)\n+2 %7B%0A        return%0A    %7D%0A%0A    %0A    for range 5 %7B%0A        pen.Walk(dist)%0A        %0A            gelo(pen, dist * 0.35, nivel - 3)%0A        %0A        pen.Walk(-dist)%0A        pen.Right(72)   %0A%09%09%0A    %7D%0A%09\n %0A%7D%0A%0A\n-%0A\n func\n@@ -478,14 +478,12 @@\n 0)%0A%09\n-arvore\n+gelo\n (pen\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-25_18-50-06",
+            "content": "@@ -638,16 +638,35 @@\n , 400)%0A%09\n+arvore(pen, 200, 2)\n %0A%0A%09pen.S\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_18-50-29",
+            "content": "@@ -642,25 +642,8 @@\n 0)%0A%09\n-gelo(pen, 200, 2)\n %0A%0A%09p\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_18-50-50",
+            "content": "@@ -611,9 +611,8 @@\n ing(\n-9\n 0)%0A%09\n@@ -636,31 +636,30 @@\n 00, \n-75\n+40\n 0)%0A%09\n-%0A%09arvore(pen, 150\n+gelo(pen, 200, 2\n )%0A%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_18-55-52",
+            "content": "@@ -167,17 +167,17 @@\n  dist %3C \n-2\n+1\n 0 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_18-59-24",
+            "content": "@@ -171,9 +171,9 @@\n t %3C \n-3\n+2\n 0 %7B%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_18-59-34",
+            "content": "@@ -167,18 +167,17 @@\n  dist %3C \n-10\n+3\n 0 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-00-02",
+            "content": "@@ -167,17 +167,18 @@\n  dist %3C \n-4\n+10\n 0 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-00-08",
+            "content": "@@ -171,10 +171,10 @@\n t %3C \n-35\n+40\n  %7B%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-00-16",
+            "content": "@@ -184,16 +184,17 @@\n  ri(0, 5\n+0\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-00-54",
+            "content": "@@ -183,17 +183,17 @@\n f ri(0, \n-1\n+5\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-02",
+            "content": "@@ -183,17 +183,17 @@\n f ri(0, \n-0\n+1\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-11",
+            "content": "@@ -167,17 +167,17 @@\n  dist %3C \n-2\n+3\n 5 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-20",
+            "content": "@@ -171,10 +171,10 @@\n t %3C \n-30\n+25\n  %7B%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-32",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 3\n-5\n+0\n  %7B%0A%09%09if \n@@ -183,17 +183,17 @@\n f ri(0, \n-2\n+0\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-49",
+            "content": "@@ -171,10 +171,10 @@\n t %3C \n-20\n+35\n  %7B%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-01-58",
+            "content": "@@ -187,9 +187,9 @@\n (0, \n-3\n+2\n ) ==\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-12",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 2\n-5\n+0\n  %7B%0A%09%09if \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-22",
+            "content": "@@ -167,18 +167,18 @@\n  dist %3C \n-10\n+25\n  %7B%0A%09%09if \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-30",
+            "content": "@@ -167,17 +167,17 @@\n  dist %3C \n-4\n+1\n 0 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-38",
+            "content": "@@ -167,17 +167,17 @@\n  dist %3C \n-3\n+4\n 0 %7B%0A%09%09if\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-46",
+            "content": "@@ -168,17 +168,17 @@\n dist %3C 3\n-5\n+0\n  %7B%0A%09%09if \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-02-54",
+            "content": "@@ -187,11 +187,9 @@\n (0, \n-2,5\n+3\n ) ==\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-03-06",
+            "content": "@@ -184,16 +184,18 @@\n  ri(0, 2\n+,5\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-03-31",
+            "content": "@@ -183,17 +183,17 @@\n f ri(0, \n-1\n+2\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-03-38",
+            "content": "@@ -183,17 +183,17 @@\n f ri(0, \n-0\n+1\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-03-49",
+            "content": "@@ -1,742 +1,108 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc arvore(pen *Pen, dist float64) %7B%0A%09if dist %3C 25 %7B%0A%09%09if ri(0, 10) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)%0A%7D%0A%0A%0Afunc main() %7B%0A%09pen := NewPen(800, 800)%0A%09pen.SetHeading(90)%0A%09pen.SetPosition(400, 750)%0A%09%0A%09arvore(pen, 150)%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A%0A\n+@@ -167,17 +167,17 @@%0A  dist %253C %0A-2%0A+3%0A 5 %257B%250A%2509%2509if%0A@@ -183,17 +183,17 @@%0A f ri(0, %0A-1%0A+0%0A ) == 0 %257B\n %0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-25_19-04-18",
+            "content": "@@ -171,9 +171,9 @@\n t %3C \n-3\n+2\n 5 %7B%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-04-29",
+            "content": "@@ -183,17 +183,18 @@\n f ri(0, \n-3\n+10\n ) == 0 %7B\n@@ -237,17 +237,18 @@\n lCircle(\n-5\n+10\n )%0A%09%09%7D%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-04-49",
+            "content": "@@ -183,17 +183,17 @@\n f ri(0, \n-0\n+3\n ) == 0 %7B\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-04-59",
+            "content": "@@ -236,17 +236,16 @@\n lCircle(\n-1\n 5)%0A%09%09%7D%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-05-07",
+            "content": "@@ -240,10 +240,10 @@\n cle(\n-30\n+15\n )%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-05-16",
+            "content": "@@ -236,17 +236,17 @@\n lCircle(\n-1\n+3\n 0)%0A%09%09%7D%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-05-23",
+            "content": "@@ -237,17 +237,17 @@\n Circle(1\n-5\n+0\n )%0A%09%09%7D%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-05-32",
+            "content": "@@ -1,17 +1,140 @@\n-func circulos\n+package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc arvore\n (pen\n@@ -144,20 +144,20 @@\n en, \n-raio\n+dist\n  float64\n , ni\n@@ -156,31 +156,41 @@\n at64\n-, nivel int)\n+) %7B%0A%09if dist %3C 35 \n %7B%0A\n+%09\n %09if \n-nivel\n+ri(0, 0)\n  == \n@@ -199,85 +199,165 @@\n %7B%0A%09%09\n-return%0A%09%7D%0A\n+%09pen.SetRGB(255, 0, 0)%0A%09%09\n %09pen.\n-Draw\n+Fill\n Circle(\n-raio)%0A%0A%09for range 6 %7B%0A%09%09pen.Right(60)%0A%0A%09\n+15)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A\n %09pen.\n-Up(\n+SetRGB(0, 0, 0\n )%0A\n-%09\n %09pen\n@@ -366,111 +366,176 @@\n alk(\n-raio\n+dist\n )%0A\n-%09\n %09pen.\n-Down()%0A%0A%09%09pen.Right(90)%0A%0A%09%09circulos(pen, raio*0.33, nivel-1)%0A%09%09%0A%09%09pen.Up(\n+Right(ang_dir)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvore(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq\n )%0A\n-%09\n %09pen.\n-Left(9\n+SetRGB(0, 0, \n 0)%0A\n-%09\n %09pen\n@@ -545,32 +545,15 @@\n lk(-\n-raio)%0A%09%09pen.Down()%0A%09%7D%0A%7D%0A\n+dist)%0A%7D\n %0A%0A%0Af\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_19-08-06",
+            "content": "@@ -379,24 +379,22 @@\n 750)%0A%09%0A%09\n-circulos\n+arvore\n (pen, 15\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-25_19-08-25",
+            "content": "@@ -1,129 +1,4 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0A\n func\n@@ -288,16 +288,18 @@\n )%0A%09%7D%0A%7D%0A%0A\n+%0A%0A\n func mai\n@@ -345,16 +345,17 @@\n Heading(\n+9\n 0)%0A%09pen.\n@@ -375,12 +375,14 @@\n 00, \n-400)\n+750)%0A%09\n %0A%09ci\n@@ -397,14 +397,11 @@\n en, \n-200, 2\n+150\n )%0A%0A%09\n@@ -471,11 +471,12 @@\n ully.%22)%0A\n-\n %7D%0A%0A\n+%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-25_19-10-00",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-3\n+2\n )%0A%0A%09pen.\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-25_19-11-55",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-4\n+3\n )%0A%0A%09pen.\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-25_19-12-04",
+            "content": "@@ -315,651 +315,8 @@\n 0)%0A%0A\n-%09%09n := 5%0A%09%09startAngleDeg := 18.0%0A%09%09polygonRaio := smallRaio * 1.5%0A%09%09stepAngle := 360.0 / float64(n)%0A%0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09angleRad := (startAngleDeg + stepAngle*float64(i)) * math.Pi / 180.0%0A%09%09%09vx := penOriginalX + polygonRaio*math.Cos(angleRad)%0A%09%09%09vy := penOriginalY - polygonRaio*math.Sin(angleRad)%0A%09%09%09if i == 0 %7B%0A%09%09%09%09pen.Up()%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%09pen.Down()%0A%09%09%09%7D else %7B%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09startAngleRad := startAngleDeg * math.Pi / 180.0%0A%09%09pen.Goto(penOriginalX+polygonRaio*math.Cos(startAngleRad), penOriginalY-polygonRaio*math.Sin(startAngleRad))%0A%0A%09%09pen.Up()%0A%09%09pen.Goto(penOriginalX, penOriginalY)%0A%09%09pen.Down()%0A%0A\n %09%09ci\n@@ -331,17 +331,17 @@\n en, \n-smallRaio\n+raio*0.33\n , ni\n@@ -347,16 +347,18 @@\n ivel-1)%0A\n+%09%09\n %0A%09%09pen.U\n@@ -410,17 +410,16 @@\n wn()%0A%09%7D%0A\n-%0A\n %7D%0A%0Afunc \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-25_19-19-31",
+            "content": "@@ -317,31 +317,674 @@\n %0A%0A%09%09\n-circulos(pen, raio*0.33\n+n := 5%0A%09%09startAngleDeg := 18.0%0A%09%09polygonRaio := smallRaio * 1.5%0A%09%09stepAngle := 360.0 / float64(n)%0A%0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09angleRad := (startAngleDeg + stepAngle*float64(i)) * math.Pi / 180.0%0A%09%09%09vx := penOriginalX + polygonRaio*math.Cos(angleRad)%0A%09%09%09vy := penOriginalY - polygonRaio*math.Sin(angleRad)%0A%09%09%09if i == 0 %7B%0A%09%09%09%09pen.Up()%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%09pen.Down()%0A%09%09%09%7D else %7B%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09startAngleRad := startAngleDeg * math.Pi / 180.0%0A%09%09pen.Goto(penOriginalX+polygonRaio*math.Cos(startAngleRad), penOriginalY-polygonRaio*math.Sin(startAngleRad))%0A%0A%09%09pen.Up()%0A%09%09pen.Goto(penOriginalX, penOriginalY)%0A%09%09pen.Down()%0A%0A%09%09circulos(pen, smallRaio\n , ni\n@@ -990,18 +990,16 @@\n ivel-1)%0A\n-%09%09\n %0A%09%09pen.U\n@@ -1051,16 +1051,17 @@\n wn()%0A%09%7D%0A\n+%0A\n %7D%0A%0Afunc \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-04-25_19-20-25",
+            "content": "@@ -315,758 +315,46 @@\n 0)%0A%0A\n-%0AsmallRaio := raio / 3.0%0A%09%09penOriginalX, penOriginalY := pen.x, pen.y%0A%0A%09%09n := 5%0A%09%09startAngleDeg := 18.0%0A%09%09polygonRaio := smallRaio * 1.5%0A%09%09stepAngle := 360.0 / float64(n)%0A%0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09angleRad := (startAngleDeg + stepAngle*float64(i)) * math.Pi / 180.0%0A%09%09%09vx := penOriginalX + polygonRaio*math.Cos(angleRad)%0A%09%09%09vy := penOriginalY - polygonRaio*math.Sin(angleRad)%0A%09%09%09if i == 0 %7B%0A%09%09%09%09pen.Up()%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%09pen.Down()%0A%09%09%09%7D else %7B%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09startAngleRad := startAngleDeg * math.Pi / 180.0%0A%09%09pen.Goto(penOriginalX+polygonRaio*math.Cos(startAngleRad), penOriginalY-polygonRaio*math.Sin(startAngleRad))%0A%0A%09%09pen.Up()%0A%09%09pen.Goto(penOriginalX, penOriginalY)%0A%09%09pen.Down()%0A%0A%09%09circulos(pen, smallRaio, nivel-1)%0A\n+%09%09circulos(pen, raio*0.33, nivel-1)%0A%09%09\n %0A%09%09p\n@@ -411,19 +411,16 @@\n n()%0A%09%7D%0A%7D\n-%0A%09%09\n %0A%0Afunc m\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-25_19-23-13",
+            "content": "@@ -29,20 +29,17 @@\n %22%0A%09%22math\n-%22%0A%09%22\n+/\n rand%22%0A)%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-25_19-23-42",
+            "content": "@@ -29,17 +29,20 @@\n %22%0A%09%22math\n-/\n+%22%0A%09%22\n rand%22%0A)%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-25_19-23-52",
+            "content": "@@ -33,13 +33,95 @@\n math\n-%22%0A)%0A%0A\n+/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D\n %0A%0Afu\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-25_19-26-17",
+            "content": "@@ -34,16 +34,18 @@\n ath%22%0A)%0A%0A\n+%0A%0A\n func cir\n@@ -87,60 +87,178 @@\n  int\n-, leva int) %7B%0A%09pen.DrawCircle(raio)%0A%0A%09if leva == 4 %7B\n+)%7B%0A%09if nivel == 0 %7B%0A%09%09return%0A%09%7D%0A%09pen.DrawCircle(raio)%0A%0A%09for range 6 %7B%0A%09%09pen.Right(60)%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(raio)%0A%09%09pen.Down()%0A%0A%09%09pen.Right(90)%0A%0A%0AsmallRaio := raio / 3.0\n %0A%09%09p\n@@ -299,16 +299,17 @@\n , pen.y%0A\n+%0A\n %09%09n := 5\n@@ -346,25 +346,30 @@\n ygonRaio := \n-r\n+smallR\n aio * 1.5%0A%09%09\n@@ -946,158 +946,8 @@\n n()%0A\n-%09%7D%0A%0A%09if nivel == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09for range 6 %7B%0A%09%09pen.Right(60)%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(raio)%0A%09%09pen.Down()%0A%0A%09%09pen.Right(90)%0A%0A%09%09smallRaio := raio / 3.0\n %0A%09%09c\n@@ -981,16 +981,8 @@\n el-1\n-, leva+1\n )%0A%0A%09\n@@ -1041,16 +1041,19 @@\n n()%0A%09%7D%0A%7D\n+%0A%09%09\n %0A%0Afunc m\n@@ -1131,17 +1131,16 @@\n 0, 400)%0A\n-%0A\n %09circulo\n@@ -1155,12 +1155,9 @@\n 00, \n-3, 1\n+4\n )%0A%0A%09\n@@ -1229,8 +1229,9 @@\n ly.%22)%0A%7D%0A\n+%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-04-25_19-29-16",
+            "content": "@@ -33,13 +33,8 @@\n math\n-/rand\n %22%0A)%0A\n@@ -43,131 +43,788 @@\n unc \n-ri(inf, sup\n+circulos(pen *Pen, raio float64, nivel int, leva\n  int) \n-float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc circulos(pen *Pen, raio float64, nivel int)%7B\n+%7B%0A%09pen.DrawCircle(raio)%0A%0A%09if leva == 4 %7B%0A%09%09penOriginalX, penOriginalY := pen.x, pen.y%0A%09%09n := 5%0A%09%09startAngleDeg := 18.0%0A%09%09polygonRaio := raio * 1.5%0A%09%09stepAngle := 360.0 / float64(n)%0A%0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09angleRad := (startAngleDeg + stepAngle*float64(i)) * math.Pi / 180.0%0A%09%09%09vx := penOriginalX + polygonRaio*math.Cos(angleRad)%0A%09%09%09vy := penOriginalY - polygonRaio*math.Sin(angleRad)%0A%09%09%09if i == 0 %7B%0A%09%09%09%09pen.Up()%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%09pen.Down()%0A%09%09%09%7D else %7B%0A%09%09%09%09pen.Goto(vx, vy)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09startAngleRad := startAngleDeg * math.Pi / 180.0%0A%09%09pen.Goto(penOriginalX+polygonRaio*math.Cos(startAngleRad), penOriginalY-polygonRaio*math.Sin(startAngleRad))%0A%0A%09%09pen.Up()%0A%09%09pen.Goto(penOriginalX, penOriginalY)%0A%09%09pen.Down()%0A%09%7D%0A\n %0A%09if\n@@ -848,38 +848,16 @@\n eturn%0A%09%7D\n-%0A%09pen.DrawCircle(raio)\n %0A%0A%09for r\n@@ -947,44 +947,76 @@\n %0A%0A%09%09\n-circulos(pen, raio*0.33, nivel-1)%0A%09%09\n+smallRaio := raio / 3.0%0A%09%09circulos(pen, smallRaio, nivel-1, leva+1)%0A\n %0A%09%09p\n@@ -1160,16 +1160,17 @@\n 0, 400)%0A\n+%0A\n %09circulo\n@@ -1181,17 +1181,20 @@\n n, 200, \n-4\n+3, 1\n )%0A%0A%09pen.\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-04-25_19-30-05",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-2\n+4\n )%0A%0A%09pen.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-30-15",
+            "content": "@@ -522,9 +522,10 @@\n 00, \n-5\n+2)\n %0A%0A%09p\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-30-23",
+            "content": "@@ -519,17 +519,16 @@\n , 200, 5\n-)\n %0A%0A%09pen.S\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-30-28",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-6\n+5\n )%0A%0A%09pen.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-30-50",
+            "content": "@@ -522,9 +522,9 @@\n 00, \n-7\n+6\n )%0A%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-31-17",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-6\n+7\n )%0A%0A%09pen.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-31-27",
+            "content": "@@ -522,9 +522,9 @@\n 00, \n-5\n+6\n )%0A%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-31-40",
+            "content": "@@ -518,17 +518,17 @@\n n, 200, \n-6\n+5\n )%0A%0A%09pen.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-34-50",
+            "content": "@@ -202,31 +202,42 @@\n %09%7D%0A%09\n-for i := 1; i %3C= 6; i++\n+pen.DrawCircle(raio)%0A%0A%09for range 6\n  %7B%0A%09\n@@ -304,28 +304,16 @@\n pen.\n-Left(float64(i * 60)\n+Right(90\n )%0A%0A%09\n@@ -351,48 +351,35 @@\n -1)%0A\n+%09%09\n %0A%09%09pen.\n-Right(float64(i * 60))%0A%0A%09%09pen.Up(\n+Up()%0A%09%09pen.Left(90\n )%0A%09%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-36-32",
+            "content": "@@ -532,17 +532,17 @@\n n, 200, \n-4\n+6\n )%0A%0A%09pen.\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-25_19-37-17",
+            "content": "@@ -202,42 +202,31 @@\n %09%7D%0A%09\n-pen.DrawCircle(raio)%0A%0A%09for range 6\n+for i := 1; i %3C= 6; i++\n  %7B%0A%09\n@@ -293,16 +293,28 @@\n pen.\n-Right(90\n+Left(float64(i * 60)\n )%0A%0A%09\n@@ -352,35 +352,48 @@\n -1)%0A\n-%09%09\n %0A%09%09pen.\n-Up()%0A%09%09pen.Left(90\n+Right(float64(i * 60))%0A%0A%09%09pen.Up(\n )%0A%09%09\n@@ -532,17 +532,17 @@\n n, 200, \n-6\n+4\n )%0A%0A%09pen.\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-25_19-38-20",
+            "content": "@@ -197,17 +197,16 @@\n turn%0A%09%7D%0A\n-%0A\n %09pen.Dra\n@@ -229,27 +229,15 @@\n for \n-i := 1; i %3C= 6; i++\n+range 6\n  %7B%0A%09\n@@ -304,28 +304,16 @@\n pen.\n-Left(float64(i * 60)\n+Right(90\n )%0A%0A%09\n@@ -351,48 +351,35 @@\n -1)%0A\n+%09%09\n %0A%09%09pen.\n-Right(float64(i * 60))%0A%0A%09%09pen.Up(\n+Up()%0A%09%09pen.Left(90\n )%0A%09%09\n@@ -518,17 +518,17 @@\n n, 200, \n-4\n+6\n )%0A%0A%09pen.\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_19-39-29",
+            "content": "@@ -556,17 +556,17 @@\n n, 200, \n-6\n+4\n )%0A%0A%09pen.\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_19-39-42",
+            "content": "@@ -560,9 +560,9 @@\n 00, \n-5\n+6\n )%0A%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_19-39-57",
+            "content": "@@ -123,20 +123,24 @@\n %7D%0A%0Afunc \n-ge\n+circu\n lo\n+s\n (pen *Pe\n@@ -142,20 +142,20 @@\n n *Pen, \n-dist\n+raio\n  float64\n@@ -187,213 +187,272 @@\n = 0 \n-%7C%7C dist %3C 2 %7B%0A        return%0A    %7D%0A%0A    %0A    for range 5 %7B%0A        pen.Walk(dist)%0A        %0A            ge\n+%7B%0A%09%09return%0A%09%7D%0A%0A%09pen.DrawCircle(raio)%0A%0A%09for i := 1; i %3C= 6; i++ %7B%0A%09%09pen.Right(60)%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(raio)%0A%09%09pen.Down()%0A%0A%09%09pen.Left(float64(i * 60))%0A%0A%09%09circu\n lo\n+s\n (pen, \n-dist * 0.35\n+raio*0.33\n , nivel\n- - 3)%0A        %0A        pen.Walk(-dist)%0A        pen.Right(72)   %0A%09%09%0A    %7D%0A%09\n+-1)%0A%0A%09%09pen.Right(float64(i * 60))%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(-raio)%0A%09%09pen.Down()%0A%09%7D\n %0A%7D%0A%0A\n@@ -541,12 +541,16 @@\n 0)%0A%09\n-ge\n+circu\n lo\n+s\n (pen\n@@ -556,17 +556,17 @@\n n, 200, \n-2\n+5\n )%0A%0A%09pen.\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_19-41-07",
+            "content": "@@ -123,22 +123,19 @@\n %7D%0A%0Afunc \n-rotaca\n+gel\n o(pen *P\n@@ -154,22 +154,47 @@\n at64\n-)%7B%0A%09if\n+, nivel int)%7B%0A%09if nivel == 0 %7C%7C\n  dist %3C \n 1 %7B%0A\n@@ -189,17 +189,17 @@\n  dist %3C \n-1\n+2\n  %7B%0A     \n@@ -222,158 +222,119 @@\n %0A   \n+ \n %0A    \n-r := float64(int(dist*1.5) %25 256)%0A    g := float64(int(dist*0.5) %25 256)%0A    b := float64(255 - (int(dist) %25 256))%0A\n+for range 5 %7B%0A        pen.Walk(dist)%0A        %0A            gelo(pen, dist * 0.35, nivel - 3)\n %0A    \n-%0A\n     \n-pen.SetRGB(r, g, b)%0A%0A\n+%0A    \n     \n@@ -334,32 +334,33 @@\n        pen.Walk(\n+-\n dist)%0A    pen.Ri\n@@ -349,24 +349,28 @@\n (-dist)%0A    \n+  \n+  \n pen.Right(90\n@@ -371,50 +371,29 @@\n ght(\n-90)%0A%0A    %0A    rotacao(pen, dist - 4)%0A\n+72)   %0A%09%09%0A    %7D%0A%09\n %0A%7D%0A%0A\n-%0A\n func\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-25_19-44-05",
+            "content": "@@ -416,24 +416,25 @@\n st - 4)%0A%0A%7D%0A%0A\n+%0A\n func main() \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_19-45-34",
+            "content": "@@ -506,22 +506,19 @@\n , 400)%0A%09\n-rotaca\n+gel\n o(pen, 2\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-25_19-46-05",
+            "content": "@@ -39,16 +39,93 @@\n and%22%0A)%0A%0A\n+func ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D\n %0A%0Afunc r\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-25_19-46-21",
+            "content": "@@ -23,19 +23,34 @@\n %0A%09%22fmt%22%0A\n+%09%22math/rand%22%0A\n )%0A%0A\n+%0A%0A\n func rot\n@@ -77,17 +77,16 @@\n float64)\n- \n %7B%0A%09if di\n@@ -98,22 +98,38 @@\n 1 %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A%0A   %0A    \n r :=\n@@ -158,17 +158,20 @@\n  %25 256)%0A\n-%09\n+    \n g := flo\n@@ -196,17 +196,20 @@\n  %25 256)%0A\n-%09\n+    \n b := flo\n@@ -239,17 +239,25 @@\n  256))%0A%0A\n-%09\n+    %0A    \n pen.SetR\n@@ -269,17 +269,20 @@\n  g, b)%0A%0A\n-%09\n+    \n pen.Walk\n@@ -288,17 +288,20 @@\n k(dist)%0A\n-%09\n+    \n pen.Righ\n@@ -307,17 +307,25 @@\n ht(90)%0A%0A\n-%09\n+    %0A    \n rotacao(\n@@ -337,12 +337,15 @@\n dist\n--\n+ - \n 4)%0A\n+%0A\n %7D%0A%0Af\n@@ -422,20 +422,18 @@\n ion(\n-2\n+4\n 00, \n-2\n+4\n 00)%0A\n-%09%0A\n %09rot\n@@ -442,19 +442,22 @@\n ao(pen, \n-4\n+2\n 00\n+, 2\n )%0A%0A%09pen.\n@@ -469,15 +469,12 @@\n NG(%22\n-espiral\n+tree\n .png\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-25_19-48-46",
+            "content": "@@ -407,12 +407,15 @@\n NG(%22\n-tree\n+espiral\n .png\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-25_19-49-11",
+            "content": "@@ -31,20 +31,22 @@\n )%0A%0Afunc \n-trig\n+rotaca\n o(pen *P\n@@ -76,17 +76,17 @@\n  dist %3C \n-5\n+1\n  %7B%0A%09%09ret\n@@ -98,215 +98,153 @@\n %7D%0A%0A%09\n-pen.SetLineWidth(dist / 35)%0A%09pen.Walk(dist)%0A%09%0A%09trigo(pen, dist*0.25)%0A%0A%09pen.Left(35)%0A%09trigo(pen, dist*0.5)%0A%09pen.Right(35)%0A%0A%09pen.Right(35)%0A%09trigo(pen, dist*0.5)%0A%09pen.Left(35)%0A%0A%09pen.Left(4)%0A%09trigo(pen, dist*0.3\n+r := float64(int(dist*1.5) %25 256)%0A%09g := float64(int(dist*0.5) %25 256)%0A%09b := float64(255 - (int(dist) %25 256))%0A%0A%09pen.SetRGB(r, g, b)%0A%0A%09pen.Walk(dist\n )%0A%09p\n@@ -256,100 +256,33 @@\n ght(\n-4\n+90\n )%0A%0A%09\n-pen.Right(4)%0A%09trigo(pen, dist*0.3)%0A%09pen.Left(4)%0A%0A%09trigo(pen, dist*0.8)%0A%0A%09pen.Walk(-dist\n+rotacao(pen, dist-4\n )%0A%7D%0A\n@@ -325,10 +325,8 @@\n 00)%0A\n-%09%0A\n %09pen\n@@ -337,17 +337,16 @@\n Heading(\n-9\n 0)%0A%09pen.\n@@ -361,32 +361,36 @@\n ion(\n-4\n+2\n 00, \n-78\n+20\n 0)%0A\n+%09\n %0A%09\n-trig\n+rotaca\n o(pen, \n-8\n+40\n 0)%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-25_21-08-07",
+            "content": "@@ -31,22 +31,21 @@\n )%0A%0Afunc \n-galhos\n+trigo\n (pen *Pe\n@@ -63,331 +63,215 @@\n at64\n-, nivel int) %7B%0A%09// Ponto de parada da recurs%C3%A3o%0A%09if nivel == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09// Divide o tronco principal em 4 segmentos para termos 4 pontos de ramifica%C3%A7%C3%A3o%0A%09segmento := dist / 4.0%0A%0A%09for i := 0; i %3C 4; i++ %7B%0A%09%09// A tartaruga sobe um pouquinho no tronco...%0A%09%09pen.Walk(segmento)%0A%0A%09%09// ... e cria o 1%C2%BA galho para a ESQUERDA%0A%09\n+) %7B%0A%09if dist %3C 5 %7B%0A%09%09return%0A%09%7D%0A%0A%09pen.SetLineWidth(dist / 35)%0A%09pen.Walk(dist)%0A%09%0A%09trigo(pen, dist*0.25)%0A%0A%09pen.Left(35)%0A%09trigo(pen, dist*0.5)%0A%09pen.Right(35)%0A%0A%09pen.Right(35)%0A%09trigo(pen, dist*0.5)%0A%09pen.Left(35)%0A%0A\n %09pen\n@@ -277,27 +277,24 @@\n n.Left(4\n-0\n )%0A%09\n-%09galhos\n+trigo\n (pen, di\n@@ -295,37 +295,26 @@\n en, dist*0.3\n-5, nivel-1\n )%0A\n-%09\n %09pen.Right(4\n@@ -317,55 +317,11 @@\n ht(4\n-0\n )%0A%0A\n-%09%09// ... e cria o 2%C2%BA galho para a DIREITA%0A%09\n %09pen\n@@ -332,19 +332,16 @@\n ht(4\n-0\n )%0A%09\n-%09galhos\n+trigo\n (pen\n@@ -354,21 +354,10 @@\n *0.3\n-5, nivel-1\n )%0A\n-%09\n %09pen\n@@ -367,136 +367,33 @@\n ft(4\n-0\n )%0A\n-%09%7D%0A%0A%09// RESTAURA%C3%87%C3%83O DE ESTADO: %0A%09// A tartaruga volta de r%C3%A9 at%C3%A9 a base deste tronco para n%C3%A3o estragar o desenho pai%0A%09pen.Up()\n+%0A%09trigo(pen, dist*0.8)%0A\n %0A%09pe\n@@ -410,20 +410,8 @@\n st)%0A\n-%09pen.Down()%0A\n %7D%0A%0Af\n@@ -448,16 +448,18 @@\n 0, 800)%0A\n+%09%0A\n %09pen.Set\n@@ -497,158 +497,27 @@\n 0, 7\n-5\n+8\n 0)%0A%0A%09\n-// Come%C3%A7amos com o n%C3%ADvel 4. %0A%09// CUIDADO: Cada n%C3%ADvel multiplica os galhos por 8. O n%C3%ADvel 5 desenharia mais de 32 mil linhas!%0A%09galhos(pen, 300, 4\n+trigo(pen, 80\n )%0A%0A%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_21-12-44",
+            "content": "@@ -31,21 +31,22 @@\n )%0A%0Afunc \n-trigo\n+galhos\n (pen *Pe\n@@ -80,109 +80,313 @@\n  %7B%0A%09\n-if nivel == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09segmento := dist / 4.0%0A%0A%09for i := 0; i %3C 4; i++ %7B%0A%09%09pen.Walk(segmento)%0A\n+// Ponto de parada da recurs%C3%A3o%0A%09if nivel == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09// Divide o tronco principal em 4 segmentos para termos 4 pontos de ramifica%C3%A7%C3%A3o%0A%09segmento := dist / 4.0%0A%0A%09for i := 0; i %3C 4; i++ %7B%0A%09%09// A tartaruga sobe um pouquinho no tronco...%0A%09%09pen.Walk(segmento)%0A%0A%09%09// ... e cria o 1%C2%BA galho para a ESQUERDA\n %0A%09%09p\n@@ -391,37 +391,38 @@\n %09pen.Left(40)%0A%09%09\n-trigo\n+galhos\n (pen, dist*0.35,\n@@ -450,16 +450,55 @@\n (40)%0A%0A%09%09\n+// ... e cria o 2%C2%BA galho para a DIREITA\n %0A%09%09pen.R\n@@ -508,21 +508,22 @@\n t(40)%0A%09%09\n-trigo\n+galhos\n (pen, di\n@@ -559,16 +559,128 @@\n 40)%0A%09%7D%0A%0A\n+%09// RESTAURA%C3%87%C3%83O DE ESTADO: %0A%09// A tartaruga volta de r%C3%A9 at%C3%A9 a base deste tronco para n%C3%A3o estragar o desenho pai%0A\n %09pen.Up(\n@@ -805,13 +805,140 @@\n )%0A%0A%09\n-trigo\n+// Come%C3%A7amos com o n%C3%ADvel 4. %0A%09// CUIDADO: Cada n%C3%ADvel multiplica os galhos por 8. O n%C3%ADvel 5 desenharia mais de 32 mil linhas!%0A%09galhos\n (pen\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_21-14-53",
+            "content": "@@ -34,21 +34,17 @@\n func tri\n-angul\n+g\n o(pen *P\n@@ -47,23 +47,20 @@\n n *Pen, \n-tamanho\n+dist\n  float64\n@@ -71,16 +71,17 @@\n vel int)\n+ \n %7B%0A%09if ni\n@@ -88,16 +88,17 @@\n vel == 0\n+ \n %7B%0A%09%09retu\n@@ -107,20 +107,58 @@\n %0A%09%7D%0A\n-%09for range 3\n+%0A%09segmento := dist / 4.0%0A%0A%09for i := 0; i %3C 4; i++ \n %7B%0A%09%09\n@@ -170,17 +170,19 @@\n alk(\n-tamanh\n+segment\n o)%0A\n+%0A\n %09%09pe\n@@ -192,18 +192,173 @@\n eft(\n-120)%0A%09%7D%0A%0A%09\n+40)%0A%09%09trigo(pen, dist*0.35, nivel-1)%0A%09%09pen.Right(40)%0A%0A%09%09%0A%09%09pen.Right(40)%0A%09%09trigo(pen, dist*0.35, nivel-1)%0A%09%09pen.Left(40)%0A%09%7D%0A%0A%09pen.Up()%0A%09pen.Walk(-dist)%0A%09pen.Down()%0A%7D\n %0A%0Afu\n@@ -450,13 +450,9 @@\n %09tri\n-angul\n+g\n o(pe\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-25_21-18-36",
+            "content": "@@ -256,17 +256,21 @@\n 0)%0A%0A%09tri\n-g\n+angul\n o(pen, 3\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-19-13",
+            "content": "@@ -260,22 +260,15 @@\n %09tri\n-angul\n+g\n o(pen,\n- 5,\n  300\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-19-41",
+            "content": "@@ -162,17 +162,17 @@\n 20)%0A%09%7D%0A%0A\n-%7D\n+%09\n %0A%0Afunc m\n@@ -267,16 +267,19 @@\n ulo(pen,\n+ 5,\n  300, 4)\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-20-12",
+            "content": "@@ -224,10 +224,9 @@\n ing(\n-18\n+9\n 0)%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-20-31",
+            "content": "@@ -247,18 +247,18 @@\n on(400, \n-40\n+75\n 0)%0A%0A%09tri\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-20-45",
+            "content": "@@ -246,14 +246,14 @@\n ion(\n-6\n+4\n 00, \n-6\n+4\n 00)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-01",
+            "content": "@@ -247,17 +247,17 @@\n on(600, \n-1\n+6\n 00)%0A%0A%09tr\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-09",
+            "content": "@@ -246,14 +246,14 @@\n ion(\n-5\n+6\n 00, \n-4\n+1\n 00)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-31",
+            "content": "@@ -247,17 +247,17 @@\n on(500, \n-5\n+4\n 00)%0A%0A%09tr\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-42",
+            "content": "@@ -247,17 +247,17 @@\n on(500, \n-6\n+5\n 00)%0A%0A%09tr\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-49",
+            "content": "@@ -251,9 +251,9 @@\n 00, \n-7\n+6\n 00)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-21-54",
+            "content": "@@ -247,17 +247,17 @@\n on(500, \n-2\n+7\n 00)%0A%0A%09tr\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-00",
+            "content": "@@ -247,17 +247,17 @@\n on(500, \n-3\n+2\n 00)%0A%0A%09tr\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-05",
+            "content": "@@ -242,17 +242,17 @@\n osition(\n-3\n+5\n 00, 300)\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-14",
+            "content": "@@ -242,17 +242,17 @@\n osition(\n-6\n+3\n 00, 300)\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-20",
+            "content": "@@ -246,10 +246,10 @@\n ion(\n-55\n+60\n 0, 3\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-28",
+            "content": "@@ -278,10 +278,9 @@\n 00, \n-10\n+4\n )%0A%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-22-52",
+            "content": "@@ -275,16 +275,17 @@\n , 300, 1\n+0\n )%0A%0A%09pen.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-23-03",
+            "content": "@@ -220,16 +220,18 @@\n Heading(\n+18\n 0)%0A%09pen.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-23-14",
+            "content": "@@ -224,10 +224,8 @@\n ing(\n-18\n 0)%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-23-20",
+            "content": "@@ -157,10 +157,10 @@\n eft(\n+1\n 2\n-0\n 0)%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-23-31",
+            "content": "@@ -93,17 +93,17 @@\n ivel == \n-2\n+0\n %7B%0A%09%09retu\n@@ -157,10 +157,10 @@\n eft(\n-1\n 2\n+0\n 0)%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-24-02",
+            "content": "@@ -93,17 +93,17 @@\n ivel == \n-0\n+2\n %7B%0A%09%09retu\n@@ -119,17 +119,17 @@\n r range \n-5\n+3\n %7B%0A%09%09pen.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-24-12",
+            "content": "@@ -78,17 +78,16 @@\n vel int)\n- \n %7B%0A%09if ni\n@@ -98,192 +98,37 @@\n == 0\n- \n %7B%0A%09%09\n-for range 3 %7B%0A%09%09%09pen.Walk(tamanho)%0A%09%09%09pen.Left(120)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%0A%09triangulo(pen, tamanho/2, nivel-1)%0A%0A%09pen.Walk(tamanho/2)%0A%09triangulo(pen, tamanho/2, nivel-1)%0A%0A%09pen.Left(120)%0A\n+return%0A%09%7D%0A%09for range 5%7B%0A%09\n %09pen\n@@ -144,140 +144,29 @@\n anho\n-/2\n )%0A%09\n-pen.Right(120)%0A%0A%09triangulo(pen, tamanho/2, nivel-1)%0A%0A%09pen.Left(120)%0A%09pen.Walk(-tamanho/2)%0A%09pen.Right(120)%0A%09pen.Walk(-tamanho/2)\n+%09pen.Left(120)%0A%09%7D%0A\n %0A%7D%0A%0A\n@@ -246,14 +246,14 @@\n ion(\n-6\n+5\n 50, \n-2\n+3\n 00)%0A\n@@ -273,14 +273,14 @@\n en, \n-5\n+3\n 00, \n-5\n+1\n )%0A%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_21-41-49",
+            "content": "@@ -541,17 +541,17 @@\n n, 500, \n-3\n+5\n )%0A%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-42-40",
+            "content": "@@ -541,16 +541,17 @@\n n, 500, \n+3\n )%0A%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-42-49",
+            "content": "@@ -541,17 +541,16 @@\n n, 500, \n-6\n )%0A%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-43-04",
+            "content": "@@ -545,9 +545,9 @@\n 00, \n-7\n+6\n )%0A%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-43-24",
+            "content": "@@ -541,17 +541,17 @@\n n, 500, \n-6\n+7\n )%0A%0A%09pen.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-43-39",
+            "content": "@@ -31,25 +31,25 @@\n )%0A%0Afunc \n-quadrados\n+triangulo\n (pen *Pe\n@@ -110,17 +110,17 @@\n r range \n-4\n+3\n  %7B%0A%09%09%09pe\n@@ -143,25 +143,26 @@\n %09%09%09pen.Left(\n-9\n+12\n 0)%0A%09%09%7D%0A%09%09ret\n@@ -175,146 +175,89 @@\n %0A%0A%09t\n-erco := tamanho / 3.0%0A%09salto := terco * 2.0%0A%0A%09quadrados(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Walk(salto)%0A%09pen.Down()%0A%09quadrados(pen, terco\n+riangulo(pen, tamanho/2, nivel-1)%0A%0A%09pen.Walk(tamanho/2)%0A%09triangulo(pen, tamanho/2\n , ni\n@@ -260,34 +260,24 @@\n , nivel-1)%0A%0A\n-%09pen.Up()%0A\n %09pen.Left(90\n@@ -266,33 +266,34 @@\n l-1)%0A%0A%09pen.Left(\n-9\n+12\n 0)%0A%09pen.Walk(sal\n@@ -281,37 +281,41 @@\n (120)%0A%09pen.Walk(\n-salto\n+tamanho/2\n )%0A%09pen.Right(90)\n@@ -315,45 +315,39 @@\n ght(\n-90)%0A%09pen.Down()%0A%09quadrados(pen, terco\n+120)%0A%0A%09triangulo(pen, tamanho/2\n , ni\n@@ -350,34 +350,24 @@\n , nivel-1)%0A%0A\n-%09pen.Up()%0A\n %09pen.Left(18\n@@ -365,17 +365,17 @@\n n.Left(1\n-8\n+2\n 0)%0A%09pen.\n@@ -383,84 +383,18 @@\n alk(\n-salto)%0A%09pen.Right(180)%0A%09pen.Down()%0A%09quadrados(pen, terco, nivel-1)%0A%0A%09pen.Up(\n+-tamanho/2\n )%0A%09p\n@@ -402,17 +402,18 @@\n n.Right(\n-9\n+12\n 0)%0A%09pen.\n@@ -421,39 +421,18 @@\n alk(\n-salto)%0A%09pen.Left(90)%0A%09pen.Down(\n+-tamanho/2\n )%0A%7D%0A\n@@ -487,16 +487,18 @@\n Heading(\n+18\n 0)%0A%09pen.\n@@ -513,41 +513,41 @@\n ion(\n-130, 67\n+650, 20\n 0)%0A%0A%09\n-quadrados\n+triangulo\n (pen, 5\n-40, 4\n+00, 6\n )%0A%0A%09\n@@ -563,17 +563,12 @@\n NG(%22\n-quadrados\n+tree\n .png\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-25_21-46-16",
+            "content": "@@ -724,12 +724,17 @@\n NG(%22\n-tree\n+quadrados\n .png\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-25_21-46-22",
+            "content": "@@ -1,1114 +1,54 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A)%0A%0Afunc tapete(pen *Pen, tamanho float64, nivel int) %7B%0A%09if nivel == 0 %7B%0A%09%09for range 4 %7B%0A%09%09%09pen.Walk(tamanho)%0A%09%09%09pen.Left(90)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%0A%09terco := tamanho / 3.0%0A%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Walk(terco)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Walk(terco)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(90)%0A%09pen.Walk(terco)%0A%09pen.Right(90)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(90)%0A%09pen.Walk(terco)%0A%09pen.Right(90)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(180)%0A%09pen.Walk(terco)%0A%09pen.Right(180)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(180)%0A%09pen.Walk(terco)%0A%09pen.Right(180)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Right(90)%0A%09pen.Walk(terco)%0A%09pen.Left(90)%0A%09pen.Down()%0A%09tapete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Right(90)%0A%09pen.Walk(terco)%0A%09pen.Left(90)%0A%09pen.Down()%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(800, 800)%0A%09pen.SetHeading(0)%0A%09pen.SetPosition(100, 700)%0A%0A%09tapete(pen, 600, 4)%0A%0A%09pen.SavePNG(%22tapete.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D\n+@@ -702,17 +702,17 @@%0A n, 540, %0A-2%0A+4%0A )%250A%250A%2509pen.\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-25_21-49-05",
+            "content": "@@ -1046,18 +1046,20 @@\n vePNG(%22t\n-re\n+apet\n e.png%22)%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-49-13",
+            "content": "@@ -1031,9 +1031,9 @@\n 00, \n-5\n+4\n )%0A%0A%09\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-49-43",
+            "content": "@@ -1027,17 +1027,17 @@\n n, 600, \n-6\n+5\n )%0A%0A%09pen.\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-49-55",
+            "content": "@@ -1027,17 +1027,17 @@\n n, 600, \n-3\n+6\n )%0A%0A%09pen.\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-50-00",
+            "content": "@@ -1027,17 +1027,17 @@\n n, 600, \n-4\n+3\n )%0A%0A%09pen.\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-50-08",
+            "content": "@@ -1031,9 +1031,9 @@\n 00, \n-5\n+4\n )%0A%0A%09\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-50-13",
+            "content": "@@ -31,19 +31,18 @@\n )%0A%0Afunc \n-car\n+ta\n pete(pen\n@@ -191,19 +191,18 @@\n / 3.0%0A%0A%09\n-car\n+ta\n pete(pen\n@@ -252,35 +252,34 @@\n o)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -321,35 +321,34 @@\n o)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -419,35 +419,34 @@\n 0)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -517,35 +517,34 @@\n 0)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -617,35 +617,34 @@\n 0)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -717,35 +717,34 @@\n 0)%0A%09pen.Down()%0A%09\n-car\n+ta\n pete(pen, terco,\n@@ -823,19 +823,18 @@\n Down()%0A%09\n-car\n+ta\n pete(pen\n@@ -1014,11 +1014,10 @@\n )%0A%0A%09\n-car\n+ta\n pete\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-52-09",
+            "content": "@@ -1037,17 +1037,17 @@\n n, 600, \n-4\n+5\n )%0A%0A%09pen.\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-52-22",
+            "content": "@@ -1041,9 +1041,9 @@\n 00, \n-5\n+4\n )%0A%0A%09\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_21-52-28",
+            "content": "@@ -0,0 +1,1122 @@\n+package main%0A%0Aimport (%0A%09%22fmt%22%0A)%0A%0Afunc carpete(pen *Pen, tamanho float64, nivel int) %7B%0A%09if nivel == 0 %7B%0A%09%09for range 4 %7B%0A%09%09%09pen.Walk(tamanho)%0A%09%09%09pen.Left(90)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%0A%09terco := tamanho / 3.0%0A%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Walk(terco)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Walk(terco)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(90)%0A%09pen.Walk(terco)%0A%09pen.Right(90)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(90)%0A%09pen.Walk(terco)%0A%09pen.Right(90)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(180)%0A%09pen.Walk(terco)%0A%09pen.Right(180)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Left(180)%0A%09pen.Walk(terco)%0A%09pen.Right(180)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Right(90)%0A%09pen.Walk(terco)%0A%09pen.Left(90)%0A%09pen.Down()%0A%09carpete(pen, terco, nivel-1)%0A%0A%09pen.Up()%0A%09pen.Right(90)%0A%09pen.Walk(terco)%0A%09pen.Left(90)%0A%09pen.Down()%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(800, 800)%0A%09pen.SetHeading(0)%0A%09pen.SetPosition(100, 700)%0A%0A%09carpete(pen, 600, 5)%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-04-25_22-13-32",
+            "content": "@@ -1,571 +0,0 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc gelo(pen *Pen, dist float64, nivel int)%7B%0A%09if nivel == 0 %7C%7C dist %3C 2 %7B%0A        return%0A%09%7D%0A%0A    %0A    for range 5 %7B%0A        pen.Walk(dist)%0A        %0A            gelo(pen, dist * 0.35, nivel - 3)%0A        %0A        pen.Walk(-dist)%0A        pen.Right(72)   %0A%09%09%0A    %7D%0A%09%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(800, 800)%0A%09pen.SetHeading(0)%0A%09pen.SetPosition(400, 400)%0A%09gelo(pen, 200, 2)%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2026-04-25_22-50-14",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc gelo(pen *Pen, dist float64, nivel int){\n\tif nivel == 0 || dist < 2 {\n        return\n\t}\n\n    \n    for range 5 {\n        pen.Walk(dist)\n        \n            gelo(pen, dist * 0.35, nivel - 3)\n        \n        pen.Walk(-dist)\n        pen.Right(72)   \n\t\t\n    }\n\t\n}\n\nfunc main() {\n\tpen := NewPen(800, 800)\n\tpen.SetHeading(0)\n\tpen.SetPosition(400, 400)\n\tgelo(pen, 200, 2)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "38"
         }
     ]
 }

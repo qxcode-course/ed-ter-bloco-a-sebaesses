@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+)
+
+func rotacao(pen *Pen, dist float64) {
+	if dist < 1 {
+		return
+	}
+
+	r := float64(int(dist*1.5) % 256)
+	g := float64(int(dist*0.5) % 256)
+	b := float64(255 - (int(dist) % 256))
+
+	pen.SetRGB(r, g, b)
+
+	pen.Walk(dist)
+	pen.Right(90)
+
+	rotacao(pen, dist-4)
+}
+
+func main() {
+	pen := NewPen(800, 800)
+	pen.SetHeading(0)
+	pen.SetPosition(200, 200)
+	
+	rotacao(pen, 400)
+
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

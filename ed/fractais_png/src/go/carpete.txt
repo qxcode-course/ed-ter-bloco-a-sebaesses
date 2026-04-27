@@ -1,0 +1,81 @@
+package main
+
+import (
+	"fmt"
+)
+
+func carpete(pen *Pen, tamanho float64, nivel int) {
+	if nivel == 0 {
+		for range 4 {
+			pen.Walk(tamanho)
+			pen.Left(90)
+		}
+		return
+	}
+
+	terco := tamanho / 3.0
+
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Walk(terco)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Walk(terco)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Left(90)
+	pen.Walk(terco)
+	pen.Right(90)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Left(90)
+	pen.Walk(terco)
+	pen.Right(90)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Left(180)
+	pen.Walk(terco)
+	pen.Right(180)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Left(180)
+	pen.Walk(terco)
+	pen.Right(180)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Right(90)
+	pen.Walk(terco)
+	pen.Left(90)
+	pen.Down()
+	carpete(pen, terco, nivel-1)
+
+	pen.Up()
+	pen.Right(90)
+	pen.Walk(terco)
+	pen.Left(90)
+	pen.Down()
+}
+
+func main() {
+	pen := NewPen(800, 800)
+	pen.SetHeading(0)
+	pen.SetPosition(100, 700)
+
+	carpete(pen, 600, 5)
+
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

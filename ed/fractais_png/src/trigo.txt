@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+)
+
+func trigo(pen *Pen, dist float64, nivel int) {
+	if nivel == 0 {
+		return
+	}
+
+	segmento := dist / 4.0
+
+	for i := 0; i < 4; i++ {
+		pen.Walk(segmento)
+
+		pen.Left(40)
+		trigo(pen, dist*0.35, nivel-1)
+		pen.Right(40)
+
+		
+		pen.Right(40)
+		trigo(pen, dist*0.35, nivel-1)
+		pen.Left(40)
+	}
+
+	pen.Up()
+	pen.Walk(-dist)
+	pen.Down()
+}
+
+func main() {
+	pen := NewPen(800, 800)
+	pen.SetHeading(90)
+	pen.SetPosition(400, 750)
+
+	trigo(pen, 300, 4)
+
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}
