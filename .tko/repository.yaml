@@ -21,8 +21,7 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded:
-- ed@rec
+expanded: []
 flags:
   inbox: inbox
   panel: skills
@@ -30,5 +29,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
-selected_index: 11
+selected: eval1@eval1
+selected_index: 4
