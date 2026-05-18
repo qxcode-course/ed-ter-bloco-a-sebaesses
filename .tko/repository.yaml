@@ -22,13 +22,18 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@vector
+- ed@basic
+- ed@tree
+- ed@linear
+- ed@list
+- ed@dfs
+- ed@bfs
 flags:
   inbox: inbox
   panel: graph
   show_panel: 'true'
-  task_graph_mode: executions
+  task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@multiset
-selected_index: 4
+selected: ed@sandbox
+selected_index: 13
