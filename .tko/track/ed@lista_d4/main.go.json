@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_13-19-10",
+            "content": "@@ -53,19 +53,8 @@\n gs%22%0A\n-%09%22strconv%22%0A\n )%0A%0At\n@@ -149,109 +149,8 @@\n %0A%7D%0A%0A\n-func (n *Node%5BT%5D) Next() *Node%5BT%5D %7B%0A%09if n.next == n.root %7B%0A%09%09return n.root.next%0A%09%7D%0A%09return n.next%0A%7D%0A%0A\n type\n@@ -985,16 +985,19 @@\n .Stdin)%0A\n+// \n %09ll := N\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-05-19_22-36-24",
+            "content": "@@ -261,109 +261,8 @@\n %0A%7D%0A%0A\n-func (n *Node%5BT%5D) Prev() *Node%5BT%5D %7B%0A%09if n.prev == n.root %7B%0A%09%09return n.root.prev%0A%09%7D%0A%09return n.prev%0A%7D%0A%0A\n type\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-05-19_22-39-24",
+            "content": "@@ -574,24 +574,125 @@\n size: 0%7D%0A%7D%0A%0A\n+func (n *Node%5BT%5D) Next() *Node%5BT%5D %7B%0A%09if n.next == n.root %7B%0A%09%09return n.root.next%0A%09%7D%0A%09return n.next%0A%7D%0A%0A\n func (l *LLi\n@@ -940,58 +940,8 @@\n %0A%7D%0A%0A\n-func (l *LList%5BT%5D) Size() int %7B%0A%09return l.size%0A%7D%0A%0A\n func\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-05-19_22-41-23",
+            "content": "@@ -889,249 +889,8 @@\n %0A%7D%0A%0A\n-func (l *LList%5BT%5D) Clear() %7B%0A%09l.root.next = l.root%0A%09l.root.prev = l.root%0A%09l.size = 0%0A%7D%0A%0Afunc (l *LList%5BT%5D) Search(value T) *Node%5BT%5D %7B%0A%09for n := l.root.next; n != l.root; n = n.next %7B%0A%09%09if n.Value == value %7B%0A%09%09%09return n%0A%09%09%7D%0A%09%7D%0A%09return nil%0A%7D%0A%0A\n func\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-19_22-45-45",
+            "content": "@@ -1419,16 +1419,33 @@\n %0A%09for %7B%0A\n+%09%09fmt.Print(%22$%22)%0A\n %09%09if !sc\n@@ -1515,14 +1515,8 @@\n tln(\n-%22$%22 + \n line\n@@ -1635,24 +1635,27 @@\n  %22show%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-05-19_22-46-47",
+            "content": "@@ -1667,24 +1667,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-05-19_22-47-58",
+            "content": "@@ -1717,16 +1717,19 @@\n ck%22:%0A%09%09%09\n+// \n for _, v\n@@ -1752,16 +1752,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09num, _ \n@@ -1785,16 +1785,19 @@\n i(v)%0A%09%09%09\n+// \n %09ll.Push\n@@ -1809,16 +1809,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-05-19_22-48-12",
+            "content": "@@ -1821,17 +1821,19 @@\n ar%22:%0A%09%09%09\n-%09\n+// \n ll.Clear\n@@ -1856,16 +1856,19 @@\n rd%22:%0A%09%09%09\n+// \n search, \n@@ -1897,16 +1897,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n steps, _\n@@ -1937,16 +1937,19 @@\n %5B2%5D)%0A%09%09%09\n+// \n node := \n@@ -1969,16 +1969,19 @@\n rch)%0A%09%09%09\n+// \n if node \n@@ -1992,16 +1992,19 @@\n il %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -2019,23 +2019,37 @@\n il: \n-not found\n+valor n%C3%A3o encontrado\n %22)%0A%09%09%09\n+// \n %09con\n@@ -2057,21 +2057,27 @@\n inue%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n collect \n@@ -2097,40 +2097,35 @@\n %0A%09%09%09\n+// \n for \n-i := 0; i %3C\n+range\n  steps\n-; i++\n  %7B%0A%09%09%09\n+// \n %09col\n@@ -2181,16 +2181,19 @@\n ue))%0A%09%09%09\n+// \n %09node = \n@@ -2207,21 +2207,27 @@\n xt()%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.Prin\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-05-19_22-49-05",
+            "content": "@@ -2242,32 +2242,35 @@\n  %22backward%22:%0A%09%09%09\n+// \n search, _ := str\n@@ -2283,32 +2283,35 @@\n toi(args%5B1%5D)%0A%09%09%09\n+// \n steps, _ := strc\n@@ -2323,32 +2323,35 @@\n toi(args%5B2%5D)%0A%09%09%09\n+// \n node := ll.Searc\n@@ -2355,32 +2355,35 @@\n arch(search)%0A%09%09%09\n+// \n if node == nil %7B\n@@ -2378,32 +2378,35 @@\n ode == nil %7B%0A%09%09%09\n+// \n %09fmt.Println(%22fa\n@@ -2405,39 +2405,53 @@\n ntln(%22fail: \n-not found\n+valor n%C3%A3o encontrado\n %22)%0A%09%09%09\n+// \n %09continue%0A%09%09\n@@ -2443,37 +2443,43 @@\n // %09continue%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n collect := %5B%5Dstr\n@@ -2491,40 +2491,35 @@\n %0A%09%09%09\n+// \n for \n-i := 0; i %3C\n+range\n  steps\n-; i++\n  %7B%0A%09%09%09\n+// \n %09col\n@@ -2567,32 +2567,35 @@\n node.Value))%0A%09%09%09\n+// \n %09node = node.Pre\n@@ -2597,29 +2597,35 @@\n e.Prev()%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.Printf(%22\n",
+            "lines": "150"
+        },
+        {
+            "label": "2026-05-19_22-53-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Node[T comparable] struct {\n\tValue T\n\tnext  *Node[T]\n\tprev  *Node[T]\n\troot  *Node[T]\n}\n\nfunc (n *Node[T]) Next() *Node[T] {\n\tif n.next == n.root {\n\t\treturn n.root.next\n\t}\n\treturn n.next\n}\n\nfunc (n *Node[T]) Prev() *Node[T] {\n\tif n.prev == n.root {\n\t\treturn n.root.prev\n\t}\n\treturn n.prev\n}\n\ntype LList[T comparable] struct {\n\troot *Node[T]\n\tsize int\n}\n\nfunc NewLList[T comparable]() *LList[T] {\n\troot := &Node[T]{}\n\troot.next = root\n\troot.prev = root\n\troot.root = root\n\treturn &LList[T]{root: root, size: 0}\n}\n\nfunc (l *LList[T]) PushBack(value T) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList[T]) insertBefore(mark *Node[T], value T) {\n\tn := &Node[T]{Value: value, root: l.root}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n\tl.size++\n}\n\nfunc (l *LList[T]) Size() int {\n\treturn l.size\n}\n\nfunc (l *LList[T]) Clear() {\n\tl.root.next = l.root\n\tl.root.prev = l.root\n\tl.size = 0\n}\n\nfunc (l *LList[T]) Search(value T) *Node[T] {\n\tfor n := l.root.next; n != l.root; n = n.next {\n\t\tif n.Value == value {\n\t\t\treturn n\n\t\t}\n\t}\n\treturn nil\n}\n\nfunc (l *LList[T]) String() string {\n\tvalues := []string{}\n\tfor n := l.root.next; n != l.root; n = n.next {\n\t\tvalues = append(values, fmt.Sprint(n.Value))\n\t}\n\treturn \"[\" + strings.Join(values, \", \") + \"]\"\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList[int]()\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"clear\":\n\t\t\t\tll.Clear()\n\t\tcase \"forward\":\n\t\t\tsearch, _ := strconv.Atoi(args[1])\n\t\t\tsteps, _ := strconv.Atoi(args[2])\n\t\t\tnode := ll.Search(search)\n\t\t\tif node == nil {\n\t\t\t\tfmt.Println(\"fail: not found\")\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tcollect := []string{}\n\t\t\tfor i := 0; i < steps; i++ {\n\t\t\t\tcollect = append(collect, fmt.Sprintf(\"%v\", node.Value))\n\t\t\t\tnode = node.Next()\n\t\t\t}\n\t\t\tfmt.Printf(\"[ %s ]\\n\", strings.Join(collect, \" \"))\n\t\tcase \"backward\":\n\t\t\tsearch, _ := strconv.Atoi(args[1])\n\t\t\tsteps, _ := strconv.Atoi(args[2])\n\t\t\tnode := ll.Search(search)\n\t\t\tif node == nil {\n\t\t\t\tfmt.Println(\"fail: not found\")\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tcollect := []string{}\n\t\t\tfor i := 0; i < steps; i++ {\n\t\t\t\tcollect = append(collect, fmt.Sprintf(\"%v\", node.Value))\n\t\t\t\tnode = node.Prev()\n\t\t\t}\n\t\t\tfmt.Printf(\"[ %s ]\\n\", strings.Join(collect, \" \"))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "150"
+        }
+    ]
+}

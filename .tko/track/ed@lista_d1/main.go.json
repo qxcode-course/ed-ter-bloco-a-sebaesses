@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_18-25-46",
+            "content": "@@ -115,53 +115,8 @@\n %0A%7D%0A%0A\n-type LList struct %7B%0A%09root *Node%0A%09size int%0A%7D%0A%0A\n func\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-18_18-26-09",
+            "content": "@@ -160,125 +160,8 @@\n %0A%7D%0A%0A\n-func NewLList() *LList %7B%0A%09root := &Node%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09return &LList%7Broot: root, size: 0%7D%0A%7D%0A%0A\n func\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-18_18-29-26",
+            "content": "@@ -277,167 +277,8 @@\n %0A%7D%0A%0A\n-func (l *LList) insert(it *Node, value int) %7B%0A%09newNode := &Node%7Bvalue: value, next: it, prev: it.prev%7D%0A%09it.prev.next = newNode%0A%09it.prev = newNode%0A%09l.size++%0A%7D%0A%0A\n func\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-18_18-38-27",
+            "content": "@@ -436,172 +436,8 @@\n %0A%7D%0A%0A\n-func (l *LList) erase(it *Node) %7B%0A%09// Nunca permita remover o sentinela%0A%09if it == l.root %7B%0A%09%09return%0A%09%7D%0A%09it.prev.next = it.next%0A%09it.next.prev = it.prev%0A%09l.size--%0A%7D%0A%0A\n func\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-18_18-41-35",
+            "content": "@@ -466,16 +466,54 @@\n Node) %7B%0A\n+%09// Nunca permita remover o sentinela%0A\n %09if it =\n@@ -600,76 +600,8 @@\n %0A%7D%0A%0A\n-func (l *LList) PushBack(value int) %7B%0A%09l.insert(l.root, value)%0A%7D%0A%0A%0A%0A\n func\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-18_18-42-11",
+            "content": "@@ -628,78 +628,8 @@\n %0A%7D%0A%0A\n-func (l *LList) PushFront(value int) %7B%0A%09l.insert(l.root.next, value)%0A%7D\n %0A%0Afu\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-18_18-43-57",
+            "content": "@@ -700,157 +700,8 @@\n %0A%7D%0A%0A\n-func (l *LList) PopBack() %7B%0A%09if l.size %3E 0 %7B%0A%09%09l.erase(l.root.prev)%0A%09%7D%0A%7D%0A%0Afunc (l *LList) PopFront() %7B%0A%09if l.size %3E 0 %7B%0A%09%09l.erase(l.root.next)%0A%09%7D%0A%7D%0A%0A\n func\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-05-18_18-50-07",
+            "content": "@@ -849,55 +849,8 @@\n %0A%7D%0A%0A\n-func (l *LList) Size() int %7B%0A%09return l.size%0A%7D%0A%0A\n func\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-05-18_18-50-18",
+            "content": "@@ -896,93 +896,8 @@\n %0A%7D%0A%0A\n-func (l *LList) Clear() %7B%0A%09l.root.next = l.root%0A%09l.root.prev = l.root%0A%09l.size = 0%0A%7D%0A%0A\n func\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-05-18_18-53-55",
+            "content": "@@ -981,219 +981,8 @@\n %0A%7D%0A%0A\n-func (l *LList) String() string %7B%0A%09var values %5B%5Dstring%0A%09for it := l.root.next; it != l.root; it = it.next %7B%0A%09%09values = append(values, strconv.Itoa(it.value))%0A%09%7D%0A%09return %22%5B%22 + strings.Join(values, %22, %22) + %22%5D%22%0A%7D%0A%0A\n func\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-18_18-54-10",
+            "content": "@@ -1241,16 +1241,19 @@\n .Stdin)%0A\n+// \n %09ll := N\n@@ -1270,16 +1270,33 @@\n %0A%09for %7B%0A\n+%09%09fmt.Print(%22$%22)%0A\n %09%09if !sc\n@@ -1366,14 +1366,8 @@\n tln(\n-%22$%22 + \n line\n@@ -1486,24 +1486,27 @@\n  %22show%22:%0A%09%09%09\n+// \n fmt.Println(\n@@ -1532,24 +1532,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n@@ -1581,24 +1581,27 @@\n h_back%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1612,32 +1612,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1645,32 +1645,35 @@\n conv.Atoi(v)%0A%09%09%09\n+// \n %09ll.PushBack(num\n@@ -1669,32 +1669,35 @@\n ushBack(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22push_f\n@@ -1706,16 +1706,19 @@\n nt%22:%0A%09%09%09\n+// \n for _, v\n@@ -1741,16 +1741,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09num, _ \n@@ -1774,16 +1774,19 @@\n i(v)%0A%09%09%09\n+// \n %09ll.Push\n@@ -1799,16 +1799,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n@@ -1822,24 +1822,27 @@\n p_back%22:%0A%09%09%09\n+// \n ll.PopBack()\n@@ -1865,16 +1865,19 @@\n nt%22:%0A%09%09%09\n+// \n ll.PopFr\n@@ -1901,16 +1901,19 @@\n ar%22:%0A%09%09%09\n+// \n ll.Clear\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-05-18_18-55-29",
+            "content": "@@ -38,16 +38,27 @@\n %22%0A%09%22os%22%0A\n+%09%22strings%22%0A\n )%0A%0Atype \n@@ -981,322 +981,62 @@\n %0A%7D%0A%0A\n-// Criando a formata%C3%A7%C3%A3o %5B1, 2, 3%5D %22na ra%C3%A7a%22 sem o pacote strings ou strconv%0Afunc (l *LList) String() string %7B%0A%09if l.size == 0 %7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%09%0A%09// Come%C3%A7a com o colchete e o primeiro elemento%0A%09result := %22%5B%22 + fmt.Sprint(l.root.next.value)%0A%09%0A%09// Percorre do segundo elemento em diante adicionando a v%C3%ADrgula antes\n+func (l *LList) String() string %7B%0A%09var values %5B%5Dstring\n %0A%09fo\n@@ -1054,21 +1054,16 @@\n oot.next\n-.next\n ; it != \n@@ -1091,35 +1091,44 @@\n %7B%0A%09%09\n-result += %22, %22 + fmt.Sprint\n+values = append(values, strconv.Itoa\n (it.\n@@ -1137,43 +1137,59 @@\n lue)\n+)\n %0A%09%7D%0A%09re\n-sult += %22%5D%22%0A%09%0A%09return result\n+turn %22%5B%22 + strings.Join(values, %22, %22) + %22%5D%22\n %0A%7D%0A%0A\n@@ -1360,640 +1360,36 @@\n )%0A%09%09\n-%0A%09%09// Separando os argumentos %22na ra%C3%A7a%22 (j%C3%A1 que n%C3%A3o estamos usando o pacote strings)%0A%09%09// Vamos pegar a linha inteira e ler os comandos dela%0A%09%09var args %5B%5Dstring%0A%09%09var word string%0A%09%09// Um pequeno truque usando Sscan para ler as palavras, %0A%09%09// ou podemos simplesmente extrair os comandos com Sprintln/Sscanf iterativo.%0A%09%09// Para simplificar e n%C3%A3o ter que refazer o parser do %60strings.Fields%60,%0A%09%09// o jeito mais seguro de manter a estrutura e ler as palavras %C3%A9 iterar:%0A%09%09wordScanner := bufio.NewScanner(stringsReader(line))%0A%09%09wordScanner.Split(bufio.ScanWords)%0A%09%09for wordScanner.Scan() %7B%0A%09%09%09args = append(args, wordScanner.Text())%0A%09%09%7D\n+args := strings.Fields(line)\n %0A%0A%09%09\n@@ -1602,43 +1602,33 @@\n %09%09%09%09\n-var num int%0A%09%09%09%09fmt.Sscan(v, &num) \n+num, _ := strconv.Atoi(v)\n %0A%09%09%09\n@@ -1711,43 +1711,33 @@\n %09%09%09%09\n-var num int%0A%09%09%09%09fmt.Sscan(v, &num) \n+num, _ := strconv.Atoi(v)\n %0A%09%09%09\n@@ -1951,303 +1951,4 @@\n %7D%0A%7D%0A\n-%0Atype StringReader struct %7B%0A%09s   string%0A%09idx int%0A%7D%0A%0Afunc stringsReader(s string) *StringReader %7B%0A%09return &StringReader%7Bs, 0%7D%0A%7D%0A%0Afunc (r *StringReader) Read(b %5B%5Dbyte) (n int, err error) %7B%0A%09if r.idx %3E= len(r.s) %7B%0A%09%09return 0, fmt.Errorf(%22EOF%22)%0A%09%7D%0A%09n = copy(b, r.s%5Br.idx:%5D)%0A%09r.idx += n%0A%09return n, nil%0A%7D%0A\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-05-18_18-57-34",
+            "content": "@@ -42,30 +42,8 @@\n os%22%0A\n-%09%22strings%22%0A%09%22strconv%22%0A\n )%0A%0At\n@@ -970,62 +970,322 @@\n %0A%7D%0A%0A\n-func (l *LList) String() string %7B%0A%09var values %5B%5Dstring\n+// Criando a formata%C3%A7%C3%A3o %5B1, 2, 3%5D %22na ra%C3%A7a%22 sem o pacote strings ou strconv%0Afunc (l *LList) String() string %7B%0A%09if l.size == 0 %7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%09%0A%09// Come%C3%A7a com o colchete e o primeiro elemento%0A%09result := %22%5B%22 + fmt.Sprint(l.root.next.value)%0A%09%0A%09// Percorre do segundo elemento em diante adicionando a v%C3%ADrgula antes\n %0A%09fo\n@@ -1303,16 +1303,21 @@\n oot.next\n+.next\n ; it != \n@@ -1345,44 +1345,35 @@\n %7B%0A%09%09\n-values = append(values, strconv.Itoa\n+result += %22, %22 + fmt.Sprint\n (it.\n@@ -1382,59 +1382,43 @@\n lue)\n-)\n %0A%09%7D%0A%09re\n-turn %22%5B%22 + strings.Join(values, %22, %22) + %22%5D%22\n+sult += %22%5D%22%0A%09%0A%09return result\n %0A%7D%0A%0A\n@@ -1589,36 +1589,640 @@\n )%0A%09%09\n-args := strings.Fields(line)\n+%0A%09%09// Separando os argumentos %22na ra%C3%A7a%22 (j%C3%A1 que n%C3%A3o estamos usando o pacote strings)%0A%09%09// Vamos pegar a linha inteira e ler os comandos dela%0A%09%09var args %5B%5Dstring%0A%09%09var word string%0A%09%09// Um pequeno truque usando Sscan para ler as palavras, %0A%09%09// ou podemos simplesmente extrair os comandos com Sprintln/Sscanf iterativo.%0A%09%09// Para simplificar e n%C3%A3o ter que refazer o parser do %60strings.Fields%60,%0A%09%09// o jeito mais seguro de manter a estrutura e ler as palavras %C3%A9 iterar:%0A%09%09wordScanner := bufio.NewScanner(stringsReader(line))%0A%09%09wordScanner.Split(bufio.ScanWords)%0A%09%09for wordScanner.Scan() %7B%0A%09%09%09args = append(args, wordScanner.Text())%0A%09%09%7D\n %0A%0A%09%09\n@@ -2435,33 +2435,43 @@\n %09%09%09%09\n-num, _ := strconv.Atoi(v)\n+var num int%0A%09%09%09%09fmt.Sscan(v, &num) \n %0A%09%09%09\n@@ -2554,33 +2554,43 @@\n %09%09%09%09\n-num, _ := strconv.Atoi(v)\n+var num int%0A%09%09%09%09fmt.Sscan(v, &num) \n %0A%09%09%09\n@@ -2796,12 +2796,311 @@\n %22)%0A%09%09%7D%0A%09%7D%0A%7D%0A\n+%0Atype StringReader struct %7B%0A%09s   string%0A%09idx int%0A%7D%0A%0Afunc stringsReader(s string) *StringReader %7B%0A%09return &StringReader%7Bs, 0%7D%0A%7D%0A%0Afunc (r *StringReader) Read(b %5B%5Dbyte) (n int, err error) %7B%0A%09if r.idx %3E= len(r.s) %7B%0A%09%09return 0, fmt.Errorf(%22EOF%22)%0A%09%7D%0A%09n = copy(b, r.s%5Br.idx:%5D)%0A%09r.idx += n%0A%09return n, nil%0A%7D%0A\n",
+            "lines": "169"
+        },
+        {
+            "label": "2026-05-18_18-58-19",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Node struct {\n\tvalue int\n\tnext  *Node\n\tprev  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\troot := &Node{}\n\troot.next = root\n\troot.prev = root\n\treturn &LList{root: root, size: 0}\n}\n\nfunc (l *LList) insert(it *Node, value int) {\n\tnewNode := &Node{value: value, next: it, prev: it.prev}\n\tit.prev.next = newNode\n\tit.prev = newNode\n\tl.size++\n}\n\nfunc (l *LList) erase(it *Node) {\n\tif it == l.root {\n\t\treturn\n\t}\n\tit.prev.next = it.next\n\tit.next.prev = it.prev\n\tl.size--\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insert(l.root, value)\n}\n\nfunc (l *LList) PushFront(value int) {\n\tl.insert(l.root.next, value)\n}\n\nfunc (l *LList) PopBack() {\n\tif l.size > 0 {\n\t\tl.erase(l.root.prev)\n\t}\n}\n\nfunc (l *LList) PopFront() {\n\tif l.size > 0 {\n\t\tl.erase(l.root.next)\n\t}\n}\n\nfunc (l *LList) Size() int {\n\treturn l.size\n}\n\nfunc (l *LList) Clear() {\n\tl.root.next = l.root\n\tl.root.prev = l.root\n\tl.size = 0\n}\n\nfunc (l *LList) String() string {\n\tvar values []string\n\tfor it := l.root.next; it != l.root; it = it.next {\n\t\tvalues = append(values, strconv.Itoa(it.value))\n\t}\n\treturn \"[\" + strings.Join(values, \", \") + \"]\"\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList()\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushFront(num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tll.PopBack()\n\t\tcase \"pop_front\":\n\t\t\tll.PopFront()\n\t\tcase \"clear\":\n\t\t\tll.Clear()\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "128"
+        }
+    ]
+}

@@ -6,34 +6,30 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: eval1
   target: https://github.com/senapk/eval_26_ed_1
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 expanded:
-- ed@basic
-- ed@tree
 - ed@linear
-- ed@list
 - ed@dfs
 - ed@bfs
+- ed@basic
+- ed@tree
 flags:
   inbox: inbox
   panel: graph
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@sandbox
-selected_index: 13
+selected: ed@list
+selected_index: 4
