@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"strconv"
 )
 
 type Node[T comparable] struct {
@@ -13,20 +12,6 @@ type Node[T comparable] struct {
 	next  *Node[T]
 	prev  *Node[T]
 	root  *Node[T]
-}
-
-func (n *Node[T]) Next() *Node[T] {
-	if n.next == n.root {
-		return n.root.next
-	}
-	return n.next
-}
-
-func (n *Node[T]) Prev() *Node[T] {
-	if n.prev == n.root {
-		return n.root.prev
-	}
-	return n.prev
 }
 
 type LList[T comparable] struct {
@@ -42,6 +27,23 @@ func NewLList[T comparable]() *LList[T] {
 	return &LList[T]{root: root, size: 0}
 }
 
+func (n *Node[T]) Next() *Node[T] {
+	if n.next == n.root {
+		return n.root.next
+	}
+	return n.next
+}
+
+func (l *LList[T]) Size() int {
+	return l.size
+}
+
+func (l *LList[T]) Clear() {
+	l.root.next = l.root
+	l.root.prev = l.root
+	l.size = 0
+}
+
 func (l *LList[T]) PushBack(value T) {
 	l.insertBefore(l.root, value)
 }
@@ -55,14 +57,12 @@ func (l *LList[T]) insertBefore(mark *Node[T], value T) {
 	l.size++
 }
 
-func (l *LList[T]) Size() int {
-	return l.size
-}
-
-func (l *LList[T]) Clear() {
-	l.root.next = l.root
-	l.root.prev = l.root
-	l.size = 0
+func (l *LList[T]) String() string {
+	values := []string{}
+	for n := l.root.next; n != l.root; n = n.next {
+		values = append(values, fmt.Sprint(n.Value))
+	}
+	return "[" + strings.Join(values, ", ") + "]"
 }
 
 func (l *LList[T]) Search(value T) *Node[T] {
@@ -74,77 +74,51 @@ func (l *LList[T]) Search(value T) *Node[T] {
 	return nil
 }
 
-func (l *LList[T]) String() string {
-	values := []string{}
-	for n := l.root.next; n != l.root; n = n.next {
-		values = append(values, fmt.Sprint(n.Value))
-	}
-	return "[" + strings.Join(values, ", ") + "]"
-}
-
-
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	ll := NewLList[int]()
 
-	for {
-		if !scanner.Scan() {
-			break
-		}
+	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Println("$" + line)
-		args := strings.Fields(line)
 
-		if len(args) == 0 {
-			continue
+		editor := NewLList[rune]()
+		cursor := editor.root
+
+		for _, c := range line {
+			switch c {
+			case 'R':
+				editor.insertBefore(cursor, '\n')
+			case 'B':
+				if cursor.prev != editor.root {
+					editor.removeNode(cursor.prev)
+				}
+			case 'D':
+				if cursor != editor.root {
+					toDelete := cursor
+					cursor = cursor.next
+					editor.removeNode(toDelete)
+				}
+			case '<':
+				if cursor.prev != editor.root {
+					cursor = cursor.prev
+				}
+			case '>':
+				if cursor != editor.root {
+					cursor = cursor.next
+				}
+			default:
+				editor.insertBefore(cursor, c)
+			}
 		}
 
-		cmd := args[0]
-
-		switch cmd {
-		case "show":
-			fmt.Println(ll.String())
-		case "size":
-			fmt.Println(ll.Size())
-		case "push_back":
-			for _, v := range args[1:] {
-				num, _ := strconv.Atoi(v)
-				ll.PushBack(num)
+		for n := editor.root.next; n != editor.root; n = n.next {
+			if n == cursor {
+				fmt.Print("|")
 			}
-		case "clear":
-				ll.Clear()
-		case "forward":
-			search, _ := strconv.Atoi(args[1])
-			steps, _ := strconv.Atoi(args[2])
-			node := ll.Search(search)
-			if node == nil {
-				fmt.Println("fail: not found")
-				continue
-			}
-			collect := []string{}
-			for i := 0; i < steps; i++ {
-				collect = append(collect, fmt.Sprintf("%v", node.Value))
-				node = node.Next()
-			}
-			fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
-		case "backward":
-			search, _ := strconv.Atoi(args[1])
-			steps, _ := strconv.Atoi(args[2])
-			node := ll.Search(search)
-			if node == nil {
-				fmt.Println("fail: not found")
-				continue
-			}
-			collect := []string{}
-			for i := 0; i < steps; i++ {
-				collect = append(collect, fmt.Sprintf("%v", node.Value))
-				node = node.Prev()
-			}
-			fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
-		case "end":
-			return
-		default:
-			fmt.Println("fail: comando invalido")
+			fmt.Print(string(n.Value))
 		}
+		if cursor == editor.root {
+			fmt.Print("|")
+		}
+		fmt.Println()
 	}
 }

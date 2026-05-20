@@ -22,3 +22,28 @@
 2026-05-19 22:49:30, MOVE, v:1, k:ed@lista_d4, mode:EDIT
 2026-05-19 22:53:02, MOVE, v:1, k:ed@lista_d4, mode:EDIT
 2026-05-19 22:53:06, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-05-19 22:54:14, SELF, v:1, k:ed@lista_d4, self:1, rate:100, concept:1
+2026-05-19 22:54:27, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:Vinicius Chrystian Joao Pedro, concept:1
+2026-05-19 22:55:15, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-19 22:55:48, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-19 22:55:53, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-19 23:02:58, EXEC, v:1, k:ed@editor, mode:FULL, rate:0, size:5
+2026-05-19 23:03:50, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:03:49, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-19 23:03:50, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-19 23:05:27, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-19 23:16:25, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:16:57, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:17:14, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:18:46, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:18:40, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-19 23:18:46, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-19 23:20:37, EXEC, v:1, k:ed@editor, mode:FULL, rate:0
+2026-05-19 23:20:55, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-19 23:20:58, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-19 23:21:09, EXEC, v:1, k:ed@editor, mode:FULL, size:1, fail:COMP
+2026-05-19 23:21:20, EXEC, v:1, k:ed@editor, mode:FULL, size:125, fail:COMP
+2026-05-19 23:21:21, EXEC, v:1, k:ed@editor, mode:FULL, fail:COMP
+2026-05-19 23:20:35, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-19 23:20:37, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-19 23:21:20, MOVE, v:1, k:ed@editor, mode:EDIT

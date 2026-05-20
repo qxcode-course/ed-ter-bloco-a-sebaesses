@@ -1,0 +1,31 @@
+2026-05-20 13:33:38, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:Vinicius Chrystian Joao Pedro, concept:1
+2026-05-20 13:34:29, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-20 13:34:48, EXEC, v:1, k:ed@editor, mode:FULL, fail:COMP
+2026-05-20 13:34:52, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-20 13:34:56, MOVE, v:1, k:ed@editor, mode:PICK
+2026-05-20 13:35:15, EXEC, v:1, k:ed@editor, mode:FULL, fail:COMP
+2026-05-20 13:39:20, EXEC, v:1, k:ed@editor, mode:FULL, rate:100, size:134
+2026-05-20 13:41:45, EXEC, v:1, k:ed@editor, mode:FULL, size:216, fail:COMP
+2026-05-20 13:42:07, EXEC, v:1, k:ed@editor, mode:FULL, size:216, fail:COMP
+2026-05-20 13:42:41, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 13:39:20, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 13:47:34, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 13:47:50, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 13:55:10, EXEC, v:1, k:ed@editor, mode:FULL, size:103, fail:COMP
+2026-05-20 13:57:34, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 13:57:57, EXEC, v:1, k:ed@editor, mode:FULL, size:145, fail:COMP
+2026-05-20 13:58:09, EXEC, v:1, k:ed@editor, mode:FULL, size:145, fail:COMP
+2026-05-20 13:58:11, EXEC, v:1, k:ed@editor, mode:FULL, fail:COMP
+2026-05-20 13:59:32, EXEC, v:1, k:ed@editor, mode:FULL, size:145, fail:COMP
+2026-05-20 14:00:03, EXEC, v:1, k:ed@editor, mode:FULL, rate:100, size:133
+2026-05-20 14:00:02, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 14:00:03, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-20 14:04:08, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-20 14:04:17, SELF, v:1, k:ed@editor, self:1, rate:100, problem:1
+2026-05-20 14:04:30, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-05-20 14:04:30, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-20 14:04:29, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-20 14:04:30, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-20 14:04:30, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-20 14:04:30, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-20 14:09:54, MOVE, v:1, k:ed@prin_list1, mode:BACK

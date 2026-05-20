@@ -19,17 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@rec
+- ed@list
 - ed@dfs
-- ed@bfs
-- ed@basic
-- ed@tree
 flags:
-  inbox: inbox
-  panel: graph
-  show_panel: 'false'
+  inbox: all
+  panel: skills
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@list
-selected_index: 4
+selected: ed@prin_list1
+selected_index: 33
