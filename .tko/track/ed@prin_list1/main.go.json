@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-22_20-49-10",
+            "content": "@@ -189,167 +189,8 @@\n %0A%7D%0A%0A\n-func NewDList%5BT comparable%5D() *DList%5BT%5D %7B%0A%09root := &DNode%5BT%5D%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09root.root = root%0A%09return &DList%5BT%5D%7Broot: root, size: 0%7D%0A%7D%0A%0A\n // m\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-22_20-49-59",
+            "content": "@@ -348,319 +348,8 @@\n %0A%7D%0A%0A\n-func (l *DList%5BT%5D) Front() *DNode%5BT%5D %7B%0A%09if l.size == 0 %7B%0A%09%09return nil%0A%09%7D%0A%09return l.root.next%0A%7D%0A%0Afunc (l *DList%5BT%5D) PushBack(value T) %7B%0A%09l.Insert(l.root, value)%0A%7D%0A%0Afunc (l *DList%5BT%5D) Erase(it *DNode%5BT%5D) %7B%0A%09if it == l.root %7C%7C it == nil %7B%0A%09%09return%0A%09%7D%0A%09it.prev.next = it.next%0A%09it.next.prev = it.prev%0A%09l.size--%0A%7D%09%09%0A%0A\n // m\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-22_20-54-53",
+            "content": "@@ -27,80 +27,334 @@\n mt%22%0A\n-)%0A%0A// move para frente na lista circular ignorando o sentinela\n+%09%22strings%22%0A)%0A%0Atype DNode%5BT comparable%5D struct %7B%0A%09Value            T%0A%09next, prev, root *DNode%5BT%5D%0A%7D%0A%0Atype DList%5BT comparable%5D struct %7B%0A%09root *DNode%5BT%5D%0A%09size int%0A%7D%0A%0Afunc NewDList%5BT comparable%5D() *DList%5BT%5D %7B%0A%09root := &DNode%5BT%5D%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09root.root = root%0A%09return &DList%5BT%5D%7Broot: root, size: 0%7D%0A%7D%0A\n %0Afunc \n-Next\n (l *\n@@ -363,37 +363,191 @@\n ist%5B\n-int%5D, it *DNode%5Bint%5D)\n+T%5D) Front() *DNode%5BT%5D %7B%0A%09if l.size == 0 %7B%0A%09%09return nil%0A%09%7D%0A%09return l.root.next%0A%7D%0A%0Afunc (l *DList%5BT%5D) PushBack(value T) %7B%0A%09l.Insert(l.root, value)%0A%7D%0A%0Afunc (l *DList%5BT%5D) Erase(it\n  *DNode%5B\n int%5D\n@@ -542,20 +542,19 @@\n  *DNode%5B\n-int%5D\n+T%5D)\n  %7B%0A%09if i\n@@ -554,21 +554,16 @@\n %7B%0A%09if it\n-.next\n  == l.ro\n@@ -569,49 +569,319 @@\n oot \n-%7B%0A%09%09return l.root.next%0A%09%7D%0A%09return it.next\n+%7C%7C it == nil %7B%0A%09%09return%0A%09%7D%0A%09it.prev.next = it.next%0A%09it.next.prev = it.prev%0A%09l.size--%0A%7D%09%09%0A%0A// mostra a lista com o elemento sword destacado%0Afunc ToStr(l *DList%5Bint%5D, sword *DNode%5Bint%5D) string %7B%0A%09return %22%22%0A%7D%0A%0A// move para frente na lista circular%0Afunc Next(l *DList%5Bint%5D, it *DNode%5Bint%5D) *DNode%5Bint%5D %7B%0A%09return nil\n %0A%7D%0A%0A\n@@ -919,14 +919,9 @@\n int%0A\n-%0A%09for \n+%09\n fmt.\n@@ -943,17 +943,35 @@\n sen)\n- == 2 %7B%0A%09\n+%0A%09fmt.Println(qtd, chosen)%0A\n %09l :\n@@ -988,17 +988,16 @@\n %5Bint%5D()%0A\n-%09\n %09for i :\n@@ -1017,17 +1017,16 @@\n ; i++ %7B%0A\n-%09\n %09%09l.Push\n@@ -1033,22 +1033,19 @@\n Back(i)%0A\n-%09\n %09%7D%0A\n-%0A%09\n %09sword :\n@@ -1056,18 +1056,16 @@\n Front()%0A\n-%0A%09\n %09for ran\n@@ -1080,17 +1080,16 @@\n n - 1 %7B%0A\n-%09\n %09%09sword \n@@ -1105,22 +1105,19 @@\n  sword)%0A\n-%09\n %09%7D%0A\n-%0A%09\n %09for ran\n@@ -1131,17 +1131,16 @@\n - 1 %7B%0A%09%09\n-%09\n fmt.Prin\n@@ -1162,17 +1162,16 @@\n ord))%0A%09%09\n-%09\n l.Erase(\n@@ -1186,17 +1186,16 @@\n sword))%0A\n-%09\n %09%09sword \n@@ -1215,14 +1215,11 @@\n rd)%0A\n-%09\n %09%7D%0A\n-%0A%09\n %09fmt\n@@ -1244,13 +1244,10 @@\n sword))%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-22_20-57-55",
+            "content": "@@ -26,16 +26,76 @@\n fmt%22%0A)%0A%0A\n+// move para frente na lista circular ignorando o sentinela%0A\n func Nex\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-22_21-00-48",
+            "content": "@@ -188,26 +188,12 @@\n nt%0A%0A\n-%09%0A\n %09for\n- %7B%0A%09%09n, _ :=\n  fmt\n@@ -216,36 +216,15 @@\n sen)\n-%0A%09%09if n != 2 %7B%0A%09%09%09break%0A%09%09%7D%0A\n+ == 2 %7B\n %0A%09%09l\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_21-02-04",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it.next == l.root {\n\t\treturn l.root.next\n\t}\n\treturn it.next\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\n\t\n\tfor {\n\t\tn, _ := fmt.Scan(&qtd, &chosen)\n\t\tif n != 2 {\n\t\t\tbreak\n\t\t}\n\n\t\tl := NewDList[int]()\n\t\tfor i := 1; i <= qtd; i++ {\n\t\t\tl.PushBack(i)\n\t\t}\n\n\t\tsword := l.Front()\n\n\t\tfor range chosen - 1 {\n\t\t\tsword = Next(l, sword)\n\t\t}\n\n\t\tfor range qtd - 1 {\n\t\t\tfmt.Println(ToStr(l, sword))\n\t\t\tl.Erase(Next(l, sword))\n\t\t\tsword = Next(l, sword)\n\t\t}\n\n\t\tfmt.Println(ToStr(l, sword))\n\t}\n}\n",
+            "lines": "43"
+        }
+    ]
+}

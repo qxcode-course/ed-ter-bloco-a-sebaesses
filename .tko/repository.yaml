@@ -19,13 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
 - ed@list
+- ed@rec
 - ed@dfs
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: time
   show_time: 'true'
 lang: go
