@@ -1,0 +1,35 @@
+2026-05-24 20:37:29, SELF, v:1, k:ed@editor, self:1, rate:100, debug:1
+2026-05-24 20:37:44, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:Vinicius Chrystian Joao Pedro, concept:1
+2026-05-24 20:37:49, SELF, v:1, k:ed@editorint, self:1, rate:100, friend:Vinicius Chrystian Joao Pedro, concept:1
+2026-05-24 20:37:49, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-24 20:37:52, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
+2026-05-24 20:37:53, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-24 20:38:11, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-05-24 20:38:13, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-24 20:37:52, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-24 20:38:11, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:38:11, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:38:11, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:38:11, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:46:19, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:74, fail:COMP
+2026-05-24 20:46:26, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:74, fail:COMP
+2026-05-24 20:46:42, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:82
+2026-05-24 20:46:40, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:46:42, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 20:47:06, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-24 20:47:15, SELF, v:1, k:ed@wordsearch, self:1, rate:100, concept:1
+2026-05-24 21:06:07, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-05-24 21:06:10, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-24 21:06:07, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-24 21:06:07, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-24 21:07:45, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-05-24 21:09:01, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:22, fail:COMP
+2026-05-24 21:11:04, EXEC, v:1, k:ed@subset_sum, mode:FREE, size:29
+2026-05-24 21:11:11, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-05-24 21:11:34, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:75, size:33
+2026-05-24 21:11:33, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-24 21:11:42, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-24 21:24:55, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:35
+2026-05-24 21:25:00, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:35
+2026-05-24 21:25:47, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-24 21:26:13, SELF, v:1, k:ed@subset_sum, self:1, rate:100, guided:1, concept:1

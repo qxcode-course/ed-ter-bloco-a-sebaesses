@@ -19,9 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@rec
-- ed@dfs
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
@@ -29,5 +27,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@prin_list1
-selected_index: 33
+selected: ed@subset_sum
+selected_index: 5

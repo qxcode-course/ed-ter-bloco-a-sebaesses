@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_21-07-45",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,388 +37,8 @@\n ) %7B%0A\n-%0A    func subsetSum(arr %5B%5Dint, k int, index int) bool %7B%0A        if k == 0 %7B%0A            return true%0A        %7D%0A        if index %3E= len(arr) %7B%0A            return false%0A        %7D%0A        // Include current element%0A        if subsetSum(arr, k-arr%5Bindex%5D, index+1) %7B%0A            return true%0A        %7D%0A        // Exclude current element%0A        return subsetSum(arr, k, index+1)%0A    %7D%0A%0A\n     \n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-24_21-09-01",
+            "content": "@@ -20,16 +20,35 @@\n  %22fmt%22%0A%0A\n+func main() %7B%0A%0A    \n func sub\n@@ -418,194 +418,39 @@\n  %7D%0A%0A\n-func main() %7B%0A    var n, k int%0A    %0A    if _, err := fmt.Scan(&n, &k); err != nil %7B%0A        return%0A%7D%0A    arr := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Scan(&arr%5Bi%5D)%0A    %7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-05-24_21-11-04",
+            "content": "@@ -586,72 +586,7 @@\n    %7D\n-%0A%0A    if subsetSum(arr, k, 0) %7B%0A        fmt.Println(%22true%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-24_21-11-34",
+            "content": "@@ -646,30 +646,8 @@\n e%22)%0A\n-    %7D else %7B%0A        %0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-24_21-24-55",
+            "content": "@@ -667,28 +667,8 @@\n     \n-fmt.Println(%22false%22)\n %0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-24_21-25-00",
+            "content": "package main\nimport \"fmt\"\n\nfunc subsetSum(arr []int, k int, index int) bool {\n        if k == 0 {\n            return true\n        }\n        if index >= len(arr) {\n            return false\n        }\n        // Include current element\n        if subsetSum(arr, k-arr[index], index+1) {\n            return true\n        }\n        // Exclude current element\n        return subsetSum(arr, k, index+1)\n    }\n\nfunc main() {\n    var n, k int\n    \n    if _, err := fmt.Scan(&n, &k); err != nil {\n        return\n}\n    arr := make([]int, n)\n    for i := 0; i < n; i++ {\n        fmt.Scan(&arr[i])\n    }\n\n    if subsetSum(arr, k, 0) {\n        fmt.Println(\"true\")\n    } else {\n        fmt.Println(\"false\")\n    }\n}\n",
+            "lines": "35"
+        }
+    ]
+}
