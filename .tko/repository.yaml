@@ -27,5 +27,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@subset_sum
-selected_index: 5
+selected: ed@distancia
+selected_index: 6

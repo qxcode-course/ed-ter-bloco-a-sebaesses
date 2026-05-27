@@ -1,0 +1,18 @@
+2026-05-26 13:25:10, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-26 13:26:12, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-26 13:26:20, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-05-26 13:26:22, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-26 13:27:09, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-26 13:25:48, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-26 13:26:20, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:26:20, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:27:05, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-26 13:43:09, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-05-26 13:43:11, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-26 13:44:04, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:110
+2026-05-26 13:43:09, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-26 13:43:09, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-26 13:43:09, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-26 13:45:13, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-26 13:44:04, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-26 13:47:04, MOVE, v:1, k:ed@bufferring, mode:BACK

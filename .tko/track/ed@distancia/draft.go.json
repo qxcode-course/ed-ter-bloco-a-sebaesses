@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_22-11-21",
+            "content": "@@ -38,17 +38,16 @@\n id(arr %5B\n-%5D\n byte, id\n@@ -69,16 +69,17 @@\n har byte\n+%5D\n ) bool %7B\n@@ -85,100 +85,52 @@\n %7B%0A%09i\n-nicio := idx - L%0A%09if inicio %3C 0 %7B%0A%09%09inicio = 0%0A%09%7D%0A%09for i := inicio; i %3C idx; i++ %7B%0A%09\n+f arr%5Bchar%5D == 0 %7B%0A%09%09return true%0A%09%7D%0A\n %09if arr%5B\n i%5D =\n@@ -121,38 +121,37 @@\n %0A%09%7D%0A%09if arr%5B\n-i\n+char\n %5D == \n-char\n+1\n  %7B%0A\n-%09\n %09%09return fal\n@@ -157,121 +157,57 @@\n lse%0A\n-%09%09%7D%0A\n %09%7D%0A%09\n-fim := idx + L%0A%09if fim %3E= len(arr) %7B%0A%09%09fim = len(arr) - 1%0A%09%7D%0A%09for i := idx + 1; i %3C= fim; i++ %7B%0A%09\n+if arr%5Bchar%5D == 2 %7B%0A%09%09return true%0A%09%7D%0A\n %09if arr%5B\n i%5D =\n@@ -206,22 +206,21 @@\n arr%5B\n-i\n+char\n %5D == \n-char\n+3\n  %7B%0A\n-%09\n %09%09re\n@@ -230,20 +230,16 @@\n n false%0A\n-%09%09%7D%0A\n %09%7D%0A%09retu\n@@ -245,14 +245,16 @@\n urn \n-tru\n+fals\n e%0A%7D\n+%09\n %0A%0Afu\n@@ -274,119 +274,239 @@\n var \n-seq string%0A%09var L int%0A%0A%09for %7B%0A%09%09n, _ := fmt.Scan(&seq, &L)%0A%09%09if n != 2 %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09arr := %5B%5Dbyte(seq)%0A%09%09%0A%0A%7D%0A%09\n+T int%0A%09fmt.Scan(&T)%0A%09for i := 0; i %3C T; i++ %7B%0A%09%09var S string%0A%09%09fmt.Scan(&S)%0A%09%09arr := %5B256%5Dint%7B%7D%0A%09%09for j := 0; j %3C len(S); j++ %7B%0A%09%09%09arr%5BS%5Bj%5D%5D++%0A%09%09%7D%0A%09%09if isValid(arr) %7B%0A%09%09%09fmt.Println(%22YES%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(%22NO%22)%0A%09%09%7D%0A%09%7D%0A    %0A%7D\n %0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-27_22-26-01",
+            "content": "@@ -499,174 +499,9 @@\n )%0A%09%09\n-var solve func (idx int) bool%0A%09%09solve = func (idx int) bool %7B%0A%09%09%09if idx == len(arr) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%09if arr%5Bidx%5D != '.' %7B%0A%09%09%09%09return solve(idx + 1)%0A%09%09%09%7D%0A%0A%09%09%09\n+%0A\n %0A%7D%0A%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-27_22-31-03",
+            "content": "@@ -665,226 +665,8 @@\n %0A%09%09%09\n-for d := 0; d %3C= L; d++ %7B%0A%09%09%09%09if isValid(arr, idx, L, 'A' + byte(d)) %7B%0A%09%09%09%09%09arr%5Bidx%5D = 'A' + byte(d)%0A%09%09%09%09%09if solve(idx + 1) %7B%0A%09%09%09%09%09%09return true%0A%09%09%09%09%09%7D%0A%09%09%09%09%09arr%5Bidx%5D = '.'%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09return false%0A%09%09%7D%0A%09%09solve(0)%0A%09%09%0A%09%7D\n %0A%7D%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-27_22-38-25",
+            "content": "@@ -880,32 +880,8 @@\n )%0A%09%09\n-fmt.Println(string(arr))\n %0A%09%7D%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-27_22-44-59",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -505,24 +505,25 @@\n r solve func\n+ \n (idx int) bo\n@@ -539,16 +539,17 @@\n e = func\n+ \n (idx int\n@@ -720,11 +720,13 @@\n L, '\n-0'+\n+A' + \n byte\n@@ -749,17 +749,17 @@\n idx%5D = '\n-0\n+A\n ' + byte\n@@ -904,10 +904,12 @@\n rr))%0A%09%7D%0A\n-\n %7D%0A\n+%09%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-27_22-46-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc isValid(arr []byte, idx int, L int, char byte) bool {\n\tinicio := idx - L\n\tif inicio < 0 {\n\t\tinicio = 0\n\t}\n\tfor i := inicio; i < idx; i++ {\n\t\tif arr[i] == char {\n\t\t\treturn false\n\t\t}\n\t}\n\tfim := idx + L\n\tif fim >= len(arr) {\n\t\tfim = len(arr) - 1\n\t}\n\tfor i := idx + 1; i <= fim; i++ {\n\t\tif arr[i] == char {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar seq string\n\tvar L int\n\n\tfor {\n\t\tn, _ := fmt.Scan(&seq, &L)\n\t\tif n != 2 {\n\t\t\tbreak\n\t\t}\n\t\tarr := []byte(seq)\n\t\tvar solve func(idx int) bool\n\t\tsolve = func(idx int) bool {\n\t\t\tif idx == len(arr) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t\tif arr[idx] != '.' {\n\t\t\t\treturn solve(idx + 1)\n\t\t\t}\n\n\t\t\tfor d := 0; d <= L; d++ {\n\t\t\t\tif isValid(arr, idx, L, '0'+byte(d)) {\n\t\t\t\t\tarr[idx] = '0' + byte(d)\n\t\t\t\t\tif solve(idx + 1) {\n\t\t\t\t\t\treturn true\n\t\t\t\t\t}\n\t\t\t\t\tarr[idx] = '.'\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn false\n\t\t}\n\t\tsolve(0)\n\t\tfmt.Println(string(arr))\n\t}\n}\n",
+            "lines": "60"
+        }
+    ]
+}
