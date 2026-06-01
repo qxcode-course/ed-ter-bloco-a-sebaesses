@@ -1,0 +1,30 @@
+2026-06-01 21:15:44, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-06-01 21:22:57, EXEC, v:1, k:ed@caminho, mode:FULL, size:111, fail:COMP
+2026-06-01 21:25:21, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:25:38, EXEC, v:1, k:ed@caminho, mode:FULL, size:116, fail:COMP
+2026-06-01 21:26:21, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:120
+2026-06-01 21:26:53, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:136
+2026-06-01 21:30:28, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:26:53, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:31:05, EXEC, v:1, k:ed@caminho, mode:FULL, rate:0, size:139
+2026-06-01 21:31:34, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:31:05, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:42:27, EXEC, v:1, k:ed@caminho, mode:FULL, rate:100, size:148
+2026-06-01 21:42:38, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-06-01 21:42:52, SELF, v:1, k:ed@caminho, self:1, rate:100, concept:1, debug:1
+2026-06-01 21:42:27, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 21:43:15, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-06-01 22:08:48, MOVE, v:1, k:ed@rotten, mode:DOWN
+2026-06-01 22:08:50, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-06-01 22:08:48, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-01 22:08:48, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-01 22:12:11, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-01 22:18:33, EXEC, v:1, k:ed@rotten, mode:FULL, rate:33, size:44
+2026-06-01 22:18:49, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-06-01 22:18:58, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:52
+2026-06-01 22:19:00, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-06-01 22:19:10, SELF, v:1, k:ed@rotten, self:1, rate:100, guided:1, concept:1
+2026-06-01 22:18:55, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-01 22:18:58, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-01 22:57:15, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-01 23:22:33, MOVE, v:1, k:ed@bufferring, mode:BACK

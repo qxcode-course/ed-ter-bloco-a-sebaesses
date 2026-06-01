@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_22-18-33",
+            "content": "@@ -906,46 +906,8 @@\n ) %7B%0A\n-    var m, n int%0A    fmt.Scan(&m, &n)%0A\n     \n@@ -918,168 +918,39 @@\n  := \n-make(\n %5B%5D%5B%5Dint\n-, m)%0A    for i := 0; i %3C m; i++ %7B%0A        grid%5Bi%5D = make(%5B%5Dint, n)%0A        for j := 0; j %3C n; j++ %7B%0A            fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A        %7D%0A    \n+%7B%7B2,1,1%7D,%7B1,1,0%7D,%7B0,1,1%7D\n %7D%0A  \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-01_22-18-58",
+            "content": "package main\nimport \"fmt\"\n\ntype Orange struct {\n    r, c, min int\n}\n\nfunc orangesRotting(grid [][]int) int {\n    m, n := len(grid), len(grid[0])\n    q := []Orange{}\n    for i := 0; i < m; i++ {\n        for j := 0; j < n; j++ {\n            if grid[i][j] == 2 {\n                q = append(q, Orange{i, j, 0})\n            }\n        }\n    }\n    ans := 0\n    for len(q) > 0 {\n        o := q[0]\n        q = q[1:]\n        ans = o.min\n        for _, d := range [][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}} {\n            r, c := o.r+d[0], o.c+d[1]\n            if r >= 0 && r < m && c >= 0 && c < n && grid[r][c] == 1 {\n                grid[r][c] = 2\n                q = append(q, Orange{r, c, o.min + 1})\n            }\n        }\n    }\n    for i := 0; i < m; i++ {\n        for j := 0; j < n; j++ {\n            if grid[i][j] == 1 {\n                return -1\n            }\n        }\n    }\n    return ans\n}  \n\nfunc main() {\n    var m, n int\n    fmt.Scan(&m, &n)\n    grid := make([][]int, m)\n    for i := 0; i < m; i++ {\n        grid[i] = make([]int, n)\n        for j := 0; j < n; j++ {\n            fmt.Scan(&grid[i][j])\n        }\n    }\n    fmt.Println(orangesRotting(grid))\n}\n",
+            "lines": "52"
+        }
+    ]
+}

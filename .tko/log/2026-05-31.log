@@ -1,0 +1,6 @@
+2026-05-31 17:14:58, SELF, v:1, k:ed@distancia, self:1, rate:100, concept:1
+2026-05-31 17:15:03, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-31 17:15:17, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-31 17:15:33, SELF, v:1, k:ed@distancia, self:1, rate:100, concept:1, debug:1
+2026-05-31 17:16:12, MOVE, v:1, k:ed@caminho, mode:DOWN
+2026-05-31 17:16:13, MOVE, v:1, k:ed@caminho, mode:PICK
