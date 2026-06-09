@@ -19,14 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
 - ed@linear
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
+  show_panel: 'false'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@bufferring
+selected: ed@fila_enc
 selected_index: 7

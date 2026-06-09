@@ -1,0 +1,28 @@
+2026-06-09 00:43:35, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-06-09 00:43:35, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-06-09 00:43:37, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-06-09 00:43:42, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-06-09 00:43:43, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-06-09 00:43:56, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-09 00:54:31, EXEC, v:1, k:ed@bufferring, mode:FULL, size:107, fail:COMP
+2026-06-09 00:55:21, EXEC, v:1, k:ed@bufferring, mode:FULL, size:111, fail:COMP
+2026-06-09 00:57:54, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 00:58:10, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:121
+2026-06-09 00:59:05, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 00:58:09, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:04:26, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:134
+2026-06-09 01:04:26, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:10:22, EXEC, v:1, k:ed@bufferring, mode:FULL, size:143, fail:COMP
+2026-06-09 01:11:30, EXEC, v:1, k:ed@bufferring, mode:FULL, size:152, fail:COMP
+2026-06-09 01:11:27, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:17:58, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:19:10, EXEC, v:1, k:ed@bufferring, mode:FULL, size:166, fail:COMP
+2026-06-09 01:22:56, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:25:46, EXEC, v:1, k:ed@bufferring, mode:FULL, size:195, fail:COMP
+2026-06-09 01:25:57, EXEC, v:1, k:ed@bufferring, mode:FULL, size:195, fail:COMP
+2026-06-09 01:25:57, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-09 01:29:29, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:184
+2026-06-09 01:29:31, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-09 01:29:41, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-09 01:30:00, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-09 01:30:36, SELF, v:1, k:ed@bufferring, self:1, rate:100, concept:1, debug:1
