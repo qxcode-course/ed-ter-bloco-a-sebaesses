@@ -19,15 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
-- ed@linear
-- ed@bfs
+- ed@tree
 flags:
   inbox: all
   panel: skills
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: eval1@eval1
-selected_index: 30
+selected: ed@serial
+selected_index: 8

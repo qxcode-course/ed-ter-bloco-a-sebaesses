@@ -1,0 +1,9 @@
+2026-06-11 00:10:20, EXEC, v:1, k:ed@serial, mode:FULL, rate:100, size:78
+2026-06-11 00:10:55, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-11 00:11:06, SELF, v:1, k:ed@serial, self:1, rate:100, concept:1
+2026-06-11 00:11:06, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-11 00:11:08, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-11 00:12:17, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-11 00:15:12, EXEC, v:1, k:ed@serial, mode:FULL, rate:100, size:82
+2026-06-11 00:15:13, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-11 00:15:19, SELF, v:1, k:ed@serial, self:1, rate:100, concept:1, refactor:1

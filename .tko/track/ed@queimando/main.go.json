@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_23-42-16",
+            "content": "@@ -173,328 +173,333 @@\n )%0A%0A%09\n-for !stack.IsEmpty() %7B%0A%09%09curr := stack.Pop()%0A%09%09r := curr.l%0A%09%09col := curr.c%0A%0A%09%09if r %3E= 0 && r %3C len(grid) && col %3E= 0 && col %3C len(grid%5B0%5D) && grid%5Br%5D%5Bcol%5D == '#' %7B%0A%09%09%09grid%5Br%5D%5Bcol%5D = 'o'%0A%09%09%09%0A%09%09%09stack.Push(Pos%7Br - 1, col%7D)%0A%09%09%09stack.Push(Pos%7Br + 1, col%7D)%0A%09%09%09stack.Push(Pos%7Br, col - 1%7D)%0A%09%09%09stack.Push(Pos%7Br, col + 1%7D)%0A%09%09%7D%0A%09%7D\n+// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A\n %0A%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-10_23-47-51",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{l, c})\n\n\tfor !stack.IsEmpty() {\n\t\tcurr := stack.Pop()\n\t\tr := curr.l\n\t\tcol := curr.c\n\n\t\tif r >= 0 && r < len(grid) && col >= 0 && col < len(grid[0]) && grid[r][col] == '#' {\n\t\t\tgrid[r][col] = 'o'\n\t\t\t\n\t\t\tstack.Push(Pos{r - 1, col})\n\t\t\tstack.Push(Pos{r + 1, col})\n\t\t\tstack.Push(Pos{r, col - 1})\n\t\t\tstack.Push(Pos{r, col + 1})\n\t\t}\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "55"
+        }
+    ]
+}
