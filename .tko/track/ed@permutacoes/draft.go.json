@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_23-13-30",
+            "content": "@@ -253,39 +253,8 @@\n    %0A\n-    fmt.Println(string(chars))%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-15_23-13-43",
+            "content": "@@ -285,11 +285,43 @@\n ))%0A    %0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-15_23-13-49",
+            "content": "@@ -42,448 +42,8 @@\n %22%0A)%0A\n-%0Afunc permute(chars %5B%5Drune, current %5B%5Drune, visited %5B%5Dbool) %7B%0A    if len(current) == len(chars) %7B%0A        fmt.Println(string(current))%0A        return%0A    %7D%0A%0A    for i := 0; i %3C len(chars); i++ %7B%0A        if !visited%5Bi%5D %7B%0A            visited%5Bi%5D = true%0A            current = append(current, chars%5Bi%5D)%0A            permute(chars, current, visited)%0A            current = current%5B:len(current)-1%5D%0A            visited%5Bi%5D = false%0A        %7D%0A    %7D%0A%7D%0A%0A\n func\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-15_23-21-20",
+            "content": "@@ -688,112 +688,48 @@\n  %7D)%0A\n-%0A\n     \n-visited := make(%5B%5Dbool, len(chars))%0A    var current %5B%5Drune%0A    permute(chars, current, visited\n+%0A    fmt.Println(string(chars)\n )%0A    %0A\n+%0A\n %7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-15_23-24-17",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"sort\"\n)\n\nfunc permute(chars []rune, current []rune, visited []bool) {\n    if len(current) == len(chars) {\n        fmt.Println(string(current))\n        return\n    }\n\n    for i := 0; i < len(chars); i++ {\n        if !visited[i] {\n            visited[i] = true\n            current = append(current, chars[i])\n            permute(chars, current, visited)\n            current = current[:len(current)-1]\n            visited[i] = false\n        }\n    }\n}\n\nfunc main() {\n    var s string\n    if _, err := fmt.Scan(&s); err != nil {\n        return\n    }\n\n    chars := []rune(s)\n    sort.Slice(chars, func(i, j int) bool {\n        return chars[i] < chars[j]\n    })\n\n    visited := make([]bool, len(chars))\n    var current []rune\n    permute(chars, current, visited)\n    \n}\n",
+            "lines": "39"
+        }
+    ]
+}

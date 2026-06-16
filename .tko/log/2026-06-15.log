@@ -1,0 +1,68 @@
+2026-06-15 22:52:15, MOVE, v:1, k:ed@inverter, mode:DOWN
+2026-06-15 22:52:17, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-06-15 22:52:50, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:72
+2026-06-15 22:53:45, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-06-15 22:53:48, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-06-15 22:55:12, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:71
+2026-06-15 22:55:44, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:74
+2026-06-15 22:56:30, EXEC, v:1, k:ed@inverter, mode:FULL, rate:33, size:74
+2026-06-15 22:52:15, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:52:15, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:52:15, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:56:26, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:56:30, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:56:47, EXEC, v:1, k:ed@inverter, mode:FULL, rate:66, size:75
+2026-06-15 22:56:55, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 22:56:47, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 23:01:54, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100, size:76
+2026-06-15 23:06:20, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-06-15 23:06:26, SELF, v:1, k:ed@inverter, self:1, rate:100, concept:1
+2026-06-15 23:01:52, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 23:01:54, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-15 23:06:39, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-06-15 23:06:40, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-15 23:06:39, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:06:39, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:06:39, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:11:31, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:13:30, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:19
+2026-06-15 23:13:43, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:20
+2026-06-15 23:13:49, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:20, size:20
+2026-06-15 23:15:59, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:13:48, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:21:20, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:20, size:38
+2026-06-15 23:21:20, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:24:17, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:39
+2026-06-15 23:24:26, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-15 23:24:52, SELF, v:1, k:ed@permutacoes, self:1, rate:100, concept:1, debug:1
+2026-06-15 23:25:03, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-06-15 23:25:04, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-15 23:22:22, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:24:17, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:24:42, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-15 23:25:03, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:25:03, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:25:03, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:35:53, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30, size:29
+2026-06-15 23:36:35, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:35:53, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:37:07, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30, size:43
+2026-06-15 23:37:23, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:37:07, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:43:34, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:49:23, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:54
+2026-06-15 23:49:24, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-06-15 23:49:30, SELF, v:1, k:ed@magicsearch, self:1, rate:100, concept:1
+2026-06-15 23:49:37, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-06-15 23:49:39, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 23:49:23, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-15 23:49:37, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:49:37, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:49:37, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:49:37, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:56:33, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:82
+2026-06-15 23:56:33, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:57:32, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:82
+2026-06-15 23:59:04, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:87
+2026-06-15 23:59:03, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 23:59:04, MOVE, v:1, k:ed@iterador, mode:EDIT
