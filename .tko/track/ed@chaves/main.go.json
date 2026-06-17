@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_22-06-14",
+            "content": "@@ -27,17 +27,8 @@\n mt%22%0A\n-%09%22queue%22%0A\n )%0A%0Af\n@@ -44,451 +44,6 @@\n ) %7B%0A\n-%09q := queue.NewQueue%5Bstring%5D()%0A%0Ateams := %5B%5Dstring%7B%22A%22, %22B%22, %22C%22, %22D%22, %22E%22, %22F%22, %22G%22, %22H%22, %22I%22, %22J%22, %22K%22, %22L%22, %22M%22, %22N%22, %22O%22, %22P%22%7D%0A%09for _, team := range teams %7B%0A%09%09q.Enqueue(team)%0A%09%7D%0A%0A%09for i := 0; i %3C 15; i++ %7B%0A%09%09time1 := q.Dequeue()%0A%09%09time2 := q.Dequeue()%0A%09%09var gols1, gols2 int%0A%09%09if _, err := fmt.Scan(&gols1, &gols2); err != nil %7B%0A%09%09%09return %0A%09%7D%0A%0A%09if gols1 %3E gols2 %7B%0A%09%09q.Enqueue(time1)%0A%09%7D else %7B%0A%09%09q.Enqueue(time2)%0A%09%7D%0A%0A%09fmt.Println(q.Dequeue())%0A\n %7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-17_22-30-23",
+            "content": "@@ -496,10 +496,8 @@\n ue())%0A%7D%0A\n-%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-06-17_22-30-41",
+            "content": "@@ -23,16 +23,25 @@\n %0A%09%22fmt%22%0A\n+%09%22queue%22%0A\n )%0A%0Afunc \n@@ -55,16 +55,22 @@\n %7B%0A%09q := \n+queue.\n NewQueue\n@@ -468,20 +468,16 @@\n e2)%0A%09%7D%0A%0A\n-%09%7D%0A%0A\n %09fmt.Pri\n@@ -496,8 +496,10 @@\n ue())%0A%7D%0A\n+%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-06-17_22-33-41",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tq := NewQueue[string]()\n\nteams := []string{\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\"}\n\tfor _, team := range teams {\n\t\tq.Enqueue(team)\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\t\ttime1 := q.Dequeue()\n\t\ttime2 := q.Dequeue()\n\t\tvar gols1, gols2 int\n\t\tif _, err := fmt.Scan(&gols1, &gols2); err != nil {\n\t\t\treturn \n\t}\n\n\tif gols1 > gols2 {\n\t\tq.Enqueue(time1)\n\t} else {\n\t\tq.Enqueue(time2)\n\t}\n\n\t}\n\n\tfmt.Println(q.Dequeue())\n}\n",
+            "lines": "32"
+        }
+    ]
+}

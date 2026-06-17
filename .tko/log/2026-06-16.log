@@ -1,1 +1,20 @@
 2026-06-16 00:07:10, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:13:15, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-16 23:14:59, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:100
+2026-06-16 23:19:19, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:109
+2026-06-16 23:19:19, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:19:30, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:20:08, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:113
+2026-06-16 23:24:38, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:20:08, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:25:54, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:124
+2026-06-16 23:25:53, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:25:54, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-16 23:37:22, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:131
+2026-06-16 23:37:23, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-16 23:37:35, SELF, v:1, k:ed@iterador, self:1, rate:100, concept:1
+2026-06-16 23:39:18, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-06-16 23:39:29, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-16 23:39:18, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-16 23:39:18, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-16 23:39:18, MOVE, v:1, k:ed@chaves, mode:EDIT

@@ -1,0 +1,15 @@
+2026-06-17 22:02:08, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-17 22:02:10, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-17 22:02:14, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-17 22:06:14, EXEC, v:1, k:ed@chaves, mode:FULL, size:48, fail:COMP
+2026-06-17 22:02:41, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-17 22:06:29, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-17 22:11:26, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-17 22:11:52, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-17 22:30:23, EXEC, v:1, k:ed@chaves, mode:FULL, size:71, fail:COMP
+2026-06-17 22:30:41, EXEC, v:1, k:ed@chaves, mode:FULL, size:72, fail:COMP
+2026-06-17 22:31:22, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-17 22:33:41, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:72
+2026-06-17 22:33:44, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-17 22:33:53, SELF, v:1, k:ed@chaves, self:1, rate:100, concept:1, debug:1
+2026-06-17 22:34:04, SELF, v:1, k:ed@chaves, self:1, rate:100, concept:1, debug:1
