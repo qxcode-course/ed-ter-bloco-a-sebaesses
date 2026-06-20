@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-20_19-56-56",
+            "content": "@@ -237,249 +237,8 @@\n %0A%7D%0A%0A\n-func serializaAux(node *Node, serial *%5B%5Dstring) %7B%0A%09if node == nil %7B%0A%09%09*serial = append(*serial, %22#%22)%0A%09%09return%0A%09%7D%0A%09*serial = append(*serial, fmt.Sprintf(%22%25d%22, node.Value))%0A%09serializaAux(node.Left, serial)%0A%09serializaAux(node.Right, serial)%0A%7D%0A%0A\n // D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-20_19-58-28",
+            "content": "@@ -238,33 +238,33 @@\n %7D%0A%0Afunc serializ\n-e\n+a\n Aux(node *Node, \n@@ -377,21 +377,26 @@\n al, \n-strconv.Itoa(\n+fmt.Sprintf(%22%25d%22, \n node\n@@ -405,33 +405,33 @@\n alue))%0A%09serializ\n-e\n+a\n Aux(node.Left, s\n@@ -442,25 +442,25 @@\n l)%0A%09serializ\n-e\n+a\n Aux(node.Rig\n@@ -644,90 +644,36 @@\n  %7B%0A%09\n-var result %5B%5Dstring%0A%09serializeAux(root, &result)%0A%09return strings.Join(result, %22 %22)\n+// TODO%0A%09_ = root%0A%09return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-06-20_20-08-39",
+            "content": "@@ -202,511 +202,38 @@\n %0A%09%7D%0A\n-%0A\n %09r\n-oot := &Node%7BValue: values%5B0%5D%7D%0A%0A%09for i := 1; i %3C len(values); i++ %7B%0A%09%09v := values%5Bi%5D%0A%0A%09%09if v %3C root.Value %7B%0A%09%09%09if root.Left == nil %7B%0A%09%09%09%09root.Left = &Node%7BValue: v%7D%0A%09%09%09%7D%0A%09%09%7D else if v %3E root.Value %7B%0A%09%09%09if root.Right == nil %7B%0A%09%09%09%09root.Right = &Node%7BValue: v%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return root%0A%7D%0A%0Afunc insertNode(node **Node, value int) %7B%0A%09if *node == nil %7B%0A%09%09*node = &Node%7BValue: value%7D%0A%09%09return%0A%09%7D%0A%09if value %3C (*node).Value %7B%0A%09%09insertNode(&(*node).Left, value)%0A%09%7D else %7B%0A%09%09insertNode(&(*node).Right, value)%0A%09\n+eturn &Node%7BValue: values%5B0%5D\n %7D%0A%7D%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-06-20_20-15-22",
+            "content": "@@ -126,263 +126,8 @@\n %0A%7D%0A%0A\n-func insertRecursive(node *Node, value int) *Node %7B%0A%09if node == nil %7B%0A%09%09return &Node%7BValue: value%7D%0A%09%7D%0A%0A%09if value %3C node.Value %7B%0A%09%09node.Left = insertRecursive(node.Left, value)%0A%09%7D else %7B%0A%09%09node.Right = insertRecursive(node.Right, value)%0A%09%7D%0A%09return node%0A%7D%0A%0A\n func\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-06-20_20-20-04",
+            "content": "@@ -419,96 +419,319 @@\n  %7B%0A%09\n-var root *Node%0A%0A%09for _, value := range v\n+if len(values) == 0 %7B%0A%09%09return nil%0A%09%7D%0A%0A%09root := &Node%7BValue: values%5B0%5D%7D%0A%0A%09for i := 1; i %3C len(values); i++ %7B%0A%09%09v := values%5Bi%5D%0A%0A%09%09if v %3C root.V\n alue\n-s\n  %7B%0A%09%09\n-root = insertRecursive(root, value)%0A%09%7D\n+%09if root.Left == nil %7B%0A%09%09%09%09root.Left = &Node%7BValue: v%7D%0A%09%09%09%7D%0A%09%09%7D else if v %3E root.Value %7B%0A%09%09%09if root.Right == nil %7B%0A%09%09%09%09root.Right = &Node%7BValue: v%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %0A%09re\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-20_20-21-13",
+            "content": "@@ -698,33 +698,8 @@\n lse \n-if value %3E (*node).Value \n %7B%0A%09%09\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-20_20-23-43",
+            "content": "@@ -537,24 +537,25 @@\n rtNode(node \n+*\n *Node, value\n@@ -558,32 +558,33 @@\n alue int) %7B%0A%09if \n+*\n node == nil %7B%0A%09%09\n@@ -579,24 +579,25 @@\n  == nil %7B%0A%09%09\n+*\n node = &Node\n@@ -636,16 +636,17 @@\n alue %3C (\n+*\n node).Va\n@@ -662,24 +662,25 @@\n nsertNode(&(\n+*\n node).Left, \n@@ -706,16 +706,17 @@\n alue %3E (\n+*\n node).Va\n@@ -736,16 +736,17 @@\n tNode(&(\n+*\n node).Ri\n@@ -764,22 +764,8 @@\n %0A%09%7D%0A\n-%09%09return node%0A\n %7D%0A%0Af\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-20_20-25-47",
+            "content": "@@ -520,16 +520,265 @@\n root%0A%7D%0A%0A\n+func insertNode(node *Node, value int) %7B%0A%09if node == nil %7B%0A%09%09node = &Node%7BValue: value%7D%0A%09%09return%0A%09%7D%0A%09if value %3C (node).Value %7B%0A%09%09insertNode(&(node).Left, value)%0A%09%7D else if value %3E (node).Value %7B%0A%09%09insertNode(&(node).Right, value)%0A%09%7D%0A%09%09return node%0A%7D%0A\n %0Afunc se\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-06-20_20-26-42",
+            "content": "@@ -310,30 +310,8 @@\n lse \n-if value %3E node.Value \n %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-06-20_20-27-04",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc insertRecursive(node *Node, value int) *Node {\n\tif node == nil {\n\t\treturn &Node{Value: value}\n\t}\n\n\tif value < node.Value {\n\t\tnode.Left = insertRecursive(node.Left, value)\n\t} else if value > node.Value {\n\t\tnode.Right = insertRecursive(node.Right, value)\n\t}\n\treturn node\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar root *Node\n\n\tfor _, value := range values {\n\t\troot = insertRecursive(root, value)\n\t}\n\treturn root\n}\n\n\nfunc serializeAux(node *Node, serial *[]string) {\n\tif node == nil {\n\t\t*serial = append(*serial, \"#\")\n\t\treturn\n\t}\n\t*serial = append(*serial, strconv.Itoa(node.Value))\n\tserializeAux(node.Left, serial)\n\tserializeAux(node.Right, serial)\n}\n\n// Dica: crie um vetor compartilhado e v\u00e1 preenchendo conforme anda na recurs\u00e3o\n// Depois use o strings.Join para gerar o serial\nfunc Serialize(root *Node) string {\n\tvar result []string\n\tserializeAux(root, &result)\n\treturn strings.Join(result, \" \")\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(Serialize((root)))\n}\n",
+            "lines": "101"
+        }
+    ]
+}

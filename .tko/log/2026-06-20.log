@@ -1,0 +1,63 @@
+2026-06-20 18:53:55, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-20 18:56:39, EXEC, v:1, k:ed@pilhado, mode:FULL, size:56, fail:COMP
+2026-06-20 18:58:13, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:00:36, EXEC, v:1, k:ed@pilhado, mode:FULL, size:68, fail:COMP
+2026-06-20 19:00:19, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:06:58, EXEC, v:1, k:ed@pilhado, mode:FULL, size:91, fail:COMP
+2026-06-20 19:08:01, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:13:14, EXEC, v:1, k:ed@pilhado, mode:FULL, size:114, fail:COMP
+2026-06-20 19:13:11, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:14:28, EXEC, v:1, k:ed@pilhado, mode:FULL, size:125, fail:COMP
+2026-06-20 19:15:31, EXEC, v:1, k:ed@pilhado, mode:FULL, size:125, fail:COMP
+2026-06-20 19:15:30, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:19:11, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:124
+2026-06-20 19:19:09, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:19:11, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:26:58, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:0, size:123
+2026-06-20 19:26:41, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:26:57, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:28:27, EXEC, v:1, k:ed@pilhado, mode:FULL, rate:100, size:121
+2026-06-20 19:28:28, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-20 19:28:43, SELF, v:1, k:ed@pilhado, self:1, rate:100, concept:1, debug:1
+2026-06-20 19:28:55, SELF, v:1, k:ed@pilhado, self:1, rate:100, concept:1, debug:1
+2026-06-20 19:29:10, SELF, v:1, k:ed@pilhado, self:1, rate:100, concept:1, code:1
+2026-06-20 19:29:24, SELF, v:1, k:ed@pilhado, self:1, rate:100, concept:1
+2026-06-20 19:29:33, SELF, v:1, k:ed@pilhado, self:1, rate:100, concept:1, code:1
+2026-06-20 19:30:57, SELF, v:1, k:ed@baruel, self:1, rate:100, concept:1
+2026-06-20 19:31:24, MOVE, v:1, k:ed@bst_serial, mode:DOWN
+2026-06-20 19:31:25, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-20 19:28:26, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:28:27, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-20 19:31:24, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 19:31:24, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 19:56:56, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:75
+2026-06-20 19:58:17, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 19:56:56, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 19:58:28, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:0, size:85
+2026-06-20 19:58:49, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 19:58:28, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:08:39, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:16, size:85
+2026-06-20 20:13:13, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:08:39, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:15:22, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:33, size:114
+2026-06-20 20:17:41, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:15:22, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:20:04, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:33, size:127
+2026-06-20 20:21:13, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:66, size:112
+2026-06-20 20:23:15, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:21:13, MOVE, v:1, k:ed@bst_serial, mode:EDIT
+2026-06-20 20:23:43, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:66, size:112
+2026-06-20 20:25:47, EXEC, v:1, k:ed@bst_serial, mode:FULL, size:113, fail:COMP
+2026-06-20 20:26:42, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:66, size:101
+2026-06-20 20:27:04, EXEC, v:1, k:ed@bst_serial, mode:FULL, rate:100, size:101
+2026-06-20 20:27:06, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-20 20:27:08, SELF, v:1, k:ed@bst_serial, self:1, rate:100
+2026-06-20 20:27:12, SELF, v:1, k:ed@bst_serial
+2026-06-20 20:27:13, SELF, v:1, k:ed@bst_serial, self:1, rate:100
+2026-06-20 20:27:14, MOVE, v:1, k:ed@bst_serial, mode:PICK
+2026-06-20 20:27:15, MOVE, v:1, k:ed@bst_serial, mode:BACK
+2026-06-20 20:27:16, SELF, v:1, k:ed@bst_serial
+2026-06-20 20:27:17, SELF, v:1, k:ed@bst_serial, self:1, rate:100
+2026-06-20 20:27:20, SELF, v:1, k:ed@bst_serial
+2026-06-20 20:27:21, SELF, v:1, k:ed@bst_serial, self:1, rate:100
+2026-06-20 20:27:40, SELF, v:1, k:ed@bst_serial, self:1, rate:100, concept:1

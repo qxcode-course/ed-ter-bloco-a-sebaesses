@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-20_18-56-39",
+            "content": "@@ -236,209 +236,6 @@\n %09%7D%0A%09\n-dims := strings.Fields(scanner.Text())%0A%09if len(dims) != 2 %7B%0A%09%09return%0A%09%7D%0A%09rows, _ := strconv.Atoi(dims%5B0%5D)%0A%0A%09maze := make(%5B%5D%5B%5Drune, rows)%0A%09var start Pos%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09scanner.Scan()%0A%09%7D%0A%0A%7D\n+%0A\n %0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-20_19-00-36",
+            "content": "@@ -436,423 +436,9 @@\n ()%0A%09\n-%09line := scanner.Text()%0A%09%09maze%5Bi%5D = %5B%5Drune(line)%0A%09%09for j, ch := range maze%5Bi%5D %7B%0A%09%09%09if ch == 'I' %7B%0A%09%09%09%09start = Pos%7Br: i, c: j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09caminho := NewStack%5BPos%5D()%0A%09becos := NewStack%5BPos%5D()%0A%09caminho.Push(start)%0A%0A%09visited := make(%5B%5D%5B%5Dbool, rows)%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, len(maze%5Bi%5D))%0A%09%7D%0A%0A%09dr := %5B%5Dint%7B-1, 0, 1, 0%7D%0A%09dc := %5B%5Dint%7B0, 1, 0, -1%7D%0A%0A%09passos := 0%0A%0A%09for !caminho.IsEmpty() %7B\n+%7D\n %0A%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-20_19-06-58",
+            "content": "@@ -850,499 +850,9 @@\n y() \n-&& passos %3C 65 %7B%0A%09%09passos++%0A%09%09atual := caminho.Top()%0A%09%09visited%5Batual.r%5D%5Batual.c%5D = true%0A%0A%09%09if maze%5Batual.r%5D%5Batual.c%5D == 'F' %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09var validos %5B%5DPos%0A%09%09for i := 0; i %3C 4; i++ %7B%0A%09%09%09nr, nc := atual.r+dr%5Bi%5D, atual.c+dc%5Bi%5D%0A%09%09%09if nr %3E= 0 && nr %3C rows && nc %3E= 0 && nc %3C len(maze%5Bnr%5D) %7B%0A%09%09%09%09if maze%5Bnr%5D%5Bnc%5D != '#' && !visited%5Bnr%5D%5Bnc%5D %7B%0A%09%09%09%09%09validos = append(validos, Pos%7Br: nr, c: nc%7D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if len(validos) %3E 0 %7B%0A%09%09%09caminho.Push(validos%5B0%5D)%0A%09%09%7D else %7B%0A%09%09%09caminho.Pop()%0A%09%09%7D%0A%09%7D\n+%7B%0A\n %0A%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-06-20_19-13-14",
+            "content": "@@ -1342,203 +1342,7 @@\n %7D%0A%09%7D\n-%0A%0A%09for caminho.IsEmpty() %7B%0A%09%09p := caminho.Pop()%0A%09%09if maze%5Bp.r%5D%5Bp.c%5D != 'I' && maze%5Bp.r%5D%5Bp.c%5D != 'F' %7B%0A%09%09%09maze%5Bp.r%5D%5Bp.c%5D = '.'%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09fmt.Println(string(maze%5Bi%5D))%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-20_19-14-28",
+            "content": "@@ -1341,25 +1341,24 @@\n %09%7D%0A%09%7D%0A%0A%09for \n-!\n caminho.IsEm\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-20_19-15-31",
+            "content": "@@ -103,21 +103,22 @@\n unc main\n+ \n () %7B%0A\n-\n %09scanner\n@@ -624,17 +624,16 @@\n k%5BPos%5D()\n- \n %0A%09caminh\n@@ -813,116 +813,72 @@\n %7D%0A%0A%09\n-// La%C3%A7o livre! Roda at%C3%A9 achar o 'F' ou esvaziar a pilha (caso n%C3%A3o houvesse sa%C3%ADda).%0A%09for !caminho.IsEmpty() %7B\n+passos := 0%0A%0A%09for !caminho.IsEmpty() && passos %3C 65 %7B%0A%09%09passos++\n %0A%09%09a\n@@ -1322,16 +1322,8 @@\n %0A%09%09%09\n-beco := \n cami\n@@ -1336,28 +1336,8 @@\n p()%0A\n-%09%09%09becos.Push(beco)%0A\n %09%09%7D%0A\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-20_19-19-11",
+            "content": "@@ -284,17 +284,18 @@\n n(dims) \n-%3C\n+!=\n  2 %7B%0A%09%09r\n@@ -623,16 +623,17 @@\n k%5BPos%5D()\n+ \n %0A%09caminh\n@@ -808,16 +808,100 @@\n 0, -1%7D%0A%0A\n+%09// La%C3%A7o livre! Roda at%C3%A9 achar o 'F' ou esvaziar a pilha (caso n%C3%A3o houvesse sa%C3%ADda).%0A\n %09for !ca\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-06-20_19-26-58",
+            "content": "@@ -1373,16 +1373,71 @@\n o.Pop()%0A\n+%09%09if maze%5Bp.r%5D%5Bp.c%5D != 'I' && maze%5Bp.r%5D%5Bp.c%5D != 'F' %7B%0A%09\n %09%09maze%5Bp\n@@ -1451,16 +1451,20 @@\n %5D = '.'%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09for\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-20_19-28-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pos struct {\n\tr, c int\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Buffer(make([]byte, 1000000), 1000000)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tdims := strings.Fields(scanner.Text())\n\tif len(dims) < 2 {\n\t\treturn\n\t}\n\trows, _ := strconv.Atoi(dims[0])\n\n\tmaze := make([][]rune, rows)\n\tvar start Pos\n\n\tfor i := 0; i < rows; i++ {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmaze[i] = []rune(line)\n\t\tfor j, ch := range maze[i] {\n\t\t\tif ch == 'I' {\n\t\t\t\tstart = Pos{r: i, c: j}\n\t\t\t}\n\t\t}\n\t}\n\n\tcaminho := NewStack[Pos]()\n\tbecos := NewStack[Pos]()\n\tcaminho.Push(start)\n\n\tvisited := make([][]bool, rows)\n\tfor i := 0; i < rows; i++ {\n\t\tvisited[i] = make([]bool, len(maze[i]))\n\t}\n\n\tdr := []int{-1, 0, 1, 0}\n\tdc := []int{0, 1, 0, -1}\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\t\tvisited[atual.r][atual.c] = true\n\n\t\tif maze[atual.r][atual.c] == 'F' {\n\t\t\tbreak\n\t\t}\n\n\t\tvar validos []Pos\n\t\tfor i := 0; i < 4; i++ {\n\t\t\tnr, nc := atual.r+dr[i], atual.c+dc[i]\n\t\t\tif nr >= 0 && nr < rows && nc >= 0 && nc < len(maze[nr]) {\n\t\t\t\tif maze[nr][nc] != '#' && !visited[nr][nc] {\n\t\t\t\t\tvalidos = append(validos, Pos{r: nr, c: nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tif len(validos) > 0 {\n\t\t\tcaminho.Push(validos[0])\n\t\t} else {\n\t\t\tbeco := caminho.Pop()\n\t\t\tbecos.Push(beco)\n\t\t}\n\t}\n\n\tfor !caminho.IsEmpty() {\n\t\tp := caminho.Pop()\n\t\tmaze[p.r][p.c] = '.'\n\t}\n\n\tfor i := 0; i < rows; i++ {\n\t\tfmt.Println(string(maze[i]))\n\t}\n}\n",
+            "lines": "88"
+        }
+    ]
+}

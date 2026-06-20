@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
+- eval1@eval1
 flags:
   inbox: all
   panel: graph
@@ -29,5 +29,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@bst_insert
-selected_index: 16
+selected: ed@tree
+selected_index: 7
