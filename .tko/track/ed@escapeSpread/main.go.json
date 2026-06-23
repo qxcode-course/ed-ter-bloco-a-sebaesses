@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_00-12-40",
+            "content": "@@ -37,310 +37,43 @@\n c ma\n-ximoMinutos(grid %5B%5D%5B%5Dint) int %7B%0A%09return 3%0A%7D%0A%0Afunc main() %7B%0A%09var m, n int%0A%09if _, err := fmt.Scan(&m, &n); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09grid := make(%5B%5D%5B%5Dint, m)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09grid%5Bi%5D = make(%5B%5Dint, n)%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09fmt.Scan(&grid%5Bi%5D%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(maximoMinutos(grid)\n+in() %7B%0A%09fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-06-23_00-16-51",
+            "content": "@@ -30,39 +30,8 @@\n %0A)%0A%0A\n-type pair struct%7B%0A%09r, c int%0A%7D%0A%0A\n func\n@@ -70,461 +70,16 @@\n  %7B%0A%09\n-m := len(grid)%0A%09n := len(grid%5B0%5D)%0A%0A%09firetime := make (%5B%5D%5B%5Dint, m)%0A%09var fireQ %5B%5Dpair%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fireTime%5Bi%5D = make(%5B%5Dint, n)%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09fireTime%5Bi%5D%5Bj%5D = 1e9 // Preenchemos com %22Infinito%22%0A%09%09%09if grid%5Bi%5D%5Bj%5D == 1 %7B%0A%09%09%09%09fireTime%5Bi%5D%5Bj%5D = 0 // Fogo come%C3%A7a no minuto 0%0A%09%09%09%09fireQ = append(fireQ, pair%7Bi, j%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09dirs := %5B%5Dpair%7B%7B-1, 0%7D, %7B1, 0%7D, %7B0, -1%7D, %7B0, 1%7D%7D%0A%09for len(fireQ) %3E 0 %7B%0A%09%09curr := fireQ%5B0%5D%0A%09%09fireQ := %0A%09%7D\n+return 3\n %0A%7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-23_00-24-43",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\ntype pair struct{\n\tr, c int\n}\n\nfunc maximoMinutos(grid [][]int) int {\n\tm := len(grid)\n\tn := len(grid[0])\n\n\tfiretime := make ([][]int, m)\n\tvar fireQ []pair\n\n\tfor i := 0; i < m; i++ {\n\t\tfireTime[i] = make([]int, n)\n\t\tfor j := 0; j < n; j++ {\n\t\t\tfireTime[i][j] = 1e9 // Preenchemos com \"Infinito\"\n\t\t\tif grid[i][j] == 1 {\n\t\t\t\tfireTime[i][j] = 0 // Fogo come\u00e7a no minuto 0\n\t\t\t\tfireQ = append(fireQ, pair{i, j})\n\t\t\t}\n\t\t}\n\t}\n\n\tdirs := []pair{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}\n\tfor len(fireQ) > 0 {\n\t\tcurr := fireQ[0]\n\t\tfireQ := \n\t}\n}\n\nfunc main() {\n\tvar m, n int\n\tif _, err := fmt.Scan(&m, &n); err != nil {\n\t\treturn\n\t}\n\n\tgrid := make([][]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tgrid[i] = make([]int, n)\n\t\tfor j := 0; j < n; j++ {\n\t\t\tfmt.Scan(&grid[i][i])\n\t\t}\n\t}\n\n\tfmt.Println(maximoMinutos(grid))\n}\n\n",
+            "lines": "52"
+        }
+    ]
+}

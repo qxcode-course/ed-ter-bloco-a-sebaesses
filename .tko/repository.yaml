@@ -18,16 +18,15 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- eval1@eval1
+expanded: []
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: time
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@tree
-selected_index: 7
+selected: ed@dfs
+selected_index: 8

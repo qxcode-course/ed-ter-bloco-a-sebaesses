@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_23-30-25",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,435 +23,53 @@\n mt%22%0A\n-import %22strconv%22%0Aimport %22strings%22%0A%0Afunc geraPrimos(n int) %5B%5Dint %7B%0A    return %5B%5Dint%7B2%7D%0A%7D%0A%0Afunc formatArray(arr %5B%5Dint) string %7B%0A    strs := make(%5B%5Dstring, len(arr))%0A    for i, v := range arr %7B%0A        strs%5Bi%5D = strconv.Itoa(v)%0A    %7D%0A    return strings.Join(strs, %22 %22)%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A%0A    primos := geraPrimos(n)%0A    fmt.Println(formatArray(primos)) \n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-22_23-34-34",
+            "content": "@@ -443,16 +443,14 @@\n ray(\n-%5B\n primos\n-%5D\n )) %0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-22_23-34-53",
+            "content": "@@ -439,20 +439,22 @@\n atArray(\n+%5B\n primos\n+%5D\n )) %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-22_23-35-02",
+            "content": "@@ -265,14 +265,8 @@\n turn\n- %22%5B%22 +\n  str\n@@ -286,18 +286,11 @@\n s, %22\n-,\n  %22)\n- + %22%5D%22\n %0A%7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-22_23-47-47",
+            "content": "@@ -59,200 +59,8 @@\n s%22%0A%0A\n-func ehPrimo(num int) bool %7B%0A    if num %3C= 1 %7B%0A        return false%0A    %7D%0A    for i:= 2; i*i %3C= num; i++ %7B%0A        if num%25i == 0 %7B%0A            return false%0A        %7D%0A    %7D%0A%0A    return true%0A%7D%0A%0A\n func\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-22_23-50-17",
+            "content": "@@ -286,212 +286,24 @@\n     \n-var primos %5B%5Dint%0A    atual := 2%0A%0A    for len(primos) %3C n && len(primos) %3C 2 %7B%0A        if ehPrimo(atual) %7B%0A            primos = append(primos, atual)%0A        %7D%0A        atual++%0A    %7D%0A%0A    return primos%0A    \n+return %5B%5Dint%7B2%7D%0A\n %7D%0A%0Af\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-22_23-51-28",
+            "content": "@@ -339,16 +339,35 @@\n os) %3C n \n+&& len(primos) %3C 2 \n %7B%0A      \n@@ -840,11 +840,12 @@\n primos))\n+ \n %0A%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-23_00-01-08",
+            "content": "package main\n\nimport \"fmt\"\nimport \"strconv\"\nimport \"strings\"\n\nfunc ehPrimo(num int) bool {\n    if num <= 1 {\n        return false\n    }\n    for i:= 2; i*i <= num; i++ {\n        if num%i == 0 {\n            return false\n        }\n    }\n\n    return true\n}\n\nfunc geraPrimos(n int) []int {\n    var primos []int\n    atual := 2\n\n    for len(primos) < n {\n        if ehPrimo(atual) {\n            primos = append(primos, atual)\n        }\n        atual++\n    }\n\n    return primos\n    }\n\nfunc formatArray(arr []int) string {\n    strs := make([]string, len(arr))\n    for i, v := range arr {\n        strs[i] = strconv.Itoa(v)\n    }\n    return \"[\" + strings.Join(strs, \", \") + \"]\"\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    primos := geraPrimos(n)\n    fmt.Println(formatArray(primos))\n}\n",
+            "lines": "50"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-23_00-47-08",
+            "content": "@@ -188,16 +188,28 @@\n %09//%0A\n+%09_ := image%0A\n %09return \n imag\n@@ -204,21 +204,17 @@\n %09return \n-image\n+0\n %0A%7D%0A%0A// N\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-23_00-54-21",
+            "content": "@@ -67,179 +67,8 @@\n %0A)%0A%0A\n-func dfs(image %5B%5D%5B%5Dint, r, c, originalColor, newColor int) %7B%0A%09if r %3C 0 %7C%7C r %3E= len(image) %7C%7C c %3C 0 %7C%7C c %3E= len(image%5B0%5D) %7C%7C image %5Br%5D%5Bc%5D != originalColor %7B%0A%09%09return%0A%09%7D%0A%7D%0A%0A\n // N\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-23_00-56-24",
+            "content": "@@ -234,34 +234,8 @@\n n%0A%09%7D\n-%0A%0A%09image %5Br%5D%5Bc%5D = newColor\n %0A%7D%0A%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-23_00-56-43",
+            "content": "@@ -261,188 +261,8 @@\n lor%0A\n-%09dfs(image, r+1, c, originalColor, newColor)%0A%09dfs(image, r-1, c, originalColor, newColor)%0A%09dfs(image, r, c+1, originalColor, newColor)%0A%09dfs(image, r, c-1, originalColor, newColor)%0A\n %7D%0A%0A/\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-23_01-09-26",
+            "content": "@@ -562,113 +562,10 @@\n  %7B%0A%09\n-originalColor := image%5Bsr%5D%5Bsc%5D%0A%09if originalColor != color %7B%0A%09%09dfs(image, sr, sr, originalColor, color)%0A%09%7D\n+//\n %0A%09re\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-23_01-10-07",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc dfs(image [][]int, r, c, originalColor, newColor int) {\n\tif r < 0 || r >= len(image) || c < 0 || c >= len(image[0]) || image [r][c] != originalColor {\n\t\treturn\n\t}\n\n\timage [r][c] = newColor\n\tdfs(image, r+1, c, originalColor, newColor)\n\tdfs(image, r-1, c, originalColor, newColor)\n\tdfs(image, r, c+1, originalColor, newColor)\n\tdfs(image, r, c-1, originalColor, newColor)\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\toriginalColor := image[sr][sc]\n\tif originalColor != color {\n\t\tdfs(image, sr, sr, originalColor, color)\n\t}\n\treturn image\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "71"
+        }
+    ]
+}

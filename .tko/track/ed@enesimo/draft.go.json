@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_23-10-20",
+            "content": "@@ -43,103 +43,35 @@\n     \n-var n int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A%0A    fmt.Println(n)  \n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-22_23-11-34",
+            "content": "@@ -25,58 +25,8 @@\n t%22%0A%0A\n-func enesimoPrimo(n int) int %7B%0A    return 2   %0A%7D%0A%0A\n func\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-22_23-11-58",
+            "content": "@@ -25,218 +25,8 @@\n t%22%0A%0A\n-func ehPrimo(num int, div int) bool %7B%0A    if num %3C= 1 %7B%0A        return false%0A    %7D%0A    if div == 1 %7B%0A        return true%0A    %7D%0A    if num%25div == 0 %7B%0A        return false%0A    %7D%0A    return ehPrimo(num, div-1)%0A%7D%0A%0A\n func\n@@ -66,16 +66,17 @@\n turn 2  \n+ \n %0A%7D%0A%0Afunc\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-22_23-14-22",
+            "content": "@@ -235,241 +235,8 @@\n %0A%7D%0A%0A\n-func buscaPrimo(atual int, enc int, n int) int %7B%0A    if atual %3E 4 %7B%0A        return 0%0A    %7D%0A    if ehPrimo(atual, atual-1) %7B%0A        enc++%0A    %7D%0A    if enc == n %7B%0A        return atual%0A    %7D%0A%0A    return buscaPrimo(atual+1, enc, n)%0A%0A%7D%0A%0A\n func\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-22_23-18-12",
+            "content": "@@ -510,27 +510,11 @@\n urn \n-buscaPrimo(2, 0, n)\n+2  \n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_23-18-31",
+            "content": "@@ -643,23 +643,9 @@\n tln(\n-enesimoPrimo(n)\n+n\n )  %0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_23-23-11",
+            "content": "@@ -229,21 +229,16 @@\n div-1)%0A%7D\n-atual\n %0A%0Afunc b\n@@ -276,24 +276,66 @@\n  int) int %7B%0A\n+    if atual %3E 4 %7B%0A        return 0%0A    %7D%0A\n     if ehPri\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-22_23-24-07",
+            "content": "@@ -229,16 +229,21 @@\n div-1)%0A%7D\n+atual\n %0A%0Afunc b\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-22_23-24-55",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc ehPrimo(num int, div int) bool {\n    if num <= 1 {\n        return false\n    }\n    if div == 1 {\n        return true\n    }\n    if num%div == 0 {\n        return false\n    }\n    return ehPrimo(num, div-1)\n}\n\nfunc buscaPrimo(atual int, enc int, n int) int {\n    if ehPrimo(atual, atual-1) {\n        enc++\n    }\n    if enc == n {\n        return atual\n    }\n\n    return buscaPrimo(atual+1, enc, n)\n\n}\n\nfunc enesimoPrimo(n int) int {\n    return buscaPrimo(2, 0, n)\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    fmt.Println(enesimoPrimo(n))  \n}\n",
+            "lines": "41"
+        }
+    ]
+}

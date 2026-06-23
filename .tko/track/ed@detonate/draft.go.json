@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_21-58-44",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -24,15 +24,8 @@\n t%22%0A%0A\n-func %0A%0A\n %0Afun\n@@ -43,277 +43,35 @@\n     \n-var n, cols int%0A    if _, err := fmt.Scan(&n, &cols); err != nil %7B%0A        return%0A    %7D%0A%0A    bombs := make(%5B%5D%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        bombs%5Bi%5D = make(%5B%5Dint, 3)%0A        fmt.Scan(&bombs%5Bi%5D%5B0%5D, &bombs%5Bi%5D%5B1%5D, &bombs%5Bi%5D%5B2%5D)%0A    %7D%0A%0A    fmt.Println(bombs\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-22_22-29-37",
+            "content": "@@ -21,16 +21,22 @@\n  %22fmt%22%0A%0A\n+func %0A\n %0A%0Afunc m\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-22_22-29-43",
+            "content": "@@ -25,62 +25,8 @@\n t%22%0A%0A\n-func maxDetonation(bombs %5B%5D%5B%5Dint) int %7B%0A    return 2%0A%7D\n %0A%0Afu\n@@ -309,28 +309,13 @@\n tln(\n-maxDetonation(\n bombs)\n-)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-22_22-30-17",
+            "content": "@@ -72,17 +72,17 @@\n  return \n-1\n+2\n %0A%7D%0A%0Afunc\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-30-25",
+            "content": "@@ -72,17 +72,17 @@\n  return \n-0\n+1\n %0A%7D%0A%0Afunc\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-30-38",
+            "content": "@@ -72,17 +72,17 @@\n  return \n-3\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-30-44",
+            "content": "@@ -72,17 +72,17 @@\n  return \n-1\n+3\n %0A%7D%0A%0Afunc\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-30-50",
+            "content": "@@ -72,17 +72,17 @@\n  return \n-2\n+1\n %0A%7D%0A%0Afunc\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-31-00",
+            "content": "@@ -69,549 +69,16 @@\n     \n-maxDetonated := 0%0A    for i:= 0; %3C len (bombs); i++ %7B%0A        count := 1%0A        for j:= 0; j %3C len (bombs); j++ %7B%0A            if i == j %7B%0A                continue%0A            %7D%0A            dx := int64(bombs%5Bi%5D%5B0%5D - bombs%5Bj%5D%5B0%5D)%0A            dy := int64(bombs%5Bi%5D%5B1%5D - bombs%5Bj%5D%5B1%5D)%0A            distSq := dx*dx + dy*d%0A            rSq := int64(bombs%5Bi%5D%5B2%5D) * int64(bombs%5Bi%5D%5B2%5D)%0A            if distSq %3C= rSq %7B%0A                count ++%0A            %7D%0A    %7D%0A%0A    if count %3E maxDetonated %7B%0A        maxDetonated = count%0A    %7D%0A%7D%0A    return maxDetonated\n+return 2\n %0A%7D%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-22_22-45-01",
+            "content": "@@ -97,17 +97,16 @@\n r i:= 0;\n-i\n  %3C len (\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-22_22-45-15",
+            "content": "@@ -380,17 +380,16 @@\n x + dy*d\n-y\n %0A       \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-22_22-45-29",
+            "content": "@@ -69,58 +69,25 @@\n     \n-n := len(bombs)%0A    graph := make(%5B%5D%5B%5Dint, n)%0A    \n+maxDetonated := 0\n %0A   \n@@ -93,38 +93,47 @@\n   for i:= 0;\n- \n i %3C \n-n\n+len (bombs)\n ; i++ %7B%0A\n         for \n@@ -112,32 +112,51 @@\n  (bombs); i++ %7B%0A\n+        count := 1%0A\n         for j:= \n@@ -162,17 +162,27 @@\n  0; j %3C \n-n\n+len (bombs)\n ; j++ %7B%0A\n@@ -492,552 +492,38 @@\n     \n-graph%5Bi%5D = append(graph%5Bi%5D, j)%0A            %7D%0A        %7D%0A    %7D%0A    %0A    maxDetonated := 0%0A        for i := 0; i %3C n; i++ %7B%0A            visited := make(%5B%5Dbool, n)%0A            count := 0%0A            %0A            var dfs func(node int)%0A            dfs = func(node int) %7B%0A                visited%5Bnode%5D = true%0A                count++%0A%0A                for _, vizinho := range graph%5Bnode%5D %7B%0A                    if !visited%5Bvizinho%5D %7B%0A                        dfs(vizinho)%0A                    %7D%0A                %7D%0A            %7D%0A%0A            dfs(i)%0A        \n+count ++%0A            %7D%0A    %7D%0A%0A\n     \n@@ -556,24 +556,16 @@\n         \n-     \n-   \n maxDeton\n@@ -585,33 +585,12 @@\n     \n-        %7D%0A        %7D%0A%0A    \n+%7D%0A%7D%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-22_22-52-27",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc maxDetonation(bombs [][]int) int {\n    n := len(bombs)\n    graph := make([][]int, n)\n    \n    for i:= 0; i < n; i++ {\n        for j:= 0; j < n; j++ {\n            if i == j {\n                continue\n            }\n            dx := int64(bombs[i][0] - bombs[j][0])\n            dy := int64(bombs[i][1] - bombs[j][1])\n            distSq := dx*dx + dy*dy\n            rSq := int64(bombs[i][2]) * int64(bombs[i][2])\n            if distSq <= rSq {\n                graph[i] = append(graph[i], j)\n            }\n        }\n    }\n    \n    maxDetonated := 0\n        for i := 0; i < n; i++ {\n            visited := make([]bool, n)\n            count := 0\n            \n            var dfs func(node int)\n            dfs = func(node int) {\n                visited[node] = true\n                count++\n\n                for _, vizinho := range graph[node] {\n                    if !visited[vizinho] {\n                        dfs(vizinho)\n                    }\n                }\n            }\n\n            dfs(i)\n            if count > maxDetonated {\n                maxDetonated = count\n            }\n        }\n\n        return maxDetonated\n}\n\nfunc main() {\n    var n, cols int\n    if _, err := fmt.Scan(&n, &cols); err != nil {\n        return\n    }\n\n    bombs := make([][]int, n)\n    for i := 0; i < n; i++ {\n        bombs[i] = make([]int, 3)\n        fmt.Scan(&bombs[i][0], &bombs[i][1], &bombs[i][2])\n    }\n\n    fmt.Println(maxDetonation(bombs))\n}\n",
+            "lines": "63"
+        }
+    ]
+}
