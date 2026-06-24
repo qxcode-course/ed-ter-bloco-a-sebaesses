@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_00-43-44",
+            "content": "@@ -25,38 +25,8 @@\n t%22%0A%0A\n-var memo = make(map%5Bint%5Dint)%0A%0A\n func\n@@ -57,243 +57,17 @@\n     \n-if n %3C= k %7B%0A        return 1%0A    %7D%0A%0A    if val, ok := memo%5Bn%5D; ok %7B%0A        return val%0A    %7D%0A%0A    parte1 := (n+1)/2%0A    parte2 := n/2%0A%0A    resultado := ativos(parte1, k) + ativos(parte2, k)%0A%0A    memo%5Bn%5D = resultado%0A    return resultado\n+return 32\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-24_00-53-42",
+            "content": "package main\n\nimport \"fmt\"\n\nvar memo = make(map[int]int)\n\nfunc ativos(n, k int) int {\n    if n <= k {\n        return 1\n    }\n\n    if val, ok := memo[n]; ok {\n        return val\n    }\n\n    parte1 := (n+1)/2\n    parte2 := n/2\n\n    resultado := ativos(parte1, k) + ativos(parte2, k)\n\n    memo[n] = resultado\n    return resultado\n}\n\nfunc main() {\n    var n, k int\n    if _, err := fmt.Scan(&n, &k); err != nil {\n        return\n    }\n\n    fmt.Println(ativos(n,k))\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

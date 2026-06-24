@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_01-14-57",
+            "content": "@@ -94,116 +94,21 @@\n   %7D%0A\n-    if n == 2 %7B%0A        return 1%0A    %7D%0A%0A    if n == 3 %7B%0A        return 2%0A    %7D%0A%0A    return subirEscada(n-1) \n+%0A    return 0\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-24_01-19-50",
+            "content": "@@ -202,26 +202,8 @@\n -1) \n-+ subirEscada(n-2)\n %0A%7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-24_01-20-03",
+            "content": "@@ -214,17 +214,17 @@\n scada(n-\n-3\n+2\n )%0A%7D%0A%0Afun\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-24_01-20-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc subirEscada(n int) int {\n    if n == 1 {\n        return 1\n    }\n    if n == 2 {\n        return 1\n    }\n\n    if n == 3 {\n        return 2\n    }\n\n    return subirEscada(n-1) + subirEscada(n-3)\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    fmt.Println(subirEscada(n))\n}\n",
+            "lines": "27"
+        }
+    ]
+}

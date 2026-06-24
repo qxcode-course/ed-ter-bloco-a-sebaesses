@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_02-27-23",
+            "content": "@@ -130,199 +130,8 @@\n   %7D%0A\n-    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%5Cn%22, n, n-1, n-1)%0A    prev := calcularQuadrado(n-1)%0A    curr := prev + 2*(n-1) + 1%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%5Cn%22, n, n-1, n-1, curr)\n %0A   \n@@ -142,12 +142,9 @@\n urn \n-curr\n+0\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-24_02-48-33",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc calcularQuadrado(n int) int {\n    if n == 1 {\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n-1, n-1)\n    prev := calcularQuadrado(n-1)\n    curr := prev + 2*(n-1) + 1\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n-1, n-1, curr)\n    return curr\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n    calcularQuadrado(n)\n}\n",
+            "lines": "23"
+        }
+    ]
+}

@@ -28,5 +28,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@dfs
-selected_index: 8
+selected: ed@rec
+selected_index: 2

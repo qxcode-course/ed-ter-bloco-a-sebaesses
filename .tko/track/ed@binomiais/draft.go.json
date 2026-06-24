@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_00-57-44",
+            "content": "@@ -260,42 +260,8 @@\n    %7D\n-%0A%0A    fmt.Println(binominal(n, k))\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-24_00-58-08",
+            "content": "@@ -109,59 +109,56 @@\n     \n-%0A    return binominal(n-1, n-k) + binominal(n-1, k)\n+if k == 1 %7B%0A        return n%0A    %7D%0A%0A    return 0\n %0A%7D%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-24_01-06-44",
+            "content": "@@ -138,9 +138,9 @@\n , n-\n-2\n+k\n ) + \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-24_01-06-54",
+            "content": "@@ -134,17 +134,17 @@\n (n-1, n-\n-1\n+2\n ) + bino\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-24_01-06-59",
+            "content": "@@ -134,17 +134,17 @@\n (n-1, n-\n-k\n+1\n ) + bino\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-24_01-07-05",
+            "content": "@@ -136,11 +136,11 @@\n -1, \n-k-n\n+n-k\n ) + \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-24_01-07-13",
+            "content": "@@ -134,17 +134,17 @@\n (n-1, k-\n-1\n+n\n ) + bino\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-24_01-07-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc binominal(n, k int) int {\n    if k == 0 || k == n {\n        return 1\n    }\n    \n    return binominal(n-1, k-1) + binominal(n-1, k)\n}\n\nfunc main() {\n    var n, k int\n    if _, err := fmt.Scan(&n, &k); err != nil {\n        return\n    }\n\n    fmt.Println(binominal(n, k))\n    \n}\n",
+            "lines": "21"
+        }
+    ]
+}
