@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_20-25-31",
+            "content": "@@ -92,25 +92,8 @@\n    %7D\n-%0A%0A    imprimir(n)\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-25_20-25-49",
+            "content": "@@ -108,31 +108,8 @@\n ir(n\n-%5B1:%5D)%0A    fmt.Println(n\n )%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-25_20-26-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir(n string) {\n    if len(n) == 0 {\n        return\n    }\n\n    imprimir(n[1:])\n    fmt.Println(n)\n}\n\nfunc main() {\n    var n string\n\t\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n\timprimir(n)\n}\n",
+            "lines": "22"
+        }
+    ]
+}

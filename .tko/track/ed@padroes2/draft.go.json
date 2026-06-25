@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_20-20-16",
+            "content": "@@ -175,28 +175,15 @@\n Println(\n-calcularPecas\n (n))%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-25_20-20-29",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc calcularPecas(n int) int {\n    return n*(n+2)\n}\n\nfunc main() {\n    var n int\n\t\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n    fmt.Println(calcularPecas(n))\n}\n",
+            "lines": "17"
+        }
+    ]
+}

@@ -21,7 +21,7 @@ sources:
 expanded: []
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: time
   show_time: 'true'
 audit:

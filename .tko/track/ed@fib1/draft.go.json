@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_18-50-46",
+            "content": "@@ -161,17 +161,16 @@\n = 3; i %3C\n-=\n  n; i++ \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_18-51-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc totalCoelhos(n, k int) int {\n    if n == 1 || n == 2 {\n        return 1\n    }\n    f1, f2 := 1, 1\n    var atual int\n\n    for i := 3; i <= n; i++ {\n        atual = f2 + k*f1\n        f1 = f2\n        f2 = atual\n    }\n\n    return f2\n}\n\nfunc main() {\n    var n, k int\n    if _, err := fmt.Scan(&n, &k); err != nil {\n        return\n    }\n\n    fmt.Println(totalCoelhos(n, k))\n}\n",
+            "lines": "28"
+        }
+    ]
+}

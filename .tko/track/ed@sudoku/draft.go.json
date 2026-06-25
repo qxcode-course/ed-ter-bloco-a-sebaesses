@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_19-16-14",
+            "content": "@@ -29,585 +29,120 @@\n func\n- colocar(matriz %5B%5D%5B%5Drune, l, c int, val rune) bool %7B%0A    n := len(matriz)%0A    for i := -; i %3C n; i++ %7B%0A        if matriz%5Bl%5D%5Bi%5D == val %7C%7C matriz%5Bi%5D%5Bc%5D == val %7B%0A            return false%0A        %7D%0A    %7D %0A%0A    return true%0A%7D%0A%0Afunc resolver%0A%0Afunc main() %7B%0A    var n int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A    matriz := make(%5B%5D%5B%5Drune, n)%0A    for i := 0; i %3C n; i++ %7B%0A        var linha string%0A        fmt.Scan(&linha)%0A        matriz%5Bi%5D = %5B%5Drune(linha)%0A    %7D%0A%0A    resolver(matriz, 0)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Println(string(matriz%5Bi%5D))%0A    %7D\n+%0A%0Afunc main() %7B%0A    var n int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A    matriz := make\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-06-25_19-20-40",
+            "content": "@@ -263,79 +263,8 @@\n lver\n-(matriz %5B%5D%5B%5Drune, index int) bool %7B%0A    n := len(matriz)%0A    if index%0A%7D\n %0A%0Afu\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_19-25-26",
+            "content": "@@ -332,278 +332,8 @@\n ndex\n- == n*n %7B%0A        return true%0A    %7D%0A%0A    l := index / n%0A    c := index %25 n%0A%0A    if matriz%5Bl%5D%5Bc%5D != '.' %7B%0A        return resolver(matriz, index+1)%0A    %7D%0A%0A    for v := '1'; v %3C= rune; v++ %7B%0A        if colocar(matriz, l, c, v) %7B%0A            matriz%5Bl%5D%5Bc%5D = v%0A        %7D%0A    %7D\n %0A%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-25_19-28-10",
+            "content": "@@ -595,150 +595,15 @@\n     \n-    if resolver(matriz, index+1) %7B%0A                return true%0A            %7D%0A%0A            matriz%5Bl%5D%5Bc%5D = '.'%0A        %7D%0A    %7D%0A%0A    return false\n+%7D%0A    %7D\n %0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-25_19-29-07",
+            "content": "@@ -104,33 +104,33 @@\n z)%0A    for i := \n-0\n+-\n ; i %3C n; i++ %7B%0A \n@@ -512,13 +512,8 @@\n rune\n-('0')\n ; v+\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-25_19-29-46",
+            "content": "@@ -516,10 +516,8 @@\n ('0'\n-+n\n ); v\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-25_19-29-55",
+            "content": "@@ -231,350 +231,8 @@\n %7D %0A%0A\n-    tamanhoBloco := 2%0A    if n == 9 %7B%0A        tamanhoBloco := 3%0A    %7D%0A%0A    inicioL := (l/tamanhoBloco) * tamanhoBloco%0A    inicioC := (c/tamanhoBloco) * tamanhoBloco%0A%0A    for i := 0; i %3C tamanhoBloco; i++ %7B%0A        for j := 0; j %3C tamanhoBloco; j++ %7B%0A            if matriz%5BinicioL+i%5D%5BinicioC+j%5D == val %7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-25_20-13-56",
+            "content": "@@ -286,16 +286,17 @@\n hoBloco \n+:\n = 3%0A    \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-25_20-15-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc colocar(matriz [][]rune, l, c int, val rune) bool {\n    n := len(matriz)\n    for i := 0; i < n; i++ {\n        if matriz[l][i] == val || matriz[i][c] == val {\n            return false\n        }\n    } \n\n    tamanhoBloco := 2\n    if n == 9 {\n        tamanhoBloco = 3\n    }\n\n    inicioL := (l/tamanhoBloco) * tamanhoBloco\n    inicioC := (c/tamanhoBloco) * tamanhoBloco\n\n    for i := 0; i < tamanhoBloco; i++ {\n        for j := 0; j < tamanhoBloco; j++ {\n            if matriz[inicioL+i][inicioC+j] == val {\n\t\t\t\treturn false\n\t\t\t}\n        }\n    }\n\n    return true\n}\n\nfunc resolver(matriz [][]rune, index int) bool {\n    n := len(matriz)\n    if index == n*n {\n        return true\n    }\n\n    l := index / n\n    c := index % n\n\n    if matriz[l][c] != '.' {\n        return resolver(matriz, index+1)\n    }\n\n    for v := '1'; v <= rune('0'+n); v++ {\n        if colocar(matriz, l, c, v) {\n            matriz[l][c] = v\n            if resolver(matriz, index+1) {\n                return true\n            }\n\n            matriz[l][c] = '.'\n        }\n    }\n\n    return false\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n    matriz := make([][]rune, n)\n    for i := 0; i < n; i++ {\n        var linha string\n        fmt.Scan(&linha)\n        matriz[i] = []rune(linha)\n    }\n\n    resolver(matriz, 0)\n    for i := 0; i < n; i++ {\n        fmt.Println(string(matriz[i]))\n    }\n}\n",
+            "lines": "75"
+        }
+    ]
+}

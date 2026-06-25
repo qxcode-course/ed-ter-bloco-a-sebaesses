@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_19-02-34",
+            "content": "@@ -189,17 +189,16 @@\n t%0A    if\n- \n _, err :\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-25_19-03-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc calcularPontos(n, m int) int {\n    if m == 1 {\n        return 1\n    }\n\n    return calcularPontos(n, m-1) + (n-2)*(m-1) + 1\n}\n\nfunc main() {\n    var n, m int\n    if _, err := fmt.Scan(&n, &m); err != nil {\n        return\n    }\n\n    fmt.Println(calcularPontos(n, m ))\n}\n",
+            "lines": "20"
+        }
+    ]
+}

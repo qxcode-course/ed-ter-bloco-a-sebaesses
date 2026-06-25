@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_18-56-50",
+            "content": "@@ -306,20 +306,15 @@\n Println(\n-pares\n (n))%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-25_18-57-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc pares(n int) int {\n    if n == 1 || n == 2 {\n        return 1\n    }\n\n    if n == 3 || n == 4 {\n        return 2\n    }\n\n    return pares(n-1) + pares(n-2) - pares(n-4)\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    fmt.Println(pares(n))\n}\n",
+            "lines": "24"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_18-42-31",
+            "content": "@@ -48,32 +48,20 @@\n ro(n\n- int, c float64) float64\n+, c int) int\n  %7B%0A \n@@ -80,10 +80,8 @@\n := 0\n-.0\n %0A%0A  \n@@ -206,30 +206,16 @@\n ar n\n+, c\n  int\n-%0A    var c float64\n+ \n %0A   \n@@ -278,62 +278,12 @@\n urn%0A\n+\n     %7D\n-%0A%0A    fmt.Printf(%22%25.2f%5Cn%22, calcularDinheiro(n, c))\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-25_18-44-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc calcularDinheiro(n int, c float64) float64 {\n    dinheiro := 0.0\n\n    for i := 0; i < n; i++ {\n        dinheiro = (dinheiro + c) / 2\n    }\n    \n    return dinheiro\n}\n\nfunc main() {\n    var n int\n    var c float64\n    if _, err := fmt.Scan(&n, &c); err != nil {\n        return\n    }\n\n    fmt.Printf(\"%.2f\\n\", calcularDinheiro(n, c))\n}\n",
+            "lines": "23"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-25_20-32-49",
+            "content": "@@ -121,19 +121,20 @@\n     \n-espacos := \n+fmt.Println(\n stri\n@@ -155,75 +155,44 @@\n , k)\n-%0A%09letra := string(s%5B0%5D)%0A%09%0A%09fmt.Printf(%22%25s%25s%5Cn%22, espacos, letra)%0A%09%0A%09\n+)%0A    fmt.Println(string(s%5B0%5D))%0A    \n diag\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-25_20-35-48",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc diagonal(s string, k int) {\n    if len(s) == 0 {\n        return\n    }\n\n    espacos := strings.Repeat(\" \", k)\n\tletra := string(s[0])\n\t\n\tfmt.Printf(\"%s%s\\n\", espacos, letra)\n\t\n\tdiagonal(s[1:], k+1)\n}\n\nfunc main() {\n    var n string\n\t\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n\tdiagonal(n, 0)\n}\n",
+            "lines": "29"
+        }
+    ]
+}

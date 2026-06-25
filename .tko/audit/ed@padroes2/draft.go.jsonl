@@ -1,0 +1,3 @@
+{"ts":1782418752,"hash":"22262141845f3bedda05f988b412bcb5493ebd45be9ebd0fb80faafe8d0c13e3","mode":"full","content":"H4sIAEONPWoC/ytITM5OTE9VyE3MzOPiyswtyC8qUVBKyy1R4uJKK81LhpBgaQ1NhWouBSDgquUCAC/CA8Q3AAAA"}
+{"ts":1782418774,"hash":"f22205743b91d86158342d39c42156f72d9144db94b313a7ee2da97e1dafd835","mode":"diff","ops":[{"tag":"replace","a1":7,"a2":8,"text":"    var n int\n\t\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n    fmt.Println()\n"}]}
+{"ts":1782418809,"hash":"0b19f3ec776a963886fbc3d1535cc686404504b0c2902a1d8e08213b3943b37d","mode":"diff","ops":[{"tag":"replace","a1":4,"a2":5,"text":"func calcularPecas(n int) int {\n    return n*(n+2)\n}\n"},{"tag":"replace","a1":13,"a2":14,"text":"    fmt.Println((n))\n"}]}
